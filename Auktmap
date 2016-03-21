@@ -1,0 +1,635 @@
+"auth": {
+
+    "thingLink": "focus",
+
+    "000": {
+      "inherit": "bib",
+      "[6:7]": {
+        "fixedDefault": "z"
+      },
+      "[7:8]": null,
+      "[17:18]": {
+        "aboutEntity": "?record",
+        "link": "marc:encLevel",
+        "tokenMap": "AuthorityEncLevelType",
+        "uriTemplate": "{_}"
+      },
+      "_spec": [
+        {
+          "originalLeader": "01341cz  a2200397n  4500",
+          "source": {
+            "leader": "     cz  a       n  4500",
+            "fields": [{"001": "140482"}]
+          },
+          "result": {
+            "@type": "IndexTerm",
+            "@id": "http://libris.kb.se/auth/140482",
+            "controlNumber": "140482",
+            "marc:encLevel": {"@id": "marc:CompleteAuthorityRecord"},
+            "marc:status": {"@id": "marc:CorrectedOrRevised"},
+            "focus": {
+              "@id": "http://libris.kb.se/resource/auth/140482"
+            }
+          }
+        }
+      ]
+    },
+    "001" : {
+      "aboutEntity": "?record",
+      "aboutType": "IndexTerm",
+      "property": "controlNumber"
+    },
+    "005": {"inherit": "bib"},
+
+    "008": {
+      "[0:6]": {
+        "aboutEntity": "?record",
+        "property": "created",
+        "parseDateTime": "yyMMdd", "timeZone": "CET"
+      },
+      "[6:7]": {
+        "aboutEntity": "?record",
+        "link": "marc:subdivision",
+        "uriTemplate": "{_}",
+        "tokenMap": "SubdivisionType"
+      },
+      "[7:8]": {
+        "aboutEntity": "?record",
+        "link": "marc:romanization",
+        "uriTemplate": "{_}",
+        "tokenMap": "RomanizationType"
+      },
+      "[8:9]": {
+        "aboutEntity": "?record",
+        "link": "marc:languageOfCatalog",
+        "uriTemplate": "{_}",
+        "tokenMap": "LanguageOfCatalogType"
+      },
+      "[9:10]": {
+        "aboutEntity": "?record",
+        "link": "marc:kindOfRecord",
+        "uriTemplate": "{_}",
+        "tokenMap": "KindOfRecordType"
+      },
+      "[10:11]": {
+        "aboutEntity": "?record",
+        "link": "marc:catalogingRules",
+        "uriTemplate": "{_}",
+        "tokenMap": "CatalogingRulesType"
+      },
+      "[11:12]": {
+        "aboutEntity": "?record",
+        "link": "marc:subjectHeading",
+        "uriTemplate": "{_}",
+        "tokenMap": "SubjectHeadingType"
+      },
+      "[12:13]": {
+        "aboutEntity": "?record",
+        "link": "marc:typeOfSeries",
+        "uriTemplate": "{_}",
+        "tokenMap": "TypeOfSeriesType"
+      },
+      "[13:14]": {
+        "aboutEntity": "?record",
+        "link": "marc:numberedSeries",
+        "uriTemplate": "{_}",
+        "tokenMap": "NumberedSeriesType"
+      },
+      "[16:17]": {
+        "aboutEntity": "?record",
+        "property": "marc:headingSeries",
+        "tokenMap": "HeadingType"
+      },
+      "[17:18]": {
+        "aboutEntity": "?record",
+        "link": "marc:subjectSubdivision",
+        "uriTemplate": "{_}",
+        "tokenMap": "SubjectSubdivisionType"
+      },
+      "[28:29]": {
+        "aboutEntity": "?record",
+        "link": "marc:govtAgency",
+        "uriTemplate": "{_}",
+        "tokenMap": "GovtAgencyType"
+      },
+      "[29:30]": {
+        "aboutEntity": "?record",
+        "link": "marc:reference",
+        "uriTemplate": "{_}",
+        "tokenMap": "ReferenceType"
+      },
+      "[31:32]": {
+        "aboutEntity": "?record",
+        "link": "marc:recordUpdate",
+        "uriTemplate": "{_}",
+        "tokenMap": "RecordUpdateType"
+      },
+      "[32:33]": {
+        "aboutEntity": "?record",
+        "link": "marc:personalName",
+        "uriTemplate": "{_}",
+        "tokenMap": "PersonalNameType"
+      },
+      "[33:34]": {
+        "aboutEntity": "?record",
+        "link": "marc:level",
+        "uriTemplate": "{_}",
+        "tokenMap": "LevelType"
+      },
+      "[38:39]": {
+        "aboutEntity": "?record",
+        "link": "marc:modifiedRecord",
+        "uriTemplate": "{_}",
+        "tokenMap": "ModifiedRecordType"
+      },
+      "[39:40]": {
+        "aboutEntity": "?record",
+        "link": "marc:catalogingSource",
+        "uriTemplate": "{_}",
+        "tokenMap": "CatalogingSourceType"
+      },
+      "[14:15]": {
+        "aboutEntity": "?record",
+        "property": "marc:headingMain",
+        "tokenMap": "HeadingType"
+      },
+      "[15:16]": {
+        "aboutEntity": "?record",
+        "property": "marc:headingSubject",
+        "fixedDefault": "a",
+        "tokenMap": {"a": true, "b": false}
+      },
+      "repeatable": false
+    },
+
+    "035" : {"inherit": "bib"},
+    "040" : {
+      "inherit": "bib",
+      "TODO": "if no $f, drop entire record (or mark as obsolete)",
+      "$f": {
+        "aboutEntity": "?record",
+        "IMPROVE:about": "$thing if Concept else $record",
+        "TODO": "inCollection if . = sgp?",
+        "link": "inScheme", "resourceType": "ConceptScheme",
+        "uriTemplate": "https://id.kb.se/term/{_}",
+        "property": "notation"
+      },
+      "_spec": [
+        {
+          "source": {"040": {"ind1":" ","ind2":" ", "subfields": [{"f":"barn"}]}},
+          "result": {
+            "inScheme":  {"@type": "ConceptScheme", "@id": "https://id.kb.se/term/barn", "notation": "barn"}
+          }
+        }
+      ]
+    },
+    "042": {
+      "aboutEntity": "?record",
+      "$a": {"property": "authenticationCode"},
+      "$9": {
+        "addLink": "inCollection",
+        "resourceType": "TermCollection",
+        "uriTemplate": "https://id.kb.se/term/{_}",
+        "property": "notation"
+      }
+    },
+    "043" : {
+      "$a": {
+        "link": "nationality",
+        "uriTemplate": "https://id.kb.se/nationality/{_}", "matchUriToken": "^[a-z-]{7}$", "property": "notation"
+      }
+    },
+    "046" : {
+        "TODO": "parseDateTimeUsingFormatHints",
+        "$f": {"property": "birthDate"},
+        "$g": {"property": "deathDate"}
+    },
+    "065" : {
+      "inherit": "083",
+      "addLink": "broadMatch",
+      "uriTemplate": "https://id.kb.se/term/{+inScheme.notation}/{notation}",
+      "$2": {
+        "link": "inScheme", "resourceType": "ConceptScheme",
+        "uriTemplate": "https://id.kb.se/term/{+_}",
+        "property": "notation"
+      }
+    },
+
+    "073": {
+      "TODO": "ignore entirely (should be removed)",
+      "aboutEntity": "?record",
+      "addLink": "broader",
+      "resourceType": "TopicalTerm",
+      "$a": {"property": "prefLabel"},
+      "$z": {"link": "inScheme", "resourceType": "ConceptScheme", "property": "notation"},
+      "uriTemplate": "https://id.kb.se/term/{+inScheme.notation}/{prefLabel}"
+    },
+
+    "082" : {"inherit": "bib"},
+    "083" : {
+      "inherit": "bib:082",
+      "aboutEntity": "?record",
+      "addLink": "closeMatch",
+      "match-domain": {
+        "Concept": {"addLink": "closeMatch"},
+        "Place": {"addLink": "closeMatch"},
+        "UniformWork": {"addLink": "subject"}
+      }
+    },
+
+    "100" : {
+      "inherit": "bib",
+      "aboutEntity": "?record",
+      "aboutType": "PersonTerm",
+      "link": "focus", "embedded": true, "resourceType": "Person",
+      "match-code": {
+        "t v x y z": {
+          "aboutType": "WorkTerm",
+          "splitLink": [
+            {"codes": ["t"], "link": "focus", "spliceEntity": "UniformWork"}
+          ],
+          "link": "attributedTo",
+          "embedded": false,
+          "resourceType": "Person",
+          "$t": {"property": "title"}
+        }
+      },
+      "_spec": [
+        {
+          "source": {
+            "100": {"ind1": "1", "ind2": " ", "subfields": [
+              {"a": "Jansson, Tove"}
+          ]}},
+          "result": {
+            "@type": "PersonTerm",
+            "focus": {
+              "@type": "Person",
+              "familyName":  "Jansson", "givenName":  "Tove"
+            }
+          }
+        },
+        {
+          "source": {
+            "100": {"ind1": "1", "ind2": " ", "subfields": [
+              {"a": "Jansson, Tove"},
+              {"t": "Anteckningar från en ö"}
+          ]}},
+          "result": {
+            "@type": "WorkTerm",
+            "focus": {
+              "@type": "UniformWork",
+              "title": "Anteckningar från en ö",
+              "attributedTo": {"@type": "Person",
+                "familyName":  "Jansson", "givenName":  "Tove"}
+            }
+          }
+        }
+      ]
+    },
+    "110" : {
+      "inherit": "bib",
+      "aboutEntity": "?record",
+      "aboutType": "OrganizationTerm",
+      "link": "focus", "embedded": true
+    },
+    "111" : {
+      "inherit": "bib",
+      "aboutEntity": "?record",
+      "aboutType": "MeetingTerm",
+      "link": "focus", "embedded": true
+    },
+    "130" : {
+      "inherit": "bib",
+      "aboutEntity": "?record",
+      "aboutType": "WorkTerm",
+      "link": "focus", "embedded": true,
+      "resourceType": "UniformWork"
+    },
+    "148" : {
+      "aboutEntity": "?record",
+      "aboutType": "ChronologicalTerm",
+      "$a": {"property": "prefLabel"},
+      "uriTemplate": "https://id.kb.se/term/sao/{prefLabel}"
+    },
+    "150" : {
+      "inherit": "patterns:termbase",
+      "aboutEntity": "?record",
+      "aboutType": "TopicalTerm",
+      "dependsOn": ["040", "042"],
+      "$0": null,
+      "_spec": [
+        {
+          "name": "",
+          "source": [
+            {"150": {"ind1": " ", "ind2": " ", "subfields": [{"a": "Barnpsykologi"}]}}
+          ],
+          "result": {
+            "@type": "TopicalTerm",
+            "@id": "http://libris.kb.se/auth/140482",
+            "prefLabel": "Barnpsykologi"
+          }
+        },
+        {
+          "name": "",
+          "source": [
+            {"040": {"subfields": [{"f":"sao"}]}},
+            {"150": {"subfields": [{"a": "Barnpsykologi"}]}}
+          ],
+          "result": {
+            "@type": "TopicalTerm",
+            "@id": "http://libris.kb.se/auth/140482",
+            "prefLabel": "Barnpsykologi",
+            "inScheme":  {
+              "@type": "ConceptScheme",
+              "@id": "https://id.kb.se/term/sao",
+              "notation": "sao"
+            },
+            "sameAs":  [{"@id": "https://id.kb.se/term/sao/Barnpsykologi"}]
+          }
+        },
+        {
+          "name": "",
+          "source": [
+            {"040": {"ind1": " ", "ind2": " ", "subfields": [{"f":"sao"}]}},
+            {"150": {"ind1": " ", "ind2": " ",
+              "subfields": [{"a": "Barn"}, {"x": "psykologi"}]}}
+          ],
+          "result": {
+            "@type": "TopicalTerm",
+            "@id": "http://libris.kb.se/auth/140482",
+            "prefLabel": "Barn--psykologi",
+            "inScheme":  {
+              "@type": "ConceptScheme",
+              "@id": "https://id.kb.se/term/sao",
+              "notation": "sao"
+            },
+            "termComponentList": [
+              {
+                "@type": "TopicalTerm",
+                "prefLabel": "Barn"
+              },
+              {
+                "@type": "SubdivisionTerm",
+                "prefLabel": "psykologi"
+              }
+            ],
+            "sameAs":  [{"@id": "https://id.kb.se/term/sao/Barn--psykologi"}]
+          }
+        }
+      ]
+    },
+    "151" : {
+      "inherit": "patterns:termbase",
+      "aboutEntity": "?record",
+      "aboutType": "GeographicalTerm"
+    },
+    "155" : {
+      "inherit": "patterns:termbase",
+      "aboutEntity": "?record",
+      "aboutType": "GenreTerm",
+      "TODO:just-assert-inScheme=saogf?:uriTemplate": "https://id.kb.se/term/saogf/{prefLabel}",
+      "TODO:if-inScheme=barn?:uriTemplate": "https://id.kb.se/term/barn/gf/{prefLabel}"
+    },
+    "162" : {
+      "inherit": "patterns:termbase",
+      "TODO": "besättning - musik",
+      "aboutEntity": "?record",
+      "aboutType": "OrchestraTerm"
+    },
+
+    "180" : {
+      "inherit": "patterns:termid",
+      "aboutEntity": "?record",
+      "aboutType": "SubdivisionTerm",
+      "$x": {
+        "property": "prefLabel",
+        "defaults": {"inCollection": {"@id": "https://id.kb.se/term/subdivisions", "notation": "subdivisions"}}
+      }
+    },
+    "181" : {
+      "inherit": "patterns:termid",
+      "aboutEntity": "?record",
+      "aboutType": "GeographicalSubdivisionTerm",
+      "$z": {"property": "prefLabel"}
+    },
+    "182" : {
+      "inherit": "patterns:termid",
+      "aboutEntity": "?record",
+      "aboutType": "ChronologicalSubdivisionTerm",
+      "$y": {"property": "prefLabel"}
+    },
+    "185" : {
+      "inherit": "patterns:termid",
+      "aboutEntity": "?record",
+      "aboutType": "GenreSubdivisionTerm",
+      "$v": {"property": "prefLabel"}
+    },
+
+    "400": {
+      "inherit": "bib:100",
+      "match-code": {
+        "t": {
+          "$t": {"property": "title"},
+          "splitLink": [
+            {"codes": ["t"], "addLink": "hasVersion", "spliceEntity": "UniformWork"}
+          ],
+          "link": "attributedTo"
+        }
+      },
+      "match-domain": {
+        "PersonTerm": {
+          "addLink": "sameAs",
+          "embedded": true,
+          "TODO:alternative $a": {"addProperty": "altLabel"},
+          "$i": {"property": "scopeNote", "TODO": "or similar ('forskningsbiblioteksform')"},
+          "TODO:$d": {"TODO": "if same as 100.$d (plus drop similar duplicate splitValueProperties)"}
+        }
+      },
+      "aboutEntity": "?record",
+      "addLink": "attributedTo",
+      "resourceType": "Person"
+    },
+    "410": {
+      "inherit": "bib:610",
+      "i2": null,
+      "aboutEntity": "?record",
+      "addLink": "hasVersion",
+      "resourceType": "OrganizationTerm"
+    },
+    "411": {
+      "aboutEntity": "?record",
+      "inherit": "bib:611",
+      "addLink": "hasVersion",
+      "resourceType": "MeetingTerm"
+    },
+    "450" : {
+      "aboutEntity": "?record",
+      "$a": {"addProperty": "altLabel"},
+      "match-code": {
+        "x": {
+          "addLink": "replaces",
+          "resourceType": "TopicalTerm",
+          "uriTemplate": "https://id.kb.se/term/sao/{termComponentList.prefLabel*}",
+          "$a": {"addLink": "termComponentList",  "uriTemplate": "https://id.kb.se/term/sao/{_}", "property": "prefLabel"},
+          "$x": {"addLink": "termComponentList",  "property": "prefLabel"}
+        }
+      },
+      "TODO": "whatIs w||e"
+    },
+    "455" : {"inherit": "450"},
+    "500": {
+      "inherit": "bib:100",
+      "TODO": "this is really a link to other auth post..",
+      "aboutEntity": "?thing", "NOTE": "not really though - see 100",
+      "addLink": "hasPersona",
+      "embedded": true,
+      "resourceType": "Person"
+    },
+    "510" : {"inherit": "bib:110", "aboutEntity": null, "addLink": "seeAlso"},
+    "511" : {"inherit": "bib:111", "aboutType": null, "addLink": "seeAlso"},
+    "550" : {
+      "inherit": "150",
+      "aboutEntity": "?record",
+      "aboutType": null,
+      "resourceType": "TopicalTerm",
+      "computeLinks": {"use": "$w", "mapping": {"g": "broader", "h": "narrower", "*": "related"}},
+      "$0": {"property": "controlNumber"},
+      "_spec": [
+        {
+          "source": [
+            {"040": {"ind1": " ", "ind2": " ", "subfields": [{"f":"sao"}]}},
+            {"550": {"ind1": " ", "ind2": " ", "subfields": [{"a": "Other"}]}}
+          ],
+          "result": {
+            "inScheme": {
+              "@id": "https://id.kb.se/term/sao",
+              "@type": "ConceptScheme",
+              "notation": "sao"
+            },
+            "related": [
+              {"@type": "TopicalTerm", "@id": "https://id.kb.se/term/sao/Other", "prefLabel":  "Other"}
+            ]
+          }
+        },
+        {
+          "source": [
+            {"040": {"ind1": " ", "ind2": " ", "subfields": [{"f":"sao"}]}},
+            {"550": {"ind1": " ", "ind2": " ",
+              "subfields": [{"a": "Commedia dell`arte"}, {"w": "g"}]}}
+          ],
+          "result": {
+            "inScheme": {
+              "@id": "https://id.kb.se/term/sao",
+              "@type": "ConceptScheme",
+              "notation": "sao"
+            },
+            "broader": [
+              {"@type": "TopicalTerm",
+                "@id": "https://id.kb.se/term/sao/Commedia%20dell%60arte",
+                "prefLabel":  "Commedia dell`arte"}
+            ]
+          }
+        }
+      ]
+    },
+    "551" : {
+        "inherit": "550",
+      "resourceType": "GeographicalTerm",
+      "uriTemplate": "http://id.kb.se/place/{prefLabel}"
+    },
+    "555" : {
+      "inherit": "550",
+      "resourceType": "GenreTerm",
+      "uriTemplate": "https://id.kb.se/term/saogf/{prefLabel}"
+    },
+    "580" : {
+      "TODO": "incomplete",
+      "inherit": "180",
+      "aboutType": null,
+      "resourceType": "SubdivisionTerm"
+    },
+    "667" : {
+      "aboutEntity": "?record",
+      "$a": {"addProperty": "editorialNote"}
+    },
+    "670" : {
+      "aboutEntity": "?record",
+      "addLink": "source",
+      "embedded": true,
+      "resourceType": "CreativeWork",
+      "$a": {"property": "label"},
+      "$b": {"property": "citation"},
+      "$u": {"property": "url"}
+    },
+    "675" : {
+      "$a": {"property": "label"}
+    },
+    "678" : {
+      "TODO:i1": {},
+      "$a": {"addProperty": "note"}
+    },
+    "680" : {
+      "aboutEntity": "?record",
+      "$i": {"addProperty": "scopeNote"}
+    },
+    "688" : {
+      "aboutEntity": "?record",
+      "$a": {"addProperty": "historyNote"}
+    },
+
+    "750" : {
+      "inherit": "bib:650",
+      "i1": null,
+      "aboutEntity": "?record",
+      "computeLinks": null,
+      "addLink": "closeMatch",
+      "match-domain": {
+        "WorkTerm": {"addLink": "subject"}
+      },
+      "$0": {"addProperty": "notation"},
+      "NOTE:$2:codeList": "http://www.loc.gov/standards/sourcelist/subject.html"
+    },
+    "755" : {
+      "inherit": "750",
+      "resourceType": "GenreTerm",
+      "uriTemplate": "https://id.kb.se/term/saogf/{prefLabel}",
+      "$2": {
+        "requires-i2": "7",
+        "link": "inScheme",
+        "resourceType": "ConceptScheme", "uriTemplate": "https://id.kb.se/term/{+_}",
+        "property": "notation",
+        "NOTE:$2:codeList": "http://www.loc.gov/standards/sourcelist/genre-form.html"
+      }
+    },
+    "780" : {
+      "inherit": "750",
+      "$x": {"property": "prefLabel"}
+    },
+    "781" : {
+      "inherit": "750",
+      "resourceType": "GeographicalSubdivisionTerm",
+      "$z": {"property": "prefLabel"}
+    },
+    "782" : {
+      "inherit": "750",
+      "resourceType": "ChronologicalSubdivisionTerm",
+      "$y": {"property": "prefLabel"}
+    },
+    "785" : {
+      "inherit": "755",
+      "$v": {"property": "prefLabel"}
+    },
+
+    "856": {
+      "inherit": "bib",
+      "addLink": "relation",
+      "resourceType": "Document",
+      "TODO:i1": {},
+      "match-i2": {
+        "0": {"addLink": "sameAs", "resourceType": "Thing"},
+        "1": {"addLink": "isPrimaryTopicOf", "resourceType": "Electronic"},
+        "2": {"addLink": "relation", "resourceType": "Document"},
+        "8": {"addLink": "relation", "resourceType": "Document"}
+      }
+    }
+  },
