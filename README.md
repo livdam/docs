@@ -1,1 +1,2 @@
 # docs
+För eget bruk
