@@ -1,5 +1,5 @@
 
-100  saknas fält $f,g,l, n, p,u,0 Dessa anges i formathandboken som "Används ej", men finns hos LC men utan exempel. Även $8 saknas.
+100  saknar fält $f,g,l, n, p,t, u,0 Dessa anges i formathandboken som "Används ej", men finns hos LC men utan exempel. Även $8 saknas.
 
 110 är knepig att förstå. Det ser ut att saknas en her del fält. En del av dessa har i formathandboken anmärkning "Används ej", men finns hos LC
 med exempel för $f,k, p, t . Statik på fälten? Utöver dessa saknas $c,d, e, g,n, 4,6,8 i beskrivningen i marcframe
@@ -10,4 +10,6 @@ med exempel för $f,k, p, t . Statik på fälten? Utöver dessa saknas $c,d, e, 
 Exempel på 111 och 711 är  https://libris-qa.kb.se/1kcqc9xc11lpwgm#it  Jämför http://libris.kb.se/bib/19735721?vw=full&tab3=marc
 i expemplet: 111 saknar $n, c
 711 saknar $n, c
-2 X 710 med i1 = 2 saknas
+2 X 710 med i1 = 2 saknas . 710 saknas även i andra poster (överallt?), t ex bib 9366503
+
+700 saknar fält $f,g,l, n, p,t, u,0 
