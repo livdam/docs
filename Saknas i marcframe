@@ -3,14 +3,16 @@
 
 110 är knepig att förstå. Det ser ut att saknas en her del fält. En del av dessa har i formathandboken anmärkning "Används ej", men finns hos LC
 med exempel för $f,k, p, t . Statik på fälten? Utöver dessa saknas $c,d, e, g,n, 4,6,8 i beskrivningen i marcframe
+Exempel på 110 är bib 8351222 här finns $a, b med - precis som jag förväntar mig.
 
 710 ärver 110  och har anmärkning  "TOOO:i2": {}, "addLink": "influencedBy"´. influencedBy är inte lämplig här och ska inte läggas till.
+Varför fungerar 110 men inte 710?
 111 ärver från 110 med tillägg av $c, d
 711 ärver från 111
 Exempel på 111 och 711 är  https://libris-qa.kb.se/1kcqc9xc11lpwgm#it  Jämför http://libris.kb.se/bib/19735721?vw=full&tab3=marc
-i expemplet: 111 saknar $n, c
+i expemplet: 111 saknar $n, c . Varför saknas $c?
 711 saknar $n, c
-2 X 710 med i1 = 2 saknas . 710 saknas även i andra poster (överallt?), t ex bib 19366503
+2 X 710 med i1 = 2 saknas . 710 saknas även i andra poster (överallt?), t ex bib 19366503 (finns på dev)
 
 700 användre agendata precis som 100 och saknar fält $f,g, h, l, m, n, p,t, u,0, 3,5,6,8 . För klassisk musik behövs f, h,  k , m,n ,p,t. 
 I Libris formathandbok anges endast $g, 0, 5 som "Används ej"
