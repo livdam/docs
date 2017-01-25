@@ -23,3 +23,5 @@ I Libris formathandbok anges endast $g, 0, 5 som "Används ej"
 730 ärver 130, men måste få tillägg av i2 = 2
 
 Använder man en uppdaterad agentdata för alla skulle fälten fungera, men det behövs mer specificitet.Kan jobba med det.
+
+500, 510 och 511 ärver från 100, 110 och 111. Jag ser inte riktigt något vits med det. Kan titta på anmärkningar senare.
