@@ -16,3 +16,10 @@ i expemplet: 111 saknar $n, c . Varför saknas $c?
 
 700 användre agendata precis som 100 och saknar fält $f,g, h, l, m, n, p,t, u,0, 3,5,6,8 . För klassisk musik behövs f, h,  k , m,n ,p,t. 
 I Libris formathandbok anges endast $g, 0, 5 som "Används ej"
+
+720 - finns statistik?
+
+130 endast $a med, saknar $d, f,g,h,i,k,l,m,n,o,p,r,s,t,x,0,3,5,6,8
+730 ärver 130, men måste få tillägg av i2 = 2
+
+Använder man en uppdaterad agentdata för alla skulle fälten fungera, men det behövs mer specificitet.Kan jobba med det.
