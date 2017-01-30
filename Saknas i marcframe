@@ -2,9 +2,10 @@
 100  saknar fält $f, g, l, n, p, t, u,0 Dessa anges i formathandboken som "Används ej", men finns hos LC men utan exempel. 
 Även $k, 6, 8 saknas.
 
-110 är knepig att förstå. Det ser ut att saknas en her del fält. En del av dessa har i formathandboken anmärkning "Används ej", men finns hos LC
-med exempel för $f,k, p, t . Statik på fälten? Utöver dessa saknas $c,d, e, g,n, 4,6,8 i beskrivningen i marcframe
-Exempel på 110 är bib 8351222 här finns $a, b med - precis som jag förväntar mig.
+110 är knepig att förstå. Det ser ut att saknas en her del fält. En del av dessa har i formathandboken anmärkning "Används ej", men finns 
+hos LC med exempel för $f,k, p, t . Statik på fälten? Utöver dessa saknas $c,d, e, g,n, 4,6,8 i beskrivningen i marcframe
+Exempel på 110 är bib 8351222 här finns $a, b med - precis som jag förväntar mig. (Fast 30/1 finns inte denna med utan istället finns 9186194
+två gånger)
 
 710 ärver 110  och har anmärkning  "TOOO:i2": {}, "addLink": "influencedBy"´. influencedBy är inte lämplig här och ska inte läggas till.
 Varför fungerar 110 men inte 710?
