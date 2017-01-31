@@ -1,6 +1,6 @@
 
 100  saknar fält $f, g, l, n, p, t, u,0 Dessa anges i formathandboken som "Används ej", men finns hos LC men utan exempel. 
-Även $k, 6, 8 saknas.
+Även $k, 6, 8 saknas. Statstik? 
 
 110 är knepig att förstå. Stämmer anvisningarna för i1? Jag läser det som om i1=1 (dvs. typ $a Sverige. $b Kulturdepartementet) ska delas upp 
 på family name mm, vilket vore rimligt för i1=0. 
@@ -27,9 +27,12 @@ I Libris formathandbok anges endast $g, 0, 5 som "Används ej". $i borde kopplas
 
 720 - finns statistik?
 
-130 endast $a med, saknar $d, f,g,h,i,k,l,m,n,o,p,r,s,t,x,0,3,5,6,8
-730 ärver 130, men måste få tillägg av i2 = 2
+130 endast $a med, saknar $d, f,g,h,k,l,m,n,o,p,r,s,t,0,6,8
+730 ärver 130, men måste få tillägg av i2 = 2. Länk "influencialRelation" blir fel relation. dc:realation är ok, men relationen är oklar,
+förutom för i2=2 då hasPart är lämplig. Dessutom behöver $ i, x, 3, 5 läggas till
+740 ärver 730 vilket är ok eftersom de få fält som finns i 740 (a, h, n, p , 5, 6, 8) är lika i 730
 
-Använder man en uppdaterad agentdata för alla skulle fälten fungera, men det behövs mer specificitet.Kan jobba med det.
+Använder man en uppdaterad agentdata för alla skulle fälten fungera, men det behövs mer specificitet. Kan nog göras på olika sätt och 
+jag kan jobba med ett förslag.
 
-500, 510 och 511 ärver från 100, 110 och 111. Jag ser inte riktigt något vits med det. Kan titta på anmärkningar senare.
+
