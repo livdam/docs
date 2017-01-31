@@ -5,19 +5,22 @@
 110 är knepig att förstå. Stämmer anvisningarna för i1? Jag läser det som om i1=1 (dvs. typ $a Sverige. $b Kulturdepartementet) ska delas upp 
 på family name mm, vilket vore rimligt för i1=0. 
 Det ser ut att saknas en her del fält. En del av dessa har i formathandboken anmärkning "Används ej", men finns 
-hos LC med exempel för $f,k, p, t . Statik på fälten? Utöver dessa saknas $c,d, e, g,n, 4,6,8 i beskrivningen i marcframe. Bib id 9655062 har a,b,n,d,c. 
-QA sökproblem 30/1
+hos LC med exempel för $f,k, p, t . Statik på fälten? Utöver dessa saknas $c,d, e, g,n, 4,6,8 i beskrivningen i marcframe. Bib 9655062 (qa)
+har fält a,b,n,d,c, men bara a och b visas. Ytterligare ex på qa:2631356
+
 Exempel på 110 är bib 8351222 här finns $a, b med - precis som jag förväntar mig. (Fast 30/1 finns inte denna med utan istället finns 9186194
 två gånger)
 
 710 ärver 110  och har anmärkning  "TOOO:i2": {}, "addLink": "influencedBy"´. influencedBy är inte lämplig här och ska inte läggas till.
-Varför fungerar 110 men inte 710?
-111 ärver från 110 med tillägg av $c, d
+Varför fungerar 110 men inte 710? Exempel på QA:2631356 och 11295799 samt dev:19366503
+
+111 ärver från 110 med tillägg av $c, d. Exempel på qa:11295799 som har a,n, d, c. Endast $a International Grassland Congress och $d 2008 :
+har kommit med. Förstår inte varför $c inte fungerar.
+
 711 ärver från 111
-Exempel på 111 och 711 är  https://libris-qa.kb.se/1kcqc9xc11lpwgm#it  Jämför http://libris.kb.se/bib/19735721?vw=full&tab3=marc
-i expemplet: 111 saknar $n, c . Varför saknas $c?
-711 saknar $n, c
-2 X 710 med i1 = 2 saknas . 710 saknas även i andra poster (överallt?), t ex bib 19366503 (finns på dev)
+711 finns även i exempelpost för 111 och fungerar likadant. $a,d kommer med. Inte $c som inte fungerar och förstås inte andra fält som inte
+är tillagda.
+
 
 700 använder agendata precis som 100 och saknar fält $f, g, h, i,l, m, n, p,t, u,0, 3,5,6,8 . För klassisk musik behövs f, h,  k , m,n ,p,t. 
 I Libris formathandbok anges endast $g, 0, 5 som "Används ej". $i borde kopplas till RDA Appendix J (under arbete) 
