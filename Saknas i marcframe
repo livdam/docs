@@ -12,7 +12,7 @@ Exempel på 110 är bib 8351222 här finns $a, b med - precis som jag förvänta
 två gånger)
 
 710 ärver 110  och har anmärkning  "TOOO:i2": {}, "addLink": "influencedBy"´. influencedBy är inte lämplig här och ska inte läggas till.
-Varför fungerar 110 men inte 710? Exempel på QA:2631356 och 11295799 samt dev:19366503
+Varför fungerar 110 men inte 710? Exempel på QA:2631356 och 11295799 samt dev:19366503, men i dev:17110366 $a, men  inte $4
 
 111 ärver från 110 med tillägg av $c, d. Exempel på qa:11295799 som har a,n, d, c. Endast $a International Grassland Congress och $d 2008 :
 har kommit med. Förstår inte varför $c inte fungerar.
@@ -27,7 +27,9 @@ I Libris formathandbok anges endast $g, 0, 5 som "Används ej". $i borde kopplas
 
 720 - finns statistik?
 
-130 endast $a med, saknar $d, f,g,h,k,l,m,n,o,p,r,s,t,0,6,8
+130 endast $a, d, l med, saknar $f,g,h,k,m,n,o,p,r,s,t,0,6,8.  Exempel qa:19512743 (Ska finnas på dev men hittade inte 31/1) $a, l med, 
+men $p,s, f saknas. 130 är "huvuduppslag" och borde markeras typ "qualifiedAttribution". Expå dev:17110366 $a, l, men saknar också  $p,s,f
+
 730 ärver 130, men måste få tillägg av i2 = 2. Länk "influencialRelation" blir fel relation. dc:realation är ok, men relationen är oklar,
 förutom för i2=2 då hasPart är lämplig. Dessutom behöver $ i, x, 3, 5 läggas till
 740 ärver 730 vilket är ok eftersom de få fält som finns i 740 (a, h, n, p , 5, 6, 8) är lika i 730
