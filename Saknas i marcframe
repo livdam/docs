@@ -12,7 +12,8 @@ Exempel på 110 är bib 8351222 här finns $a, b med - precis som jag förvänta
 två gånger)
 
 710 ärver 110  och har anmärkning  "TOOO:i2": {}, "addLink": "influencedBy"´. influencedBy är inte lämplig här och ska inte läggas till.
-Varför fungerar 110 men inte 710? Exempel på QA:2631356 och 11295799 samt dev:19366503, men i dev:17110366 $a, men  inte $4
+ dev:17110366 $a, men  inte $4, på QA:2631356  finns ett av två 710 med $a, b, men inte $c,d, 4. Qa:11295799 saknar sitt 710 fält.
+liksom qa:19366503 (som ska ha $a,4)
 
 111 ärver från 110 med tillägg av $c, d. Exempel på qa:11295799 som har a,n, d, c. Endast $a International Grassland Congress och $d 2008 :
 har kommit med. Förstår inte varför $c inte fungerar.
