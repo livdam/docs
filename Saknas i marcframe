@@ -1,3 +1,4 @@
+https://github.com/libris/whelk-core/blob/develop/src/main/resources/ext/marcframe.json
 
 100  saknar fält $f, g, l, n, p, t, u,0 Dessa anges i formathandboken som "Används ej", men finns hos LC men utan exempel. 
 Även $k, 6, 8 saknas. Statstik? 
