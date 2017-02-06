@@ -1,1 +1,13 @@
+prefix bf: <http://id.loc.gov/ontologies/bibframe>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix lcrel:  <http://id.loc.gov/relators>
+prefix lclang: <http://id.loc.gov/vocabulary/language>
+prefix kbmarc: <http://id.kb.se/marc>
+prefix rdaco: <http://www.rdaregistry.info/termList/>
+prefix rdact: <http://rdaregistry.info/termList/RDACarrierType>
+prefix rdamt: <http://rdaregistry.info/termList/RDAMediaType>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+
+base <http://bibliotek.se>
+
 
