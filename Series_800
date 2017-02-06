@@ -10,4 +10,45 @@ prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
 base <http://bibliotek.se>
 
+</work/Nekromatikernsensamhet1> a  bf:Text ;
+bf:title [a bf:WorkTitle ;
+            bf:mainTitle "Nekromatikerns ensamhet" @en ] ;
+bf:contribution [ a bf:Contribution , kbmarc:MainEntry ;
+                  a   bf:agent   ;
+        bf:person <http://viaf.org/viaf/14029543> ;
+                   bf:role lcrel:auth ] ;
+bf:originDate "2001"^^xsd:gYear ; #Fast det får man inte fram helt automatiskt#
+
+.
+</work/Nekromatikernsensamhet1> a bf:Text ;
+bf:title [a bf:WorkTitle ;
+            bf:mainTitle "Nekromatikerns ensamhet" ] ;
+bf:contribution [a bf:Contribution , kbmarc:MainEntry ;
+a bf:agent ;
+bf:person </person/Nicolai-Perumov> ;
+bf:role lcrel:auth ] ; 
+
+.
+
+
+#Instance
+</instance/Nekromatikerns-ensamhet-1-2011>  a bf:Print ;
+bf:instanceOf </work/Nekromatikerns-ensamhet-1>  ;
+bf:title [a bf:Title ;
+            bf:mainTitle "Nekromatikerns ensamhet"] ;
+            
+ ;
+bf:responsibilityStatement "Nick Perumov ; översättning från ryska: & Kajsa Öberg Lindsten ;
+bf:provisionActivity [a bf:Publication ;
+                        bf:agent </organization/Coltso>  ;
+                        bf:role lcrel:pbl;
+                     bf:date "2011"^^xsd:gYear ;
+                     bf:place "Stockholm" ] ;
+
+bf:edtionStatement " Ny utg." ;
+# Hur använda bf:editionEnumeration?
+bf:hasSeries "Svärdets väktare" ;
+bf:seriesEnumeration "6" ;
+;
+
 
