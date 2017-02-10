@@ -39,4 +39,10 @@ förutom för i2=2 då hasPart är lämplig. Dessutom behöver $ i, x, 3, 5 läg
 Använder man en uppdaterad agentdata för alla skulle fälten fungera, men det behövs mer specificitet. Kan nog göras på olika sätt och 
 jag kan jobba med ett förslag.
 
+Autktoritetsformatet
+083 saknar $z som används för att ange tabell. Exempel id 151702 (Kvinnor) som har två 083 fält. 083 0 4 $z1 $a082 $2 23/swe 
+Saknas i madsrdf. Bäst att lägga till i "classification-ddc" något om att för $z addLink "TableDDC" PrefLabel blir T+$z+"--"+$a "T1--082"
+Vore bra med statistik på användning av $z
+
+
 
