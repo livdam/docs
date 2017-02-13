@@ -39,10 +39,22 @@ förutom för i2=2 då hasPart är lämplig. Dessutom behöver $ i, x, 3, 5 läg
 Använder man en uppdaterad agentdata för alla skulle fälten fungera, men det behövs mer specificitet. Kan nog göras på olika sätt och 
 jag kan jobba med ett förslag.
 
-Autktoritetsformatet
-083 saknar $z som används för att ange tabell. Exempel id 151702 (Kvinnor) som har två 083 fält. 083 0 4 $z1 $a082 $2 23/swe 
+Under arbete: Dewey Klassifikation - i väntan på Dewey.info inte granskat så noga, men dags att göra detta för återkonvertering,
+Bibliografiska formatet
+082 standard indikatorer vid katalogisering i Libris i1=0, i2=4 + $2 23/swe
+För importerade poster i1= 0,1,7, i2= #,0,4
+delfält a, 2 vanligast, men finns även $b, m, q samt $6,8
+Finnns kvar konverteringsfel från övergång till marc21, se ex 4960686 (	a 821 b .912  - ska vara 821.912)
+
+083 samma indikatorer som 082, men fler delfält $ d,l m,q, y, z (table identification)
+
+Dewey Autktoritetsformatet
+
+083 SAO redaktionen använder  $z (Table identification - table number) som används för att ange tabell. Exempel id 151702 (Kvinnor) som har två 083 fält. 083 0 4 $z1 $a082 $2 23/swe 
 Saknas i madsrdf. Bäst att lägga till i "classification-ddc" något om att för $z addLink "TableDDC" PrefLabel blir T+$z+"--"+$a "T1--082"
 Vore bra med statistik på användning av $z
+
+SAB klassifikation
 
 
 
