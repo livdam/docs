@@ -39,22 +39,36 @@ förutom för i2=2 då hasPart är lämplig. Dessutom behöver $ i, x, 3, 5 läg
 Använder man en uppdaterad agentdata för alla skulle fälten fungera, men det behövs mer specificitet. Kan nog göras på olika sätt och 
 jag kan jobba med ett förslag.
 
-Under arbete: Dewey Klassifikation - i väntan på Dewey.info inte granskat så noga, men dags att göra detta för återkonvertering,
+Klassifikation 
+Dewey Klassifikation - i väntan på Dewey.info har jag tidigare inte granskat så noga, men dags att göra detta för återkonvertering,
 Bibliografiska formatet
 082 standard indikatorer vid katalogisering i Libris i1=0, i2=4 + $2 23/swe
 För importerade poster i1= 0,1,7, i2= #,0,4
-delfält a, 2 vanligast, men finns även $b, m, q samt $6,8
+delfält a, 2 finns redan, de är vanligast. I importerade poster kan även finnas $b Item number, $m Standard or optional designation 
+(dvs standarddewey eller alternativ dewey, $q Assigning agency samt ($6,8)
 Finnns kvar konverteringsfel från övergång till marc21, se ex 4960686 (	a 821 b .912  - ska vara 821.912)
 
-083 samma indikatorer som 082, men fler delfält $ d,l m,q, y, z (table identification)
+083 samma indikatorer som 082, men delvis andra delfält $c Classification number--ending number, $m standard or optional designation,
+$q Assigning agency, $y Table sequence number for internal subarrangemendt or add tabel, $z Table identification
 
 Dewey Autktoritetsformatet
+082  Dewey Decimal Call number, ärver bib. Rör serier, vet inte om vi behöver, ska undersöka.
 
-083 SAO redaktionen använder  $z (Table identification - table number) som används för att ange tabell. Exempel id 151702 (Kvinnor) som har två 083 fält. 083 0 4 $z1 $a082 $2 23/swe 
+083  Normalt  fält för Dewey. Ärver bib vilket är ok när det bara gäller $a, 2. SAO redaktionen använder  $z (Table identification - table number) som används för att ange tabell. 
+Exempel id 151702 (Kvinnor) som har två 083 fält. 083 0 4 $z1 $a082 $2 23/swe 
 Saknas i madsrdf. Bäst att lägga till i "classification-ddc" något om att för $z addLink "TableDDC" PrefLabel blir T+$z+"--"+$a "T1--082"
-Vore bra med statistik på användning av $z
+Övriga fält borde vi inte behöva: ($b, c, 5, ($6,8) men bra att få statistik på)
+
 
 SAB klassifikation
+084 bibliografiskt ok - saknar $q (klassificerande instans) som vi troligen inte behöver
+065 aukt ärver från bib 084. Behöver tillägg av $c Explantory term  (ska hitta exempel)
+
+Övrig klassifikation
+Aukt - behöver vi mer? ska undersöka
+Bib  (tror att det är rätt ok, statistik?)
+men 080 borde har $z Common auxiliary subdivision , $2 Edition identifier
+
 
 
 
