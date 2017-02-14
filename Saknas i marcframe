@@ -62,7 +62,8 @@ Saknas i madsrdf. Bäst att lägga till i "classification-ddc" något om att fö
 
 SAB klassifikation
 084 bibliografiskt ok - saknar $q (klassificerande instans) som vi troligen inte behöver
-065 aukt ärver från bib 084. Behöver tillägg av $c Explantory term  (ska hitta exempel)
+065 aukt ärver från bib 084. Viktoria tror inte att $c Explantory term  använts vid mappning mot SAO, utan att de förklaringar som borde
+varit  i $c finns i 680 Public general note. 680 ser ok ut.
 
 Övrig klassifikation
 Aukt - behöver vi mer? ska undersöka
