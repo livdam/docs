@@ -1,0 +1,45 @@
+Under arbete
+agentdata": {
+      "match-i1": {
+        "0": {
+          "$a": {"about": "_:agent", "property": "name", "required": true, "interpunctionChars": ")"}
+        },
+        "1": {
+          "$a": {
+            "about": "_:agent",
+            "property": "name", "splitValuePattern": "([^,]+)(?:,\\s*([^,]+))",
+            "splitValueProperties": ["familyName", "givenName"], "rejoin": ", ",
+            "required": true
+          }
+        },
+        "3": {
+          "resourceType": "Family",
+          "$a": {"about": "_:agent", "property": "name", "required": true}
+        }
+      },
+      "$a": {"required": true},
+      "$b": {"about": "_:agent", "property": "numeration"}
+      "$c": {"about": "_:agent", "addProperty": "qualifyingNote"}, {"about" : "organization" , "addProperty": "LocationMeeting"}
+      
+      "$d": {
+        "about": "_:agent",
+        "property": "lifeSpan",
+        "splitValuePattern": "(\\d+)(?:\\s*-\\s*(\\d+))?",
+          "splitValueProperties": ["birthYear", "deathYear"],
+          "rejoin": "-",
+          "allowEmpty": true
+      }, {"about" : "organization" , "Meeting"  , "addProperty": "Date"} #Göra något mer?
+      "$j": {"about": "_:agent", "property": "comment"},
+      "$q": {"about": "_:agent", "property": "label"}
+    },
+
+    "attribution": {
+      "include": "agentdata",
+      "addLink": "qualifiedAttribution",
+      "embedded": true,
+      "pendingResources": {
+        "_:agent": {"link": "agent", "resourceType": "Person"}
+      },
+      "$4": {"link": "role", "property": "notation", "uriTemplate": "{notation}", "TODO:mapping": "relatorCode"},
+      "$e": {"addProperty": "roleNote"}
+    },
