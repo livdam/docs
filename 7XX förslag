@@ -9,7 +9,7 @@
       "$l": {"link": "language", "resourceType": "Language", "property": "label"},
       "$m": {"addProperty": "musicPerformanceMedium"},
       "$n": {"addProperty": "partNumber", "interpunctionChars": ","}, #tappar i specificitet, work, #
-	  #meeting#
+	  #meeting. Nu lagt tilll X10 och X11 och för X00 är det här en TODO - fundera #
       "$o": {"property": "musicArrangement"},
       "$p": {"addProperty": "partTitle", "interpunctionChars": "/"}, #??#
       "$r": {"property": "musicKey"},
