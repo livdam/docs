@@ -30,27 +30,32 @@
 
 
     "HAagentdata100,700,800": {
-      "match-i1": {
-        "0": {
+      "match": [
+      {
+        "when": "i1=0" ,
           "$a": {"about": "_:agent", "property": "name", "required": true, "interpunctionChars": ")"}
         },
-        "1": {
+	{
+        "when": "i1=1",
           "$a": {
-			  
-            "about": "_:agent",
-            "property": "name", "splitValuePattern": "([^,]+)(?:,\\s*([^,]+))",
-            "splitValueProperties": ["familyName", "givenName"], "rejoin": ", ",
-            "required": true
+	  "about": "_:agent",
+           "property": "name", "splitValuePattern": "([^,]+)(?:,\\s*([^,]+))",
+           "splitValueProperties": ["familyName", "givenName"], "rejoin": ", ",
+           "required": true
           }
         },
-        "3": {
-          "resourceType": "Family",
-          "$a": {"about": "_:agent", "property": "name", "required": true}
-        }
-      },
+        "when": "i1=3", {
+          "FIXME: @update pendingResources": {
+          "@update _:agent": {"resourceType": "Family"}
+          },
+          "$a": {"about": "_:agent", "property": "nameOfTheFamily", "required": true}
+       
+      }
+      ],
+      
       "$a": {"required": true},
       "$b": {"about": "_:agent", "property": "numeration"},
-      "$c": {"about": "_:agent", "addProperty": "titleOther"},
+      "$c": {"about": "_:agent", "addProperty": "titleOther"}, #Gillar inte "qualifyingNote"
       "$d": {
         "about": "_:agent",
         "property": "lifeSpan",
@@ -59,26 +64,29 @@
           "rejoin": "-",
           "allowEmpty": true
       },
-	  "$e": {"about":"_:agent", "property": "roleNote" #"relatorTerm" - klartext istället för kod#
-      "$j": {"about": "_:agent", "property": "comment"},
+
+      "$j": {"about": "_:agent", "property": "comment"},## attribution qualifyer (Formathandboken: Attribuerande tillägg) ex Pupil of
       "$q": {"about": "_:agent", "property": "label"}, # fullerFormName ex "(Isabella Mary)"
-	  "$u":	{"about": "_:agent", "property": "affiliation"},
-	  "$4":	{"about": "_:agent", "property": "relatorCode"},
-    },
+      "$u": {"about": "_:agent", "property": "affiliation"},
+	
+    }, 
+    ##Sortering ska göras efter detta, dvs abcdjq - $u affiliation innehåller en adress, typ gatuadress, 
+    
     "HAagentdata110,710,810": {
-      "match-i1": {
-        "0": {
-		 "resourceType": "invertedName",
+      "match": [
+      {
+        "when": "i1=0",
+	"resourceType": "invertedName",
           "$a": {"about": "_:agent", "property": "corporateName", "required": true)
 		
         },
-        "1": {
-		 "resourceType": "jurisdictionName",
+        "when": i1=1",
+	"resourceType": "jurisdictionName",
           "$a": {"about": "_:agent", "property": "corporateName", "required": true}
 			
         },
 		
-        "2": {
+        "when" i1=2",
           "resourceType": "directName",
           "$a": {"about": "_:agent", "property": "corporateName", "required": true}
 	
@@ -88,11 +96,10 @@
       "$b": {"about": "_:agent", "property": "subordinateUnit"},
       "$c": {"about": "_:agent", "addProperty": "location"},
       "$d": {"about": "_:agent", "property": "date"},
-      "$e": {"about":"_:agent", "property": "roleNote"}, #"relatorTerm" - klartext istället för kod#
-	  "$g":	{"about": "_:agent", "property": "comment"},
-	  "$n": {"about": "_:agent", "property": "numberOfPartSectionMeeting"},
-	  "$u":	{"about": "_:agent", "property": "affiliation"},
-	  "$4":	{"about": "_:agent", "property": "relatorCode"},
+      "$g": {"about": "_:agent", "property": "comment"},
+      "$n": {"about": "_:agent", "property": "numberOfPartSectionMeeting"},
+      "$u": {"about": "_:agent", "property": "affiliation"},
+
     },
     "HAagentdata111,711,811": {
      "match-i1": {
@@ -210,3 +217,6 @@
 	
     "HA711": {"include": "HAagentdata111,711,811" , "HAtitledetails"},
 	# "splicedworkdetails" är intressant - ett sätt att specificera vad som är verk? Används nu bara för 600 # och för aukt 500.
+	
+	 ## "$4":	{"about": "_:agent", "property": "relatorCode"},
+	 	  "$e": {"about":"_:agent", "property": "roleNote" #"relatorTerm" - klartext istället för kod#
