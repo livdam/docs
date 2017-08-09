@@ -29,7 +29,8 @@
 
 
 
-    "HAagentdata100,700,800": {
+    "HAagentdataX00":  #Bib 100,700, 600, 800, Aukt 100, 400, 500
+    {
       "match": [
       {
         "when": "i1=0" ,
@@ -73,7 +74,8 @@
     }, 
     ##Sortering ska göras efter inläggningsordning i listade delfält, dvs abcdjq - $u affiliation innehåller en adress, typ gatuadress, 
     
-    "HAagentdata110,710,810": {
+    "HAagentdataX10,710,810": #Bib 110,710, 610, 810, Aukt 110, 410, 510
+    {
       "match": [
       {
         "when": "i1=0",
@@ -101,7 +103,7 @@
 	# Sortering abcdng - spelar det roll i vilken ordning de listas?
     },
    
-   "HAagentdataX11": # (111,711,811)
+   "HAagentdataX11": #Bib 111, 611,711,811 Aukt 111, 411, 511
     {
      "match",  [
      {
