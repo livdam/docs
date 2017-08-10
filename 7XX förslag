@@ -1,10 +1,10 @@
 #Jag har inte letat efter standardiserade vokabulär, utan använt rubrik i marc21 när jag lagt till eller ändra
 "HAtitledetails": {
-   # Nu endast 240, 243 som använder, men kan användas mer. Har tagit bort $e som är olika. $k har fått #annan term utifrån marc21, tydligare. t 
+   # Nu endast 240, 243 som använder, men kan användas mer. Har tagit bort $d som är olika. $k har fått #annan term utifrån marc21, tydligare. t 
       "$f": {"property": "date"},
       "$g": {"property": "comment"},
-      "$h": {"property": "medium"},
-	  "$i":	{"property": "relationshipInfo"},
+      "$h": {"property": "medium"}, # LC använder inte
+	  "$i":	{"property": "relationshipInfo"}, # LC använder inte
       "$k": {"addProperty": "formSubheading"},
       "$l": {"link": "language", "resourceType": "Language", "property": "label"},
       "$m": {"addProperty": "musicPerformanceMedium"},
@@ -15,14 +15,7 @@
       "$r": {"property": "musicKey"},
       "$s": {"property": "version"},
 	  "$t":	{"property": "title" },
-	  "$5":	{"property": "institutionField"},
-	  "$6":	{"property": "linkage"},
-	  "$7": {"property": "controlSubfield"},
-	  "$8": {"property": "fieldLinkSequenceNumber"},
-      "$0": {
-        "addLink": "describedBy", "resourceType": "Record", "property": "controlNumber",
-        "uriTemplate": "http://libris.kb.se/auth/{_}"
-      }
+	  
     },
 
 
@@ -35,7 +28,7 @@
       },
       "$4": {"addLink": "role", "property": "code", "uriTemplate": "{code}", "TODO:mapping": "relatorCode"},
       "$e": {"addLink": "role", "property": "label"}
-    },
+    }, # Från Marcframe. Behöver diskutera hur vi hanterar contribution
     
 "relationdata": {
  	"$4": {"addLink": "role", "property": "code", "uriTemplate": "{code}", "TODO:mapping": "relatorCode"},
@@ -44,10 +37,14 @@
 #Fördel med relationdata är att den kan användas även på Bib 6XX och Aukt 1XX, 4XX, 5XX där troligen inte "contribution" ska användas
 
 "linkdata": {
-	"$0" :
-	"$5" :
-	"$6" :
-	}
+	"$5":	{"property": "institutionField"}, #Kanske inte här?
+	  "$6":	{"property": "linkage"},
+	  "$7": {"property": "controlSubfield"}, # Kanske inte här?
+	  "$8": {"property": "fieldLinkSequenceNumber"},
+      "$0": {
+        "addLink": "describedBy", "resourceType": "Record", "property": "controlNumber",
+        "uriTemplate": "http://libris.kb.se/auth/{_}"
+      }
 	}, #Jämför "computeLinks" Bättre så??
 
     "HAagentdataX00":  #Bib 100,700, 600, 800, Aukt 100, 400, 500
