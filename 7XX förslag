@@ -128,19 +128,19 @@
      "match",  [
      {
         "when": i1=0",
-	 "resourceType": "invertedName",
-          "$a": {"about": "_:agent", "property": "meeting", "required": true}
+	 "resourceType": "meeting",
+          "$a": {"about": "_:agent", "property": "invertedName", "required": true}
 		
         },
         "when": i1=1",
-	"resourceType": "jurisdictionName",
-          "$a": {"about": "_:agent", "property": "meeting", "required": true}
+	"resourceType": "meeting",
+          "$a": {"about": "_:agent", "property": "jurisdictionName", "required": true}
 			
         },
 		
         "when": i1=2",
-          "resourceType": "directName",
-          "$a": {"about": "_:agent", "property": "meeting", "required": true}
+          "resourceType": "meeting",
+          "$a": {"about": "_:agent", "property": "directName", "required": true}
 	
       }
 	],  
