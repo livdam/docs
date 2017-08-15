@@ -4,7 +4,7 @@
       "$f": {"property": "date"}, #bf:originDate
       "$g": {"property": "comment"}, bf#genreForm
       "$h": {"property": "medium"}, # LC använder inte
-	  "$i":	{"property": "relationshipInfo"}, # LC säger ignore, men även bf:relatedTo  som relation. Vi tar bort härifrån
+	  "$i":	{"property": "relationshipInfo"}, # LC säger ignore, men även bf:relatedTo  som relation. Vi tar bort härifrån eftersom ej del av titel
       "$k": {"addProperty": "formSubheading"}, # bf:natureOfContent
       "$l": {"link": "language", "resourceType": "Language", "property": "label"},
       "$m": {"addProperty": "musicPerformanceMedium"}, #bf:musicMedium
@@ -163,25 +163,34 @@
 
     "HA700": {
       "aboutEntity": "?work",
-      "include":  "HAagentdata100,700,800", "HAtitledetails"
-      "resourceType": "Additional",
-      "TODO:if-resourceType-ignoreOnRevertInFavourOf": "100", #Vad gör denna?
-      "match-code": {
-        "t": {
+      "include":  "HAagentdataX00", "HAtitledetails"
+      "match": [
+      {
+        "when": "$t" & i2=2",
+	"addLink:" "hasPart",
+	"resourceType": "Work",
+	 "addLink": "contribution",
+          "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
           "pendingResources": {
-            "_:work": {"link": "agent", "resourceType": "UniformWork", "embedded": false},
-            "_:agent": {"about": "_:work", "link": "attributedTo", "resourceType": "Person", "embedded": false}
+            "_:agent": {
+              "about": "_:contribution",
+              "link": "agent",
+              "resourceType": "Person",
+              "embedded": false
           },
-          "$t": {"about": "_:work", "property": "title"},
-          "$l": {"about": "_:work", "link": "language", "resourceType": "Language", "property": "label"}
+        
+        }
+
         }
       },
-      "TODO:match-i2": {
-        "2": {
-          "NOTE": "analytiskt bidrag",
-          "TODO:addLink": "hasPart"
-        }
-      },
+      {
+      "when": "$t",
+      "addLink": "relatedTo",
+      "resourceType": "Relationship"  # måste ses över
+      
+      
+      
+      
       "_spec": [
         {
           "source": {"700":
