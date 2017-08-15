@@ -206,9 +206,9 @@
           "result": {"mainEntity": {
             "instanceOf": {
               "@type": "Text",
-              "qualifiedAttribution": [
+              "contribution": [  ##"qualifiedAttribution" måste vara kvarleva, bör vara "contribution"
                 {
-                  "@type": "Additional",
+                  "@type": "Contribution", 
                   "agent": {"@type": "Person",
                     "familyName":  "Pietilä",
                     "givenName":  "Tuulikki",
@@ -227,7 +227,7 @@
           "result": {"mainEntity": {
             "instanceOf": {
               "@type": "Text",
-              "qualifiedAttribution": [
+              "contribution": [
                 {
                   "@type": "Additional",
                   "agent": {
@@ -235,7 +235,7 @@
                     "title": "Anteckningar från en ö",
                     "attributedTo": {"@type": "Person",
                       "familyName":  "Jansson", "givenName":  "Tove"}
-                  }
+                  }#Konstigt exempel. Bib id 7804351 Ta bort detta
                 }
               ]
             }
@@ -243,7 +243,53 @@
         }
       ]
     },
-
+"source": {  # Under arbete
+            "700": {"ind1": "1", "ind2": " ", "subfields": [
+              {"a": "Hammarberg, Lena"},
+              {"t": "En sund själ i en sund kropp"},
+          ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "relationship": [
+                {
+                  "@type": "Additional",  ##Vad gör här?
+                  "agent": {
+                    "@type": "Work",
+                    "title": "En sund själ i en sund kropp",
+                    "attributedTo": {"@type": "Person",
+                      "familyName":  "Hammarberg", "givenName":  "Lena"}, #Ny post som jag ber Fredrik lägga in i Dev
+		      
+      }
+              ]
+            }
+          }}
+        }
+      ]
+    },
+"source": {
+            "700": {"ind1": "1", "ind2": "2", "subfields": [  	a Bach, Johann Sebastian,d 1685-1750.t Konsert,m cembalo, stråkorkester,n BWV 1057,r F-dur
+              {"a": "Bach, Johann Sebastian"},
+              {"t": "Konsert"},
+	      {"m": "cembalo, stråkorkester},
+	      {"n": "BMV 1057"},
+	      {"r": "F-dur"}, ## Vill vi få med ISBD-tecken?
+          ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "contribution": [
+                {
+                  "@type": "Additional",  ##Vad gör här?
+                  "agent": {
+                    "@type": "Work",
+                    "title": "Konsert",
+		    "musicMedium": "cembalo, stråkorkester",
+		    "partNumber": "BMV",
+		    "musicKey": "F-dur",
+                    "attributedTo": {"@type": "Person",
+		      "familyName":  "Hammarberg", "givenName":  "Lena"}
+		   
     "HA110": {
       "aboutEntity": "?work",
       "resourceType": "Organization",
