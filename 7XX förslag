@@ -97,18 +97,18 @@
       "match": [
       {
         "when": "i1=0",
-	"resourceType": "invertedName", # Kräver pendingResources?
-          "$a": {"about": "_:agent", "property": "corporateName", "required": true}
+	"resourceType": "organization", # Kräver pendingResources?
+          "$a": {"about": "_:agent", "property": "invertedName", "required": true}
 	},
 	  #Jämför 110
 	{
         "when": i1=1",
-	"resourceType": "jurisdictionName",
-          "$a": {"about": "_:agent", "property": "corporateName", "required": true}
+	"resourceType": "jurisdiction",
+          "$a": {"about": "_:agent", "property": "jurisdictionName", "required": true}
 	},
 	 "when" i1=2",
-          "resourceType": "directName",
-          "$a": {"about": "_:agent", "property": "corporateName", "required": true}
+          "resourceType": "rganization",
+          "$a": {"about": "_:agent", "property": "directName", "required": true}
 	}
 	],  
       "$a": {"required": true},
