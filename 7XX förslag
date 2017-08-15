@@ -186,7 +186,12 @@
       {
       "when": "$t",
       "addLink": "relatedTo",
-      "resourceType": "Relationship"  # måste ses över
+      "resourceType": "Relationship" , # måste ses över
+      },
+      {
+       "when": null.
+       "resourceType": "Contribution",??????
+       "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
       
       
       
