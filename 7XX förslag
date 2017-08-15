@@ -4,7 +4,7 @@
       "$f": {"property": "date"}, #bf:originDate
       "$g": {"property": "comment"}, bf#genreForm
       "$h": {"property": "medium"}, # LC använder inte
-	  "$i":	{"property": "relationshipInfo"}, # LC säger ignore, men även bf:relatedTo  som relation
+	  "$i":	{"property": "relationshipInfo"}, # LC säger ignore, men även bf:relatedTo  som relation. Vi tar bort härifrån
       "$k": {"addProperty": "formSubheading"}, # bf:natureOfContent
       "$l": {"link": "language", "resourceType": "Language", "property": "label"},
       "$m": {"addProperty": "musicPerformanceMedium"}, #bf:musicMedium
