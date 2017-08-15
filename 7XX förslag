@@ -1,17 +1,17 @@
 #Jag har inte letat efter standardiserade vokabulär, utan använt rubrik i marc21 när jag lagt till eller ändra
 "HAtitledetails": {
    # Nu endast 240, 243 som använder, men kan användas mer. Har tagit bort $d som är olika. $k har fått #annan term utifrån marc21, tydligare. t 
-      "$f": {"property": "date"},
-      "$g": {"property": "comment"},
+      "$f": {"property": "date"}, #bf:originDate
+      "$g": {"property": "comment"}, bf#genreForm
       "$h": {"property": "medium"}, # LC använder inte
 	  "$i":	{"property": "relationshipInfo"}, # LC använder inte
-      "$k": {"addProperty": "formSubheading"},
+      "$k": {"addProperty": "formSubheading"}, # bf:natureOfContent
       "$l": {"link": "language", "resourceType": "Language", "property": "label"},
-      "$m": {"addProperty": "musicPerformanceMedium"},
+      "$m": {"addProperty": "musicPerformanceMedium"}, #bf:musicMedium
       "$n": {"addProperty": "partNumber", "interpunctionChars": ","}, #tappar i specificitet, work, #
 	  #meeting. Nu lagt tilll X10 och X11 och för X00 är det här en TODO - fundera #
-      "$o": {"property": "musicArrangement"},
-      "$p": {"addProperty": "partTitle", "interpunctionChars": "/"}, #??#
+      "$o": {"property": "musicArrangement"}, #bf:version
+      "$p": {"addProperty": "partTitle", "interpunctionChars": "/"}, #?? ; bf:partName
       "$r": {"property": "musicKey"},
       "$s": {"property": "version"},
 	  "$t":	{"property": "title" },
