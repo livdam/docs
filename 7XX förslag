@@ -163,7 +163,7 @@
 
     "HA700": {
       "aboutEntity": "?work",
-      "include":  "HAagentdataX00", "HAtitledetails"
+      "include":  "HAagentdataX00", "HAtitledetails",
       "match": [
       {
         "when": "$t" & i2=2",
@@ -190,7 +190,7 @@
       },
       {
        "when": null.
-       "resourceType": "Contribution",??????
+       "resourceType": "Contribution",
        "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
       
       
