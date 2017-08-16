@@ -304,21 +304,51 @@
     "HA110": {
       "aboutEntity": "?work",
       "resourceType": "Organization",
-      "include": "HAagentdataX10", "relationdata","linkdata",
+      "include": "HAagentdataX10", 
       "addLink": "contribution",
-      "TODO": [
-        "change splitValueProperties to work on result, to handle match combo",
-        "groupByRepetitionAndPunctuationPattern ($n $d ...)?" # Vad ska göra??
-      ],
+      "match": [
+        {
+          "when": "$b",
+          "$a": {"link": "isPartOf", "resourceType": "Organization", "property": "name"},
+          "$b": {"property": "name"}
+        },
+	],
+	
+     
        "$a": {"required": true},
-      {
-      "computeLinks": {"use": "$4", "mapping": "relatorCode"},
+      
+      "computeLinks": {"use": "$4", "mapping": "relatorCode"}, #Tittar vi på sen $e, $4
       "i1": {"marcDefault": "2"},
      
       "$0": {"addLink": "identifiedBy", "property": "value"},
-      "TODO:$c": "Compare with 111 $c", #De är lika vad vill Niklas göra?
-      "TODO:$d": "Compare with 111 $d" #De är lika vad vill Niklas göra?
-    }, 
+      "_spec": [
+      {
+      "source": {
+            "110": {"ind1": "1",  "subfields": [
+              {"a": "Sverige"},
+              {"b": "Rikets allmänna kartverk"}
+          ]}},
+          "result": {"mainEntity": {
+              "@type": "Jurisdiction",
+              "jurisdictionName": "Stockholm",
+	      "subordinateUnit": "Rikets allmänna kartverk"
+            }
+	    }
+    },
+      {
+      "source": {
+            "110": {"ind1": "2",  "subfields": [ Université de Paris. ‡b Faculté de médecine.
+              {"a": "Université de Paris"},
+              {"b": "Faculté de médecine"}
+          ]}},
+          "result": {"mainEntity": {
+              "@type": "Jurisdiction",
+              "jurisdictionName": "Université de Paris",
+	      "subordinateUnit": "Faculté de médecine"
+            }
+	    }
+    },
+  
 
     "HA111": {
       "include": "HAagentdataX11",
