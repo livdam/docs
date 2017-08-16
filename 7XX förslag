@@ -113,7 +113,7 @@
 	],  
       "$a": {"required": true},
       "$b": {"about": "_:agent", "property": "subordinateUnit"},
-      "$c": {"about": "_:agent", "addProperty": "location"}, # Jämför "$c": {"link": "location", "resourceType": "Place", "property": "label",
+      "$c": {"about": "_:agent", "addProperty": "place"}, # Jämför "$c": {"link": "place", "resourceType": "Place", "property": "label",
       "$d": {"about": "_:agent", "property": "date"},
       "$n": {"about": "_:agent", "property": "numberOfPartSectionMeeting"},
       "$g": {"about": "_:agent", "property": "comment"}, ## Miscellaneous information. Name of the other party to a treaty in a name/title field; a subelement that is not more appropriately contained in subfield $c, $d, or $n in a meeting entered under a corporate name; or a data element that is not more appropriately contained in another defined subfield in any other type of corporate name field.
@@ -145,7 +145,7 @@
       }
 	],  
       "$a": {"required": true},
-      "$c": {"about": "_:agent", "addProperty": "location"},
+      "$c": {"about": "_:agent", "addProperty": "place"},
       "$d": {"about": "_:agent", "property": "date"},# dateMeeting
 	"$e": {"about":"_:agent", "property": "subordinateUnit"},
 	 "$g":	{"about": "_:agent", "property": "comment"},
@@ -309,8 +309,10 @@
       "match": [
         {
           "when": "$b",
-          "$a": {"link": "isPartOf", "resourceType": "Organization", "property": "name"},
+	  "$a": {"link": "isPartOf", "resourceType": "Organization", "property": "name"},
           "$b": {"property": "name"}
+        },
+          
         },
 	],
 	
@@ -351,10 +353,11 @@
   
 
     "HA111": {
-      "include": "HAagentdataX11",
+     "aboutEntity": "?work",
       "resourceType": "Meeting",
-      "$c": {"link": "location", "resourceType": "Place", "property": "label"}, # Tas bort,  jämför HAagentdataX11
-      "$d": {"property": "date"} # tas bort,  jämför HAagentdataX11
+      "include": "HAagentdataX11",
+      
+   
     },
     "HA710": {"include ": "HAagentdata110,710,810" , "HAtitledetails"},
 	
