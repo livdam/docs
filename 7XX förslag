@@ -206,7 +206,7 @@
           "result": {"mainEntity": {
             "instanceOf": {
               "@type": "Text",
-              "contribution": [  ##"qualifiedAttribution" måste vara kvarleva, bör vara "contribution"
+              "contribution": [ 
                 {
                   "@type": "Contribution", 
                   "agent": {"@type": "Person",
@@ -227,15 +227,17 @@
           "result": {"mainEntity": {
             "instanceOf": {
               "@type": "Text",
-              "contribution": [
+              "relationship": [
                 {
-                  "@type": "Additional",
+                  "@type": "Relationship",
                   "agent": {
                     "@type": "UniformWork",
                     "title": "Anteckningar från en ö",
-                    "attributedTo": {"@type": "Person",
-                      "familyName":  "Jansson", "givenName":  "Tove"}
-                  }#Konstigt exempel. Bib id 7804351 Ta bort detta
+                    "contribution": [
+                      {
+                        "@type": "PrimaryContribution",
+                        "agent": {"@type": "Person", "familyName":  "Jansson", "givenName":  "Tove"}
+                  }#Konstigt exempel, dvs hittar inte en post i Libris som passar med Anteckningar från en ö i 700 t
                 }
               ]
             }
@@ -253,12 +255,13 @@
               "@type": "Text",
               "relationship": [
                 {
-                  "@type": "Additional",  ##Vad gör här?
+                  "@type": "Relationship", # bf:relatedTo (med alla underindelningar), bflc:Relation och bflc:Relationship
                   "agent": {
                     "@type": "Work",
                     "title": "En sund själ i en sund kropp",
                     "attributedTo": {"@type": "Person",
-                      "familyName":  "Hammarberg", "givenName":  "Lena"}, #Ny post som jag ber Fredrik lägga in i Dev
+                      "familyName":  "Hammarberg", "givenName":  "Lena"}, #Ny post som jag ber Fredrik lägga in i Dev. Bib id 11222757
+		      
 		      
       }
               ]
@@ -293,34 +296,17 @@
     "HA110": {
       "aboutEntity": "?work",
       "resourceType": "Organization",
-      "link": "HAagentdataX10", "relationdata","linkdata",
+      "include": "HAagentdataX10", "relationdata","linkdata",
       "addLink": "contribution",
       "TODO": [
         "change splitValueProperties to work on result, to handle match combo",
-        "groupByRepetitionAndPunctuationPattern ($n $d ...)?" # Vad gör??
+        "groupByRepetitionAndPunctuationPattern ($n $d ...)?" # Vad ska göra??
       ],
-      "match": [
-        {
-          "when": "$b",
-          "$a": {"link": "isPartOf", "resourceType": "Organization", "property": "name"},
-          "$b": {"property": "name"} # Säger detta att a är namn och b underordnat namn??
-        },
-        {
-          "when": "i1=0",
-          "$a": {"property": "name", "required": true}
-        }, # Detta finns redan i agendata
-        {
-          "when": "i1=1",
-          "$a": {
-            "property": "name", "splitValuePattern": "([^,]+)(?:,\\s*([^,]+))",
-            "splitValueProperties": ["familyName", "givenName"], "rejoin": ", ",
-            "required": true 
-          }
-        }
-      ],
+       "$a": {"required": true},
+      {
       "computeLinks": {"use": "$4", "mapping": "relatorCode"},
       "i1": {"marcDefault": "2"},
-      "$a": {"property": "name"},
+     
       "$0": {"addLink": "identifiedBy", "property": "value"},
       "TODO:$c": "Compare with 111 $c", #De är lika vad vill Niklas göra?
       "TODO:$d": "Compare with 111 $d" #De är lika vad vill Niklas göra?
