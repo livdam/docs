@@ -177,10 +177,8 @@
               "link": "agent",
               "resourceType": "Person",
               "embedded": false
-          },
-        
+          },        
         }
-
         }
       },
       {
@@ -193,9 +191,7 @@
        "resourceType": "Contribution",
        "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
       
-      
-      
-      
+            
       "_spec": [
         {
           "source": {"700":
@@ -229,7 +225,7 @@
               "@type": "Text",
               "relationship": [
                 {
-                  "@type": "Relationship",
+                  "@type": "Relationship", # bf:relatedTo (med alla underindelningar), bflc:Relation och bflc:Relationship
                   "agent": {
                     "@type": "UniformWork",
                     "title": "Anteckningar från en ö",
@@ -237,7 +233,7 @@
                       {
                         "@type": "PrimaryContribution",
                         "agent": {"@type": "Person", "familyName":  "Jansson", "givenName":  "Tove"}
-                  }#Konstigt exempel, dvs hittar inte en post i Libris som passar med Anteckningar från en ö i 700 t
+                  }
                 }
               ]
             }
@@ -245,53 +241,65 @@
         }
       ]
     },
-"source": {  # Under arbete
-            "700": {"ind1": "1", "ind2": " ", "subfields": [
-              {"a": "Hammarberg, Lena"},
-              {"t": "En sund själ i en sund kropp"},
-          ]}},
-          "result": {"mainEntity": {
-            "instanceOf": {
-              "@type": "Text",
-              "relationship": [
-                {
-                  "@type": "Relationship", # bf:relatedTo (med alla underindelningar), bflc:Relation och bflc:Relationship
-                  "agent": {
-                    "@type": "Work",
-                    "title": "En sund själ i en sund kropp",
-                    "attributedTo": {"@type": "Person",
-                      "familyName":  "Hammarberg", "givenName":  "Lena"}, #Ny post som jag ber Fredrik lägga in i Dev. Bib id 11222757
-		      
-		      
-      }
-              ]
-            }
-          }}
-        }
-      ]
-    },
+
 "source": {
-            "700": {"ind1": "1", "ind2": "2", "subfields": [  	a Bach, Johann Sebastian,d 1685-1750.t Konsert,m cembalo, stråkorkester,n BWV 1057,r F-dur
+            "700": {"ind1": "1", "ind2": "2", "subfields": [  	
               {"a": "Bach, Johann Sebastian"},
               {"t": "Konsert"},
 	      {"m": "cembalo, stråkorkester},
 	      {"n": "BMV 1057"},
-	      {"r": "F-dur"}, ## Vill vi få med ISBD-tecken?
+	      {"r": "F-dur"}, ## Vill vi få med ISBD-tecken? a Bach, Johann Sebastian,d 1685-1750.t Konsert,m cembalo, stråkorkester,n BWV 1057,r F-dur
           ]}},
           "result": {"mainEntity": {
             "instanceOf": {
               "@type": "Text",
               "contribution": [
                 {
-                  "@type": "Additional",  ##Vad gör här?
-                  "agent": {
+                  "@type": "Contribution",  
+                  "title": {
                     "@type": "Work",
                     "title": "Konsert",
 		    "musicMedium": "cembalo, stråkorkester",
 		    "partNumber": "BMV",
 		    "musicKey": "F-dur",
                     "attributedTo": {"@type": "Person",
-		      "familyName":  "Hammarberg", "givenName":  "Lena"}
+		      "familyName":  "Bach", "givenName":  "Johann Sebastian"}
+                }
+              ]
+            }
+          },
+	  {
+          "source": {
+            "700": {"ind1": "1", "ind2": "2", "subfields": [
+              {"i": "Parafraserar"},
+              {"a": "Jansson, Tove"},
+              {"t": "Anteckningar från en ö"}
+          ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "relationship": [
+                {
+                  "@type": "PartitiveRelationship",
+                  "relation": [{"label": "Parafraserar"}],
+                  "entity": {
+                    "@type": "Work",
+                    "title": "Anteckningar från en ö",
+                    "contribution": [
+                      {
+                        "@type": "Contribution",
+                        "agent": {"@type": "Person", "familyName":  "Jansson", "givenName":  "Tove"}
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }}
+        }
+      ]
+    },
+       
 		   
     "HA110": {
       "aboutEntity": "?work",
