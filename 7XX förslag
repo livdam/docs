@@ -242,7 +242,7 @@
       ]
     },
 
-"source": {
+"source": { #Det här exemplet behöver titledetails
             "700": {"ind1": "1", "ind2": "2", "subfields": [  	
               {"a": "Bach, Johann Sebastian"},
               {"t": "Konsert"},
@@ -312,9 +312,10 @@
 	  "$a": {"link": "isPartOf", "resourceType": "Organization", "property": "name"},
           "$b": {"property": "name"}
         },
-          
+        ],  
         },
-	],
+	
+	
 	
      
        "$a": {"required": true},
@@ -357,6 +358,38 @@
       "resourceType": "Meeting",
       "include": "HAagentdataX11",
       
+        "computeLinks": {"use": "$4", "mapping": "relatorCode"}, #Ska vi titta på 
+      "i1": {"marcDefault": "2"},
+      "$0": {"addLink": "identifiedBy", "property": "value"}, 
+            },
+ "source": { #Det här exemplet behöver titledetails
+            "111": { "subfields": [  	
+              {"a": "World Peace Conference"},
+              {"c": "Paris, France"},
+	      {"d": "1959},
+	      {"e": "BMV 1057"},
+	      {"n": "F-dur"}, 
+          {"g":
+	  {"q":
+	  ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "contribution": [
+                {
+                  "@type": "Contribution",  
+                  "title": {
+                    "@type": "Work",
+                    "title": "Konsert",
+		    "musicMedium": "cembalo, stråkorkester",
+		    "partNumber": "BMV",
+		    "musicKey": "F-dur",
+                    "attributedTo": {"@type": "Person",
+		      "familyName":  "Bach", "givenName":  "Johann Sebastian"}
+                }
+              ]
+            }
+          },
    
     },
     "HA710": {"include ": "HAagentdata110,710,810" , "HAtitledetails"},
