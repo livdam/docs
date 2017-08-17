@@ -98,17 +98,17 @@
       "match": [
       {
         "when": "i1=0",
-	"resourceType": "organization", # Kräver pendingResources?
+	"resourceType": "Jurisdiction", # Kräver pendingResources?
           "$a": {"about": "_:agent", "property": "invertedName", "required": true}
 	},
 	{
         "when": i1=1",
-	"resourceType": "jurisdiction",
-          "$a": {"about": "_:agent", "property": "jurisdictionName", "required": true}
+	"resourceType": "Jurisdiction",
+          "$a": {"about": "_:agent", "property": "name", "required": true}
 	},
 	 {
 	 "when" i1=2",
-          "resourceType": "rganization",
+          "resourceType": "Jurisdictionn",
           "$a": {"about": "_:agent", "property": "directName", "required": true}
 	},
 	{
