@@ -100,16 +100,21 @@
 	"resourceType": "organization", # Kräver pendingResources?
           "$a": {"about": "_:agent", "property": "invertedName", "required": true}
 	},
-	  #Jämför 110
 	{
         "when": i1=1",
 	"resourceType": "jurisdiction",
           "$a": {"about": "_:agent", "property": "jurisdictionName", "required": true}
 	},
+	 {
 	 "when" i1=2",
           "resourceType": "rganization",
           "$a": {"about": "_:agent", "property": "directName", "required": true}
-	}
+	},
+	{
+          "when": "$b",
+	  "$a": {"link": "isPartOf", "resourceType": "Organization", "property": "name"},
+          "$b": {"property": "name"}
+        }, 
 	],  
       "$a": {"required": true},
       "$b": {"about": "_:agent", "property": "subordinateUnit"},
@@ -117,9 +122,8 @@
       "$d": {"about": "_:agent", "property": "date"},
       "$n": {"about": "_:agent", "property": "numberOfPartSectionMeeting"},
       "$g": {"about": "_:agent", "property": "comment"}, ## Miscellaneous information. Name of the other party to a treaty in a name/title field; a subelement that is not more appropriately contained in subfield $c, $d, or $n in a meeting entered under a corporate name; or a data element that is not more appropriately contained in another defined subfield in any other type of corporate name field.
-      "$c": {"link": "location", "resourceType": "Place", "property": "label"},
-     
-    	"$u": {"about": "_:agent", "property": "affiliation"}
+      "$c": {"link": "place", "resourceType": "Place", "property": "label"},
+   	"$u": {"about": "_:agent", "property": "affiliation"}
 	# Sortering abcdng - spelar det roll i vilken ordning de listas?
     },
    
@@ -306,13 +310,7 @@
       "resourceType": "Organization",
       "include": "HAagentdataX10", 
       "addLink": "contribution",
-      "match": [
-        {
-          "when": "$b",
-	  "$a": {"link": "isPartOf", "resourceType": "Organization", "property": "name"},
-          "$b": {"property": "name"}
-        },
-        ],  
+      
         },
 	
 	
