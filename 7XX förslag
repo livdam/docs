@@ -360,30 +360,52 @@
       "i1": {"marcDefault": "2"},
       "$0": {"addLink": "identifiedBy", "property": "value"}, 
             },
- "source": { #Det här exemplet behöver titledetails
-            "111": { "subfields": [  	
-              {"a": "World Peace Conference"},
-              {"c": "Paris, France"},
-	      {"d": "1959},
-	      {"e": "BMV 1057"},
-	      {"n": "F-dur"}, 
-          {"g":
-	  {"q":
+ "_spec": [
+  "source": { 
+            "111": { "ind1": "1", "subfields": [  	
+              {"a": "Paris"},
+              {"q": "Peace Conference"},
+	      {"d": "1919},
+	       
+         
 	  ]}},
           "result": {"mainEntity": {
             "instanceOf": {
               "@type": "Text",
               "contribution": [
                 {
-                  "@type": "Contribution",  
-                  "title": {
-                    "@type": "Work",
-                    "title": "Konsert",
-		    "musicMedium": "cembalo, stråkorkester",
-		    "partNumber": "BMV",
-		    "musicKey": "F-dur",
-                    "attributedTo": {"@type": "Person",
-		      "familyName":  "Bach", "givenName":  "Johann Sebastian"}
+                  "@type": "PrimaryContribution",  
+                    "agent": {"@type": "Meeting",
+                    "directName": "World Peace Conference",
+		    "place": "Paris, France",
+		    "dateMeeting": "1959",
+		    "numberOfPartSectionMeeting": 1st"}
+                   
+                }
+              ]
+            }
+          },
+ "source": { 
+            "111": { "ind1": "2", "subfields": [  	
+              {"a": "World Peace Conference"},
+              {"c": "Paris, France"},
+	      {"d": "1959},
+	      {"e": "Delegation from Sweden"},
+	      {"n": "1st"}, 
+         
+	  ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "contribution": [
+                {
+                  "@type": "PrimaryContribution",  
+                    "agent": {"@type": "Meeting",
+                    "directName": "World Peace Conference",
+		    "place": "Paris, France",
+		    "dateMeeting": "1959",
+		    "numberOfPartSectionMeeting": 1st"}
+                   
                 }
               ]
             }
