@@ -1,22 +1,39 @@
 #Jag har letat i Bibframe efter standardiserade vokabulär och  använt rubrik i marc21 när jag nte hittat något.
 "HAtitledetails": {
-   # Nu endast 240, 243 som använder, men kan användas mer. Har tagit bort $d som är olika. $k har fått #annan term utifrån marc21, tydligare. t 
+   # Nu endast 240, 243 som använder, men kan användas mer. Har tagit bort $d som inte hör till titel. $k har fått #annan term utifrån marc21, tydligare. t 
       "$f": {"property": "date"}, #bf:originDate
-      "$g": {"property": "comment"}, bf#genreForm
+      "$g": {"property": "comment"}, bf#genreForm  #Behöver vi titta på
       "$h": {"property": "medium"}, # LC använder inte
-	  "$i":	{"property": "relationshipInfo"}, # LC säger ignore, men även bf:relatedTo  som relation. Vi tar bort härifrån eftersom ej del av titel
+	 
       "$k": {"addProperty": "formSubheading"}, # bf:natureOfContent
       "$l": {"link": "language", "resourceType": "Language", "property": "label"},
-      "$m": {"addProperty": "musicPerformanceMedium"}, #bf:musicMedium
-      "$n": {"addProperty": "partNumber", "interpunctionChars": ","}, #tappar i specificitet, work, #
-	  #meeting. Nu lagt tilll X10 och X11 och för X00 är det här en TODO - fundera #
-      "$o": {"property": "musicArrangement"}, #bf:version
-      "$p": {"addProperty": "partTitle", "interpunctionChars": "/"}, #?? ; bf:partName
+      "$m": {"addProperty": "musicMedium"}, #bf:musicMedium
+      "$n": {"addProperty": "partNumber", "interpunctionChars": ","}, 
+      "$o": {"property": "musicArrangement"}, #bf:version (Term or terms that identify works such as arranged for music, vulgate for religious work, etc.) - diskutera med Elisabet
+      "$p": {"addProperty": "partName", "interpunctionChars": "/"}, #?? vad gör interpunctionChars? 
       "$r": {"property": "musicKey"},
-      "$s": {"property": "version"},
-	  "$t":	{"property": "title" },
-	  
+      "$s": {"property": "version"}, # Ex.  $s9th ed. ; Passar inte med bf:version. Troligen inte så vanlig - skippa tillsvidare, kolla statistik för 700$s 710, 711
+	"$t":	{"property": "title" },
+	
+	# NOTE "$i":	{"property": "relationshipInfo"}, # LC säger ignore, men diskuteraräven bf:relatedTo  som relation. Vi tar bort härifrån eftersom ej del av titel  
     },
+    "HAtitledetails1XX,7XX"
+     "$f": {"property": "date"}, #bf:originDate
+      "$g": {"property": "comment"}, bf#genreForm  #Behöver vi titta på
+      "$h": {"property": "medium"}, # LC använder inte, men vid återkonvertering vill nog biblioteken ha
+	 
+      "$k": {"addProperty": "formSubheading"}, # bf:natureOfContent (Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system.)
+      "$l": {"link": "language", "resourceType": "Language", "property": "label"},
+      "$m": {"addProperty": "musicMedium"}, #bf:musicMedium
+      "$n": {"addProperty": "partNumber", "interpunctionChars": ","}, 
+      "$o": {"property": "musicArrangement"}, #bf:version (Term or terms that identify works such as arranged for music, vulgate for religious work, etc.) - diskutera med Elisabet
+      "$p": {"addProperty": "partName", "interpunctionChars": "/"}, #?? vad gör interpunctionChars? 
+      "$r": {"property": "musicKey"},
+      "$s": {"property": "version"}, # Ex.  $s9th ed. ; Passar inte med bf:version. Troligen inte så vanlig - skippa tillsvidare, kolla statistik för 700$s 710, 711
+	"$t":	{"property": "title" },
+	
+	#Från structuredtitle:  "$n": {"aboutNew": "_:titlePart", "property": "partNumber", "punctuationChars": ","},
+      "$p": {"about": "_:titlePart", "property": "partName", "punctuationChars": "/"}  ---Bra sätt att skriva?
 
 
     "contributiondata": {
