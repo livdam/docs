@@ -66,8 +66,8 @@
         },
 	{
         "when": "i1=3",
-          "FIXME: @update pendingResources": {
-          "@update _:agent": {"resourceType": "Family"}
+          "pendingResources": {
+          "_:agent": {"link": "agent", "resourceType": "Family"}
           },
           "$a": {"about": "_:agent", "property": "nameOfTheFamily", "required": true}
        
@@ -76,7 +76,7 @@
       
       "$a": {"required": true},
       "$b": {"about": "_:agent", "property": "numeration"},
-      "$c": {"about": "_:agent", "addProperty": "titleOther"}, #Gillar inte "qualifyingNote"
+      "$c": {"about": "_:agent", "addProperty": "titleOther"}, 
       "$d": {
         "about": "_:agent",
         "property": "lifeSpan",
@@ -86,14 +86,14 @@
           "allowEmpty": true
       },
 
-      "$j": {"about": "_:agent", "property": "comment"},## attribution qualifyer (Formathandboken: Attribuerande tillägg) ex Pupil of
-      "$q": {"about": "_:agent", "property": "label"}, # fullerFormName ex "(Isabella Mary)"
+      "$j": {"about": "_:agent", "property": "attribution qualifyee"}, ##  (Formathandboken: Attribuerande tillägg) ex Pupil of
+      "$q": {"about": "_:agent", "property": "fullerFormName"}, # fullerFormName ex "(Isabella Mary)"
       "$u": {"about": "_:agent", "property": "affiliation"},
 	
     }, 
     ##Sortering ska göras efter inläggningsordning i listade delfält, dvs abcdjq - $u affiliation innehåller en adress, typ gatuadress, 
     
-    "HAagentdataX10,710,810": #Bib 110,710, 610, 810, Aukt 110, 410, 510
+    "HAagentdataX10": #Bib 110,710, 610, 810, Aukt 110, 410, 510
     {
       "match": [
       {
