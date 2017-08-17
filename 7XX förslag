@@ -310,12 +310,15 @@
       "aboutEntity": "?work",
       "resourceType": "Organization",
       "include": "HAagentdataX10", 
-      "addLink": "contribution",
+     "pendingResources": {
+            "_:contribution": {
+              "addLink": "contribution",
+              "resourceType": "PrimaryContribution",
+              "embedded": true
       
         },
 	
-	
-	
+		
      
        "$a": {"required": true},
       
@@ -371,6 +374,11 @@
      "aboutEntity": "?work",
       "resourceType": "Meeting",
       "include": "HAagentdataX11",
+      "pendingResources": {
+            "_:contribution": {
+              "addLink": "contribution",
+              "resourceType": "PrimaryContribution",
+              "embedded": true
       
         "computeLinks": {"use": "$4", "mapping": "relatorCode"}, #Ska vi titta på 
       "i1": {"marcDefault": "2"},
