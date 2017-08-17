@@ -35,7 +35,7 @@
       "$e": {"addLink": "role", "property": "label"}
       },
 #Fördel med relationdata är att den kan användas även på Bib 6XX och Aukt 1XX, 4XX, 5XX där troligen inte "contribution" ska användas
- # 	 "$j": "about":"_:agent", "property": "roleNote"}, #"relatorTerm" - klartext istället för kod#
+ # 	 "$j": "about":"_:agent", "property": "roleNote"}, #"relatorTerm" - klartext istället för kod i 111, 711 etc#
  
 "linkdata": {
 	"$5":	{"property": "institutionField"}, #Kanske inte här?
