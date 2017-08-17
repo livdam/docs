@@ -325,7 +325,7 @@
       "$0": {"addLink": "identifiedBy", "property": "value"},
       "_spec": [
       
-      Friedrich Witte (företag)
+     
          {
       "source": {
             "110": {"ind1": "0",  "subfields": [
@@ -430,7 +430,12 @@
 	
    
     },
-    "HA710": {"include ": "HAagentdata110,710,810" , "HAtitledetails"},
+    "HA710": {
+     "aboutEntity": "?work",
+      "resourceType": "Organization",
+      "include": "HAagentdataX10", 
+      "addLink": "contribution",
+    
 	
     "HA711": {"include": "HAagentdata111,711,811" , "HAtitledetails"},
 	# "splicedworkdetails" är intressant - ett sätt att specificera vad som är verk? Används nu bara för 600 # och för aukt 500.
