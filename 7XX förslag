@@ -35,7 +35,8 @@
       "$e": {"addLink": "role", "property": "label"}
       },
 #Fördel med relationdata är att den kan användas även på Bib 6XX och Aukt 1XX, 4XX, 5XX där troligen inte "contribution" ska användas
-
+ # 	 "$j": "about":"_:agent", "property": "roleNote"}, #"relatorTerm" - klartext istället för kod#
+ 
 "linkdata": {
 	"$5":	{"property": "institutionField"}, #Kanske inte här?
 	  "$6":	{"property": "linkage"},
@@ -159,7 +160,7 @@
 	 
     },
  # Sortering acdengq 
- # 	 "$j": "about":"_:agent", "property": "roleNote"}, #"relatorTerm" - klartext istället för kod#
+
   
 
 
@@ -323,6 +324,21 @@
      
       "$0": {"addLink": "identifiedBy", "property": "value"},
       "_spec": [
+      
+      Friedrich Witte (företag)
+         {
+      "source": {
+            "110": {"ind1": "0",  "subfields": [
+              {"a": "Friedrich Witte (företag)"},
+              
+          ]}},
+          "result": {"mainEntity": {
+              "@type": "Jurisdiction",
+              "invertedName": "Friedrich Witte (företag)",
+	      
+            }
+	    }
+    },
       {
       "source": {
             "110": {"ind1": "1",  "subfields": [
