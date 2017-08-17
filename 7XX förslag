@@ -443,6 +443,15 @@
       "resourceType": "Organization",
       "include": "HAagentdataX10", 
       "addLink": "contribution",
+      
+       "when": "$t",
+      "addLink": "relatedTo",
+      "resourceType": "Relationship" , # måste ses över
+      },
+      {
+       "when": null.
+       "resourceType": "Contribution",
+       "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
     
 	
     "HA711": {"include": "HAagentdata111,711,811" , "HAtitledetails"},
