@@ -1,4 +1,4 @@
-#Jag har inte letat efter standardiserade vokabulär, utan använt rubrik i marc21 när jag lagt till eller ändra
+#Jag har letat i Bibframe efter standardiserade vokabulär och  använt rubrik i marc21 när jag nte hittat något.
 "HAtitledetails": {
    # Nu endast 240, 243 som använder, men kan användas mer. Har tagit bort $d som är olika. $k har fått #annan term utifrån marc21, tydligare. t 
       "$f": {"property": "date"}, #bf:originDate
@@ -366,6 +366,7 @@
               {"a": "Paris"},
               {"q": "Peace Conference"},
 	      {"d": "1919},
+	      {"g": "Projected, not held"},
 	       
          
 	  ]}},
@@ -376,9 +377,9 @@
                 {
                   "@type": "PrimaryContribution",  
                     "agent": {"@type": "Meeting",
-                    "directName": "World Peace Conference",
-		    "place": "Paris, France",
-		    "dateMeeting": "1959",
+                    "jurisdictionName": "Paris",
+		    "nameMeeting": "Peace Conference",
+		    "dateMeeting": "1919",
 		    "numberOfPartSectionMeeting": 1st"}
                    
                 }
@@ -410,6 +411,7 @@
               ]
             }
           },
+	
    
     },
     "HA710": {"include ": "HAagentdata110,710,810" , "HAtitledetails"},
