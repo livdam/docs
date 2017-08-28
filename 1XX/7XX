@@ -1,0 +1,478 @@
+#Jag har letat i Bibframe efter standardiserade vokabulär och  använt rubrik i marc21 när jag nte hittat något.
+"HAtitledetails": {
+   # Nu endast 240, 243 som använder, men kan användas mer. Har tagit bort $d som inte hör till titel. $k har fått #annan term utifrån marc21, tydligare. t 
+      "$f": {"property": "date"}, #bf:originDate
+      "$g": {"property": "comment"}, bf#genreForm  #Behöver vi titta på
+      "$h": {"property": "medium"}, # LC använder inte
+	 
+      "$k": {"addProperty": "formSubheading"}, # bf:natureOfContent
+      "$l": {"link": "language", "resourceType": "Language", "property": "label"},
+      "$m": {"addProperty": "musicMedium"}, #bf:musicMedium
+      "$n": {"addProperty": "partNumber", "interpunctionChars": ","}, 
+      "$o": {"property": "musicArrangement"}, #bf:version (Term or terms that identify works such as arranged for music, vulgate for religious work, etc.) - diskutera med Elisabet
+      "$p": {"addProperty": "partName", "interpunctionChars": "/"}, #?? vad gör interpunctionChars? 
+      "$r": {"property": "musicKey"},
+      "$s": {"property": "version"}, # Ex.  $s9th ed. ; Passar inte med bf:version. Troligen inte så vanlig - skippa tillsvidare, kolla statistik för 700$s 710, 711
+	"$t":	{"property": "title" },
+	
+	# NOTE "$i":	{"property": "relationshipInfo"}, # LC säger ignore, men diskuteraräven bf:relatedTo  som relation. Vi tar bort härifrån eftersom ej del av titel  
+    },
+    "HAtitledetails1XX,7XX"
+     "$f": {"property": "date"}, #bf:originDate
+      "$g": {"property": "comment"}, bf#genreForm  #Behöver vi titta på
+      "$h": {"property": "medium"}, # LC använder inte, men vid återkonvertering vill nog biblioteken ha
+	 
+      "$k": {"addProperty": "formSubheading"}, # bf:natureOfContent (Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system.)
+      "$l": {"link": "language", "resourceType": "Language", "property": "label"},
+      "$m": {"addProperty": "musicMedium"}, #bf:musicMedium
+      "$n": {"addProperty": "partNumber", "interpunctionChars": ","}, 
+      "$o": {"property": "musicArrangement"}, #bf:version (Term or terms that identify works such as arranged for music, vulgate for religious work, etc.) - diskutera med Elisabet
+      "$p": {"addProperty": "partName", "interpunctionChars": "/"}, #?? vad gör interpunctionChars? 
+      "$r": {"property": "musicKey"},
+      "$s": {"property": "version"}, # Ex.  $s9th ed. ; Passar inte med bf:version. Troligen inte så vanlig - skippa tillsvidare, kolla statistik för 700$s 710, 711
+	"$t":	{"property": "title" },
+	
+	#Från structuredtitle:  "$n": {"aboutNew": "_:titlePart", "property": "partNumber", "punctuationChars": ","},
+      "$p": {"about": "_:titlePart", "property": "partName", "punctuationChars": "/"}  ---Bra sätt att skriva?
+
+
+    "contributiondata": {
+      "include": "agentdata",
+      "addLink": "contribution",
+      "embedded": true,
+      "pendingResources": {
+        "_:agent": {"link": "agent", "resourceType": "Person"}
+      },
+      "$4": {"addLink": "role", "property": "code", "uriTemplate": "{code}", "TODO:mapping": "relatorCode"},
+      "$e": {"addLink": "role", "property": "label"}
+    }, # Från Marcframe. Behöver diskutera hur vi hanterar contribution
+    
+"relationdata": {
+ 	"$4": {"addLink": "role", "property": "code", "uriTemplate": "{code}", "TODO:mapping": "relatorCode"},
+      "$e": {"addLink": "role", "property": "label"}
+      },
+#Fördel med relationdata är att den kan användas även på Bib 6XX och Aukt 1XX, 4XX, 5XX där troligen inte "contribution" ska användas
+ # 	 "$j": "about":"_:agent", "property": "roleNote"}, #"relatorTerm" - klartext istället för kod i 111, 711 etc#
+ 
+"linkdata": {
+	"$5":	{"property": "institutionField"}, #Kanske inte här?
+	  "$6":	{"property": "linkage"},
+	  "$7": {"property": "controlSubfield"}, # Kanske inte här?
+	  "$8": {"property": "fieldLinkSequenceNumber"},
+      "$0": {
+        "addLink": "describedBy", "resourceType": "Record", "property": "controlNumber",
+        "uriTemplate": "http://libris.kb.se/auth/{_}"
+      }
+	}, #Jämför "computeLinks" Bättre så??
+
+    "HAagentdataX00":  #Bib 100,700, 600, 800, Aukt 100, 400, 500
+    {
+      "match": [
+      {
+        "when": "i1=0" ,
+          "$a": {"about": "_:agent", "property": "name", "required": true, "interpunctionChars": ")"}
+        },
+	{
+        "when": "i1=1",
+          "$a": {
+	  "about": "_:agent",
+           "property": "name", "splitValuePattern": "([^,]+)(?:,\\s*([^,]+))",
+           "splitValueProperties": ["familyName", "givenName"], "rejoin": ", ",
+           "required": true
+          }
+        },
+	{
+        "when": "i1=3",
+          "pendingResources": {
+          "_:agent": {"link": "agent", "resourceType": "Family"}
+          },
+          "$a": {"about": "_:agent", "property": "nameOfTheFamily", "required": true}
+       
+      }
+      ],
+      
+      "$a": {"required": true},
+      "$b": {"about": "_:agent", "property": "numeration"},
+      "$c": {"about": "_:agent", "addProperty": "titleOther"}, 
+      "$d": {
+        "about": "_:agent",
+        "property": "lifeSpan",
+        "splitValuePattern": "(\\d+)(?:\\s*-\\s*(\\d+))?",
+          "splitValueProperties": ["birthYear", "deathYear"],
+          "rejoin": "-",
+          "allowEmpty": true
+      },
+
+      "$j": {"about": "_:agent", "property": "attribution qualifyee"}, ##  (Formathandboken: Attribuerande tillägg) ex Pupil of
+      "$q": {"about": "_:agent", "property": "fullerFormName"}, # fullerFormName ex "(Isabella Mary)"
+      "$u": {"about": "_:agent", "property": "affiliation"},
+	
+    }, 
+    ##Sortering ska göras efter inläggningsordning i listade delfält, dvs abcdjq - $u affiliation innehåller en adress, typ gatuadress, 
+    
+    "HAagentdataX10": #Bib 110,710, 610, 810, Aukt 110, 410, 510
+    {
+      "match": [
+      {
+        "when": "i1=0",
+	"resourceType": "Jurisdiction", # Kräver pendingResources?
+          "$a": {"about": "_:agent", "property": "invertedName", "required": true}
+	},
+	{
+        "when": i1=1",
+	"resourceType": "Jurisdiction",
+          "$a": {"about": "_:agent", "property": "name", "required": true}
+	},
+	 {
+	 "when" i1=2",
+          "resourceType": "Jurisdictionn",
+          "$a": {"about": "_:agent", "property": "directName", "required": true}
+	},
+	{
+          "when": "$b",
+	  "$a": {"link": "isPartOf", "resourceType": "Organization", "property": "name"},
+          "$b": {"property": "name"}
+        }, 
+	],  
+      "$a": {"required": true},
+      "$b": {"about": "_:agent", "property": "subordinateUnit"},
+      "$c": {"about": "_:agent", "addProperty": "place"}, # Jämför "$c": {"link": "place", "resourceType": "Place", "property": "label",
+      "$d": {"about": "_:agent", "property": "date"},
+      "$n": {"about": "_:agent", "property": "numberOfPartSectionMeeting"},
+      "$g": {"about": "_:agent", "property": "comment"}, ## Miscellaneous information. Name of the other party to a treaty in a name/title field; a subelement that is not more appropriately contained in subfield $c, $d, or $n in a meeting entered under a corporate name; or a data element that is not more appropriately contained in another defined subfield in any other type of corporate name field.
+      "$c": {"link": "place", "resourceType": "Place", "property": "label"},
+   	"$u": {"about": "_:agent", "property": "affiliation"}
+	# Sortering abcdng - spelar det roll i vilken ordning de listas?
+    },
+   
+   "HAagentdataX11": #Bib 111, 611,711,811 Aukt 111, 411, 511
+    {
+     "match",  [
+     {
+        "when": i1=0",
+	 "resourceType": "meeting",
+          "$a": {"about": "_:agent", "property": "invertedName", "required": true}
+		
+        },
+        "when": i1=1",
+	"resourceType": "meeting",
+          "$a": {"about": "_:agent", "property": "jurisdictionName", "required": true}
+			
+        },
+		
+        "when": i1=2",
+          "resourceType": "meeting",
+          "$a": {"about": "_:agent", "property": "directName", "required": true}
+	
+      }
+	],  
+      "$a": {"required": true},
+      "$c": {"about": "_:agent", "addProperty": "place"},
+      "$d": {"about": "_:agent", "property": "date"},# dateMeeting
+	"$e": {"about":"_:agent", "property": "subordinateUnit"},
+	 "$g":	{"about": "_:agent", "property": "comment"},
+	 "$n": {"about": "_:agent", "property": "numberOfPartSectionMeeting"},
+	 "$q":	{"about":"_:agent", "property": "nameMeeting"},
+	 "$u":	{"about": "_:agent", "property": "affiliation"}
+	 
+    },
+ # Sortering acdengq 
+
+  
+
+
+   
+
+    "HA700": {
+      "aboutEntity": "?work",
+      "include":  "HAagentdataX00", "HAtitledetails",
+      "match": [
+      {
+        "when": "$t" & i2=2",
+	"addLink:" "hasPart",
+	"resourceType": "Work",
+	 "addLink": "contribution",
+          "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
+          "pendingResources": {
+            "_:agent": {
+              "about": "_:contribution",
+              "link": "agent",
+              "resourceType": "Person",
+              "embedded": false
+          },        
+        }
+        }
+      },
+      {
+      "when": "$t",
+      "addLink": "relatedTo",
+      "resourceType": "Relationship" , # måste ses över
+      },
+      {
+       "when": null.
+       "resourceType": "Contribution",
+       "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
+      
+            
+      "_spec": [
+        {
+          "source": {"700":
+            {"ind1": "1", "ind2": " ", "subfields": [
+              {"a": "Pietilä, Tuulikki"}, {"d": "1917-"}
+            ]}
+          },
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "contribution": [ 
+                {
+                  "@type": "Contribution", 
+                  "agent": {"@type": "Person",
+                    "familyName":  "Pietilä",
+                    "givenName":  "Tuulikki",
+                    "birthYear":  "1917"}
+                }
+              ]
+            }
+          }}
+        },
+        {
+          "source": {
+            "700": {"ind1": "1", "ind2": " ", "subfields": [
+              {"a": "Jansson, Tove"},
+              {"t": "Anteckningar från en ö"}
+          ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "relationship": [
+                {
+                  "@type": "Relationship", # bf:relatedTo (med alla underindelningar), bflc:Relation och bflc:Relationship
+                  "agent": {
+                    "@type": "UniformWork",
+                    "title": "Anteckningar från en ö",
+                    "contribution": [
+                      {
+                        "@type": "PrimaryContribution",
+                        "agent": {"@type": "Person", "familyName":  "Jansson", "givenName":  "Tove"}
+                  }
+                }
+              ]
+            }
+          }}
+        }
+      ]
+    },
+
+"source": { #Det här exemplet behöver titledetails
+            "700": {"ind1": "1", "ind2": "2", "subfields": [  	
+              {"a": "Bach, Johann Sebastian"},
+              {"t": "Konsert"},
+	      {"m": "cembalo, stråkorkester},
+	      {"n": "BMV 1057"},
+	      {"r": "F-dur"}, ## Vill vi få med ISBD-tecken? a Bach, Johann Sebastian,d 1685-1750.t Konsert,m cembalo, stråkorkester,n BWV 1057,r F-dur
+          ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "contribution": [
+                {
+                  "@type": "Contribution",  
+                  "title": {
+                    "@type": "Work",
+                    "title": "Konsert",
+		    "musicMedium": "cembalo, stråkorkester",
+		    "partNumber": "BMV",
+		    "musicKey": "F-dur",
+                    "attributedTo": {"@type": "Person",
+		      "familyName":  "Bach", "givenName":  "Johann Sebastian"}
+                }
+              ]
+            }
+          },
+	  {
+          "source": {
+            "700": {"ind1": "1", "ind2": "2", "subfields": [
+              {"i": "Parafraserar"},
+              {"a": "Jansson, Tove"},
+              {"t": "Anteckningar från en ö"}
+          ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "relationship": [
+                {
+                  "@type": "PartitiveRelationship",
+                  "relation": [{"label": "Parafraserar"}],
+                  "entity": {
+                    "@type": "Work",
+                    "title": "Anteckningar från en ö",
+                    "contribution": [
+                      {
+                        "@type": "Contribution",
+                        "agent": {"@type": "Person", "familyName":  "Jansson", "givenName":  "Tove"}
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }}
+        }
+      ]
+    },
+       
+		   
+    "HA110": {
+      "aboutEntity": "?work",
+      "resourceType": "Organization",
+      "include": "HAagentdataX10", 
+     "pendingResources": {
+            "_:contribution": {
+              "addLink": "contribution",
+              "resourceType": "PrimaryContribution",
+              "embedded": true
+      
+        },
+	
+		
+     
+       "$a": {"required": true},
+      
+      "computeLinks": {"use": "$4", "mapping": "relatorCode"}, #Tittar vi på sen $e, $4
+      "i1": {"marcDefault": "2"},
+     
+      "$0": {"addLink": "identifiedBy", "property": "value"},
+      "_spec": [
+      
+     
+         {
+      "source": {
+            "110": {"ind1": "0",  "subfields": [
+              {"a": "Friedrich Witte (företag)"},
+              
+          ]}},
+          "result": {"mainEntity": {
+              "@type": "Jurisdiction",
+              "invertedName": "Friedrich Witte (företag)",
+	      
+            }
+	    }
+    },
+      {
+      "source": {
+            "110": {"ind1": "1",  "subfields": [
+              {"a": "Sverige"},
+              {"b": "Rikets allmänna kartverk"}
+          ]}},
+          "result": {"mainEntity": {
+              "@type": "Jurisdiction",
+              "jurisdictionName": "Stockholm",
+	      "subordinateUnit": "Rikets allmänna kartverk"
+            }
+	    }
+    },
+      {
+      "source": {
+            "110": {"ind1": "2",  "subfields": [ Université de Paris. ‡b Faculté de médecine.
+              {"a": "Université de Paris"},
+              {"b": "Faculté de médecine"}
+          ]}},
+          "result": {"mainEntity": {
+              "@type": "Jurisdiction",
+              "jurisdictionName": "Université de Paris",
+	      "subordinateUnit": "Faculté de médecine"
+            }
+	    }
+    },
+  
+
+    "HA111": {
+     "aboutEntity": "?work",
+      "resourceType": "Meeting",
+      "include": "HAagentdataX11",
+      "pendingResources": {
+            "_:contribution": {
+              "addLink": "contribution",
+              "resourceType": "PrimaryContribution",
+              "embedded": true
+      
+        "computeLinks": {"use": "$4", "mapping": "relatorCode"}, #Ska vi titta på 
+      "i1": {"marcDefault": "2"},
+      "$0": {"addLink": "identifiedBy", "property": "value"}, 
+            },
+ "_spec": [
+  "source": { 
+            "111": { "ind1": "1", "subfields": [  	
+              {"a": "Paris"},
+              {"q": "Peace Conference"},
+	      {"d": "1919},
+	      {"g": "Projected, not held"},
+	       
+         
+	  ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "contribution": [
+                {
+                  "@type": "PrimaryContribution",  
+                    "agent": {"@type": "Meeting",
+                    "jurisdictionName": "Paris",
+		    "nameMeeting": "Peace Conference",
+		    "dateMeeting": "1919",
+		    "numberOfPartSectionMeeting": 1st"}
+                   
+                }
+              ]
+            }
+          },
+ "source": { 
+            "111": { "ind1": "2", "subfields": [  	
+              {"a": "World Peace Conference"},
+              {"c": "Paris, France"},
+	      {"d": "1959},
+	      {"e": "Delegation from Sweden"},
+	      {"n": "1st"}, 
+         
+	  ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "contribution": [
+                {
+                  "@type": "PrimaryContribution",  
+                    "agent": {"@type": "Meeting",
+                    "directName": "World Peace Conference",
+		    "place": "Paris, France",
+		    "dateMeeting": "1959",
+		    "numberOfPartSectionMeeting": 1st"}
+                   
+                }
+              ]
+            }
+          },
+	
+   
+    },
+    "HA710": {
+     "aboutEntity": "?work",
+      "resourceType": "Organization",
+      "include": "HAagentdataX10", 
+      "addLink": "contribution",
+      
+       "when": "$t",
+      "addLink": "relatedTo",
+      "resourceType": "Relationship" , # måste ses över
+      },
+      {
+       "when": null.
+       "resourceType": "Contribution",
+       "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
+    
+	
+    "HA711": {"include": "HAagentdata111,711,811" , "HAtitledetails"},
+	# "splicedworkdetails" är intressant - ett sätt att specificera vad som är verk? Används nu bara för 600 # och för aukt 500.
+	
+	 ## "$4":	{"about": "_:agent", "property": "relatorCode"},
+	 	  "$e": {"about":"_:agent", "property": "roleNote" #"relatorTerm" - klartext istället för kod#
