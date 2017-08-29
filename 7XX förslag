@@ -211,6 +211,7 @@
       {
        "when": null.
        "resourceType": "Contribution",
+       "subfieldOrder": "i a b c d j 4 q t g m n o p r s l k f",
        "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
       
             
@@ -468,6 +469,7 @@
       {
        "when": null.
        "resourceType": "Contribution",
+       "subfieldOrder": "i a b c d g e 4 t m n o p r s l k f",
        "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
     
 	
