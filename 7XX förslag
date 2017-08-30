@@ -322,7 +322,7 @@
         }
       ]
     },
-       
+      "HA 100" "subfieldOrder": "a b c q d j g u e 4 t n p l k f" 
 		   
     "HA110": {
       "aboutEntity": "?work",
@@ -404,6 +404,7 @@
       "i1": {"marcDefault": "2"},
       "$0": {"addLink": "identifiedBy", "property": "value"}, 
             },
+	    "subfieldOrder": " a q n c d e u j"
  "_spec": [
   "source": { 
             "111": { "ind1": "1", "subfields": [  	
