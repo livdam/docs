@@ -211,7 +211,7 @@
       {
        "when": null.
        "resourceType": "Contribution",
-       "subfieldOrder": "i a b c q d j 4 t g m n o p r s l k f",
+       "subfieldOrder": "i a b c q d j 4 t g m n p r s l k f o ",,
        "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
       
             
@@ -340,7 +340,7 @@
      
        "$a": {"required": true},
         "resourceType": "Contribution",
-       "subfieldOrder": "a b c d g u e 4 t n p l k f", 
+      "subfieldOrder": "a b n d c g u e 4 t p l k f", 
       
       "computeLinks": {"use": "$4", "mapping": "relatorCode"}, #Tittar vi på sen $e, $4
       "i1": {"marcDefault": "2"},
@@ -404,7 +404,7 @@
       "i1": {"marcDefault": "2"},
       "$0": {"addLink": "identifiedBy", "property": "value"}, 
             },
-	    "subfieldOrder": " a q n c d e u j"
+	    "subfieldOrder": "a q n d c g e u j 4 t p l k f"
  "_spec": [
   "source": { 
             "111": { "ind1": "1", "subfields": [  	
@@ -472,7 +472,8 @@
       {
        "when": null.
        "resourceType": "Contribution",
-       "subfieldOrder": "i a b c d g u e 4 t m n p r s l k f o x",  #Katarina S har aldrig sett ett x
+       "subfieldOrder": "i a b c d g u e 4 t m n p r s l k f o x",
+,  #Katarina S har aldrig sett ett x
        "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
     
 	
@@ -482,5 +483,5 @@
 	 ## "$4":	{"about": "_:agent", "property": "relatorCode"},
 	 	  "$e": {"about":"_:agent", "property": "roleNote" #"relatorTerm" - klartext istället för kod#
 		  
-	"subfieldOrder": "i a n d c g u j 4 t n s l k f x",
+	"subfieldOrder": "i a n d c g u j 4 t s l k f x",
 	# Kan bli galen! Se detta exempel: International Congress of Byzantine Studies ǂn (15th : ǂd 1976 : ǂc Athens, Greece). ǂt Actes du XVe Congrès international d'études byzantines, Athènes--Septembre 1976. ǂn 1, ǂp Art et archéologie.
