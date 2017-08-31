@@ -475,6 +475,104 @@
        "subfieldOrder": "i a b c d g u e 4 t m n p r s l k f o x",
 ,  #Katarina S har aldrig sett ett x
        "$0": {"addLink": "identifiedBy", "property": "value"}, #Tittar vi på senare
+       
+ "source": { # Testar t & i2=2
+            "710": {"ind1": "2", "ind2": "2", "subfields": [
+              {"a": "Arbetsmarknadsverket."},
+              {"t": "Arbetsmiljölagen"}
+            ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "hasPart": [
+                {
+                  "@type": "Work",
+                  "title": "Arbetsmiljölagen",
+                  "contribution": [
+                    {
+                      "@type": "PrimaryContribution",
+                      "agent": {
+                        "@type": "Organization",
+                        "name":  "Arbetsmarknadsverket."}] ] ,
+			
+			{ "source": { #  Testar t & i2=2
+            "710": {"ind1": "0", "ind2": "2", "subfields": [
+              {"a": "Namngalen organisation."},
+              {"t": "Söderbykyrka"}
+            ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "hasPart": [
+                {
+                  "@type": "Work",
+                  "title": "Söderbykyrka",
+                  "contribution": [
+                    {
+                      "@type": "PrimaryContribution",
+                      "agent": {
+                        "@type": "Organization",
+                        "name":  "Namngalen organisation."}] ]
+			 } }},
+	     {
+          "source": {
+            "710": {"ind1": "0", "ind2": " ", "subfields": [
+              {"a": "Nationell gammaldags organisation."},
+              {"t": "Handlingar 1920-1950"}
+            ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "relatedTo": [
+                {
+                  "@type": "Relationship",
+                  "entity": {
+                    "@type": "Work",
+                    "title": "Handlingar 1920-1950",
+                    "contribution": [
+                      {
+                        "@type": "PrimaryContribution",
+                        "agent":
+                          {"@type": "Organization", "name": "Nationell gammaldags organisation."}
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }}
+        },
+	
+	{
+          "source": { # Testar i1=0, dvs When null
+            "710": {"ind1": "0", "ind2": " ", "subfields": [
+              {"a": "Umeå universitet."},
+              {"b": "Institutionen för ABM."},
+              {"b": "Kulturgeografi"},
+              
+            ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "contribution": [
+                {
+                  "@type": "Contribution",
+                  "agent": {
+                    "@type": "Organization",
+                    "subordinateUnit" : ["Institutionen för ABM.",
+                              "Kulturgeografi"],
+                    "isPartOf": {
+                      "@type": "Organization",
+                      "name": "Umeå universitet."
+                    }
+                  },
+                  
+                }]
+            }
+          }}
+        },
+			
+
     
 	
     "HA711": {"include": "HAagentdata111,711,811" , "HAtitledetails"},
