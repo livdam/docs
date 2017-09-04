@@ -658,7 +658,10 @@
                   "agent": {
                     "@type": "Meeting",
                     "name": "Olympic Games.",
-		    "place": Montréal, Québec",
+		    "place": "Montréal, Québec",
+		    "numberOfPartSectionMeeting": "21st",
+		     "date": "1976",
+		    
 		    "subordinateUnit": ["Organizing Committee." , #Arts and Culture Program." ,  "Visual Arts Section."],
 		    "isPartOf": {
 		    "@type": "Contribution",
@@ -669,3 +672,37 @@
             }
           }}
         },
+	{
+{
+          "source": {
+            "711": {"ind1": "2", "ind2": "2", "subfields": [
+              {"a": "Vatican Council"},
+	      {"n": "(2nd : "},
+	      {"d": "1962-1965 : "},
+	      {"c": "Basilica di San Pietro in Vaticano)."},
+              {"t": "Constitutio pastoralis de ecclesia in mundo huius temporis."},
+	      {"i": "Facsimile (manifestation): "},
+
+            ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "relatedTo": [
+                {
+                  "@type": "Relationship",
+		  "relation": [{"label": "Facsimile (manifestation)"}],
+		  "entity": {
+		  "type": "Work",
+		  "title": "Constitutio pastoralis de ecclesia in mundo huius temporis",
+		  "contribution": [
+		  "@type": "PrimaryContribution",
+                  "agent": {
+  		   "@type": "Meeting",
+                    "name": "Vatican Council",
+		    "place": "Basilica di San Pietro in Vaticano",
+		    "numberOfPartSectionMeeting": "2nd",
+		     "date": "1962-1965"} ]
+               } }]
+            }
+          },
+        
