@@ -25,7 +25,7 @@
       "$k": {"addProperty": "formSubheading"}, # bf:natureOfContent (Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system.)
       "$l": {"link": "language", "resourceType": "Language", "property": "label"},
       "$m": {"addProperty": "musicMedium"}, #bf:musicMedium
-      "$n": {"addProperty": "partNumber", "interpunctionChars": ","}, 
+
       "$o": {"property": "musicArrangement"}, #bf:version (Term or terms that identify works such as arranged for music, vulgate for religious work, etc.) - diskutera med Elisabet
       "$p": {"addProperty": "partName", "interpunctionChars": "/"}, #?? vad gör interpunctionChars? 
       "$r": {"property": "musicKey"},
@@ -34,7 +34,7 @@
 	
 	#Från structuredtitle:  "$n": {"aboutNew": "_:titlePart", "property": "partNumber", "punctuationChars": ","},
       "$p": {"about": "_:titlePart", "property": "partName", "punctuationChars": "/"}  ---Bra sätt att skriva?
-
+#      Borttaget, får läggas på fältet "$n": {"addProperty": "partNumber", "interpunctionChars": ","}, 
 
     "contributiondata": {
       "include": "agentdata",
@@ -388,7 +388,31 @@
             }
 	    }
     },
-  
+    { 	
+
+
+      "source": {
+            "110": {"ind1": "2",  "subfields": [ Université de Paris. ‡b Faculté de médecine.
+              {"a": "Mujeres Ayudando la Raza (Organization : University of California, Davis)"},
+              {"b": "Conference"},
+	      {"n": "(2nd :"},
+	      {"d": "1998 :"},
+	      {"c": "University of California, Davis"},
+	      {"e": "author"}, # Tar inte med nu men måste prata om snart
+	      {"e": "issuing body."} # Tar inte med nu
+	      
+          ]}},
+          "result": {"mainEntity": {
+              "@type": "Jurisdiction",
+              "jname": "Mujeres Ayudando la Raza (Organization : University of California, Davis)",
+	      "subordinateUnit": "Conference",
+	      "numberOfPartSectionMeeting": "(2nd" :,
+	      "date": "1998 :",
+	      "place": "University of California, Davis)",
+	      "
+            }
+	    }
+    },
 
     "HA111": {
      "aboutEntity": "?work",
@@ -571,7 +595,43 @@
             }
           }}
         },
-			
+	
+
+{
+          "source": 
+            "710": {"ind1": "2", "ind2": " ", "subfields": [
+              {"a": "International Council of Nurses."},
+              {"b": "Quinquennial Meeting"},
+	      {"n": "(1st :"},
+	      {"d": "1904"},
+	      {"c": "Berlin, Germany)"},
+	      {"e": "author."} #tar ej med
+             
+              
+            ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "contribution": [
+                {
+                  "@type": "Contribution",
+                  "agent": {
+                    "@type": "Organization",
+                    "subordinateUnit" : "Quinquennial Meeting,
+                    "isPartOf": {
+                      "@type": "Organization",
+                      "name": "International Council of Nurses",
+		      "numberOfPartSectionMeeting": " 1st: ",
+		      "date": "1904",
+		      "place" "Berlin, Germany)"
+		      
+                    }
+                  },
+                  
+                }]
+            }
+          }}
+        },			
 
     
 	
