@@ -323,6 +323,36 @@
       ]
     },
       "HA 100" "subfieldOrder": "a b c q d j g u e 4 t n p l k f" 
+      {
+          "source": {
+            "100": {"ind1": "0", "ind2": " ", "subfields": [
+              {"a": "Haakon"},
+              {"b": "IV Haakonsson, "},
+              {"c": "King of Norway, "},
+              {"d": "1204-1263, "},
+              {"e": "author."},
+              {"4": "aut"}
+            ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "contribution": [
+                {
+                  "@type": "PrimaryContribution",
+                  "agent": {"@type": "Person",
+                    "numeration": ["IV Haakonsson, "],
+                    "titleOther":  ["King of Norway, "],
+                    "name":  "Haakon",
+                    "birthyear": "1204-1263",
+                    "role": "author",
+                    " role": "aut"},
+                }
+              ]
+            }
+          }}
+        }
+      ]
+    },
 		   
     "HA110": {
       "aboutEntity": "?work",
@@ -413,6 +443,38 @@
             }
 	    }
     },
+      {
+  "source": {  	Universidad Complutense de Madrid. ǂb Grupo de Estudio de Semiótica de la Cultura. ǂb Grupo de Estudio de Semiótica de la Cultura ǂn (1st : ǂd 2010 : ǂc Universidad Complutense de Madrid), ǂe author.
+    "110": {"ind1": "2", "ind2": " ", "subfields": [
+      {"a": "Universidad Complutense de Madrid."},
+      {"b": "Grupo de Estudio de Semiótica de la Cultura."},
+      {"b": "Congreso"},
+      {"n": "(1st"},
+      {"c": "Universidad Complutense de Madrid"},
+      {"e": "author"}
+    ]}},
+  "result": {"mainEntity": {
+    "instanceOf": {
+      "@type": "Text",
+      "contribution": [
+        {
+          "@type": "PrimaryContribution",
+          "agent": {
+            "@type": "Organization",
+            "subordinateUnit" : ["Grupo de Estudio de Semiótica de la Cultura." ,
+          "Congreso"],
+            "isPartOf": {
+              "@type": "Organization",
+              "name": "Universidad Complutense de Madrid."
+              "role": "author"
+            }
+          },
+        }]
+    }
+  }}
+}
+]
+},
 
     "HA111": {
      "aboutEntity": "?work",
@@ -480,6 +542,37 @@
               ]
             }
           },
+{
+      "source": {
+        "111": {"ind1": "2", "ind2": " ", "subfields": [
+          {"a": "Conference on Occupational Health Issues Affecting Secretarial and Clerical Personnel"},
+          {"e": "2nd"},
+          {"d": "1981"},
+          {"c": "Cincinatti, Ohio"},
+          {"j": "author"},
+          {"4": "aut"}
+        ]}},
+      "result": {"mainEntity": {
+        "instanceOf": {
+          "@type": "Text",
+          "contribution": [
+            {
+              "@type": "PrimaryContribution",
+              "agent": {
+                "@type": "Meeting",
+                "date": ["1981"],
+                "name": "Conference on Occupational Health Issues Affecting Secretarial and Clerical Personnel",
+                "numberOfPartSectionMeeting": ["2nd"],
+                "place" : [{
+                  "@type" : "Place",
+                  "label" : "Cincinatti, Ohio"
+                }]}
+            }]
+        }
+      }}
+    }
+  ]
+},
 	
    
     },
