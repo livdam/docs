@@ -389,7 +389,7 @@
                     "birthyear": "1204",
 		    "deathyear": "1263",
                     "role": "author",
-                    " role": "aut"},
+                    "role": "aut"},
                 }
               ]
             }
@@ -768,7 +768,52 @@
                 }]
             }
           }}
-        },			
+        },
+   {
+        "source": {
+          "710": {"ind1": "1", "ind2": "2", "subfields": [
+            {"i": "Conainter of (work): "}
+            {"a": "Grimm-frèreres (Musical group)."},
+            {"t": "Quartets,"},
+            {"m": "horns."},
+            {"k": "Selections;"},
+            {"o": "arranged"},
+            {"4": "cmp"}
+          ]}},
+      
+        "result": {"mainEntity": {
+          "instanceOf": {
+            "@type": "SoundRecording",
+            "relatedTo": [
+              {
+                "@type": "Relationship",
+                "relation": [{"label": "Container of (work):"}],
+              }
+            ]
+            "hasPart": [
+              {
+                "@type": "Work",
+                "title": "Quartets",
+                "musicMedium": "horns,";
+                "formSubheading": "Selections",
+                "version": "arranged",
+                
+                
+                "contribution": [
+                  {
+                    "@type": "PrimaryContribution",
+                    "agent": {
+                      "@type": "Organization",
+                      "name":  "Grimm-frèreres (Musical group)."
+                    "role": "cmp"}
+                  }
+                ]
+              }
+            ]
+          }
+        }}
+      },
+        
 
     
 	
@@ -902,4 +947,29 @@
                } }]
             }
           },
+{
+            "source": {
+              "711": {"ind1": "2", "ind2": " ", "subfields": [
+                {"a": "New York Theory Seminar."},
+                {"j": "issuing body"},
+                {"4": "isb"}
+              ]}},
+            "result": {"mainEntity": {
+              "instanceOf": {
+                "@type": "Text",
+                "contribution": [
+                  {
+                    "@type": "Contribution",
+                    "agent": {
+                      "@type": "Meeting",
+                      "name": "New York Theory Seminar.",
+                      "role": "issuing body"
+                      "role": "isb"
+                      
+                      
+                  }]
+              }
+            }}
+          },
+        
         
