@@ -343,7 +343,8 @@
                     "numeration": ["IV Haakonsson, "],
                     "titleOther":  ["King of Norway, "],
                     "name":  "Haakon",
-                    "birthyear": "1204-1263",
+                    "birthyear": "1204",
+		    "deathyear": "1263",
                     "role": "author",
                     " role": "aut"},
                 }
