@@ -322,6 +322,48 @@
         }
       ]
     },
+   {
+         "source": {
+           "700": {"ind1": "1", "ind2": " ", "subfields": [
+             {"a": "Beethoven, Ludwig van"},
+             {"d": "1770-1827"},
+             {"t": "Duo"},
+             {"m": "viola, viloncell,"},
+             {"n": "VoO 32,"},
+             {"r": "Ess-dur"},
+             {"4": "cmp"}
+
+           ]}},
+         "result": {"mainEntity": {
+           "instanceOf": {
+             "@type": "NotatedMusic",
+             "hasPart": [
+               {
+                 "@type": "Work",
+                "title": "Duo",
+                "musicMedium": "violo, vioncell",
+                "partNumber": ["VoO 32"],
+                "musicKey": "Ess-dur"
+                
+                   "contribution": [
+                     {
+                       "@type": "PrimaryContribution",
+                       "role": [{"code": "cmp"}],
+                       "agent": {"@type": "Person", 
+                       "familyName":  "Beethoven", 
+                       "givenName":  "Ludwig van",
+                       "birthyear": "1770",
+                       "deathyear": "1827",
+                       
+                     }
+                     }
+                   ]
+                 }
+               }
+             ]
+           }
+         }}
+       },
       "HA 100" "subfieldOrder": "a b c q d j g u e 4 t n p l k f" 
       {
           "source": {
