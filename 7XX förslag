@@ -354,6 +354,7 @@
                        "givenName":  "Ludwig van",
                        "birthyear": "1770",
                        "deathyear": "1827",
+		       "role": "cmp"
                        
                      }
                      }
