@@ -1,1 +1,304 @@
+600
+		  "_spec": [
+        {
+          "source": {
+            "600": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [{"a": "Ovid,"}, {"d": "43 B.C.-17 A.D. or 18 A.D."}, {"x": "Amores"},  {"l": "English."}]
+            },
+			 "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "subject": [
+                {
+                  "@type": "Person",
+                  "name": "Ovid",
+				  "date": "43 B.C.-17 A.D. or 18 A.D.",
+				  "subdivision": "Amores.",
+				  "language4": "English"
+                  ],
+				"@id": "http://id.loc.gov/authorities/names/n85005984",
+				"@type": "Topic",
+             		"inScheme": {
+                    "@id": "http://id.loc.gov/authorities/names",
+                    "@type": "ConceptScheme",
+                    "code": "lsch",
+					}}},	
+					
+					
+		 "source": {
+            "600": {
+              "ind1": "3",
+              "ind2": "0",
+              "subfields": [{"a": "Butler family.}, {"x": "Health"} ],
+            },
+			 "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "subject":
+			   "@type": "Family",
+                  "name": "Butler family.",
+				  "subdivision": "Health"},
+				"@id": "http://id.loc.gov/authorities/names/n85005984",
+				"@type": "Topic",
+				
+					"inScheme": {
+                    "@id": "http://id.loc.gov/authorities/names",
+                    "@type": "ConceptScheme",
+                    "code": "lsch",
+					}}},
+		
+	,
+					}}},
+		 "source": {
+            "600": {
+              "ind1": "1",
+              "ind2": "0",
+              "subfields": [{"a": "Harris, Andy "}, {"c": "(Composer)"}, {"x": "Travel"}, {"z": "Morocco"}, {"z": "Marrakech"} ],
+            },
+			 "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "subject":
+			   "@type": "Person",
+                  "name": "Harris, Andy ",
+				  "titleOther": "(Compose)",
+				  "subdivision": "Travel",
+				  "Geographic": "Morocco" ,
+				  "Geographic": "Marrakech" ,
+				  	"inScheme": {
+                    "@id": "http://id.loc.gov/authorities/names",
+                    "@type": "ConceptScheme",
+                    "code": "lsch",
+					}}},
+		"source": {
+            "600": {
+              "ind1": "1",
+              "ind2": "0",
+              "subfields": [{"a": "Mangunwijaya, Y. B.,"}, {"d": "1929-1999"}, {"x": "Criticism and interpretation"},  {"x": "History"}, {"y": "21st century."} ],
+            },
+			 "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "subject":
+			   "@type": "Person",
+                  "name": "Mangunwijaya, Y. B.",
+				  "date": "1929-1999",
+				  "subdivision": "Criticism and interpretation",
+				  "subdivision": "History" ,
+				  "temporal": "21st century"},
+				  	"inScheme": {
+                    "@id": "http://id.loc.gov/authorities/names",
+                    "@type": "ConceptScheme",
+                    "code": "lsch",
+					}}},
+			
+			"source": {
+            "600": {
+              "ind1": "1",
+              "ind2": "0",
+              "subfields": [{"a": "Scarlatti, Domenico,"}, {"d": "1685-1757"}, {"t": "Sonatas,}, {"m": "harpsichord"},  {"n": "K. 492, "}, {"r": "D major;}, {"y": "21st century."}  ],
+            },
+			 "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "subject":
+			   "@type": "Person",
+                  "name": "Scarlatti, Domenico",
+				  "date": "1685-1757",
+				  "title": "Sonatas", 
+				  "partNumber": "K. 492"
+				  "musicMedium": "harpsichord",
+				  "musicKey": "D major;" ,
+				  "temporal": "21st century"},
+				  	"inScheme": {
+                    "@id": "http://id.loc.gov/authorities/names",
+                    "@type": "ConceptScheme",
+                    "code": "lsch",
+					}}},
+			
+			"source": {
+            "600": {
+              "ind1": "0",
+              "ind2": "0",
+              "subfields": [{"a": "Black Foot,"}, {"c": "Chief,"}, {"d": "-1877"}, {"c": "(Spirit)"}  ],
+            },
+			 "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "subject":
+			   "@type": "Person",
+                  "name": "Black Foot",
+				  "titleOther": "Chief",
+				  "titleOther": "(Spirit)","
+				  "date": "-1877",
+				 },
+				 "@id": "http://id.loc.gov/authorities/names/n81020634",
+				 "@type": "Topic",
+				  	"inScheme": {
+                    "@id": "http://id.loc.gov/authorities/names",
+                    "@type": "ConceptScheme",
+                    "code": "lsch",
+					}}},
 
+
+
+
+
+
+
+
+
+
+
+
+610
+	 "_spec": [ 
+        {
+          "source":
+            "610": {
+              "ind1": "1",
+              "ind2": "7",
+              "subfields": [{"a": "Sverige"}, {"b": "Riksdagen"}, {"$d (1792 : ", {"$c Gävle)}, {"2": "sao"}]
+            }
+          },
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "subject": [
+                {
+                  "@type": "Organization",
+				  "subordinateUnit" : "Riksdagen",
+                    "isPartOf": {
+                      "@type": "Organization",
+                      "name": "Sverige" },
+                  "date": "1792",
+				  "place": "Gävle",
+                    }
+                  
+                  ],
+                  "inScheme": {
+                    "@id": "https://id.kb.se/term/sao",
+                    "@type": "ConceptScheme",
+                    "code": "sao"
+					}}}],
+					
+		 "_spec": [ 
+        {
+          "source":
+            "610": {
+              "ind1": "1",
+              "ind2": "4",
+              "subfields": [{"a": "United States"}, {"$t":  "Act to Extend the Expiration Date of Section 252 of the Energy Policy and Conservation Act (1982 July 19)"}, {"v": "catalogs"} ]
+            }
+          },
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "subject": [
+                {
+                  "@type": "Organization",
+                   "name": "United States" },
+                  "title": "Act to Extend the Expiration Date of Section 252 of the Energy Policy and Conservation Act (1982 July 19)",
+				  "GenreForm": "catalogs",
+                    }
+                  
+                  ],
+
+				  
+		  "source":
+            "610": {
+              "ind1": "2",
+              "ind2": "0",
+              "subfields": [{"a": "Rossiĭskiĭ gosudarstvennyĭ arkhiv drevnikh aktov."}, {"$k": " Manuscript."}, {"t": "Egentitel"},{"n": "Fond 1209"}, {"p": "Pomestnyĭ prikaz"} ],
+            }
+          },
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "subject": [
+                {
+                  "@type": "Organization",
+                   "name": "Rossiĭskiĭ gosudarstvennyĭ arkhiv drevnikh aktov.",
+				   "formSubheading": "Manuscript",
+                  "title": "Egentitel",
+				  "partNumber": "Fond 1209",
+				  "partName": "Pomestnyĭ prikaz",
+                    }
+                  
+                  ],		  
+			"inScheme": {
+                    "@id": "http://id.loc.gov/authorities/names",
+                    "@type": "ConceptScheme",
+                    "code": "lsch"
+					},
+                  }
+                }
+              ]
+        
+          }}
+        }
+      ]
+    },
+
+
+
+
+
+
+
+
+611
+
+	    "_spec": 
+        {
+          "source": {"611": {"ind1": "2" , "ind2": "0", "subfields": [{"$a": "Rio+20 (Conference)"}, {"$d": "(2012 : "}, {"$c": "Rio de Janeiro, Brazil)"}] }},
+		  "result": {"mainEntity": {
+		  "instanceOf": {
+              "@type": "Text", 
+			  "subject", [
+			  
+			"@type": "Meeting",
+			  "agent": {"@type": "Meeting, "name": "Rio+20 (Conference)"},
+			  "date": "2012",
+			  "place" "Rio de Janeiro, Brazil" ] },
+			  "@id": "http://id.loc.gov/authorities/names/nb2013013299.html",
+			  "@type": "Topic",
+			  "inScheme": {
+                    "@id": "http://id.loc.gov/authorities/names",
+                    "@type": "ConceptScheme",
+                    "code": "lsch"
+			
+			 ,
+			  
+		  
+     
+	 # Kul ex eftersom finns både som 711 och 611 Vatican Council ǂn (2nd : ǂd 1962-1965 : ǂc Basilica di San Pietro in Vaticano). ǂt Constitutio pastoralis de ecclesia in mundo huius temporis.
+        {
+          "source": {"611": {"ind1": "2" , "ind2": "0", "subfields": [
+		     {"a": "Vatican Council"},
+			{"n": "(2nd : "},
+			{"d": "1962-1965 : "},
+			{"c": "Basilica di San Pietro in Vaticano)."},
+             {"t": "Constitutio pastoralis de ecclesia in mundo huius temporis."}
+			 {"l": "Italian"}],
+			 
+			 "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+			  "subject" [
+			  {
+			  "@type": "Meeting", "name": "Vatican Council"},
+			  "date": "2012",
+			  "place" "Rio de Janeiro, Brazil" ,
+			  "title": "Constitutio pastoralis de ecclesia in mundo huius temporis",
+			  "Language": {"@type" : "Language",
+			  "label" : "Italian"
+			
+			  
+			  "inScheme": {
+                    "@id": "https://id.kb.se/term/sao",
+                    "@type": "ConceptScheme",
+                    "code": "lcsh"]
+			  ]
