@@ -302,3 +302,184 @@
                     "@type": "ConceptScheme",
                     "code": "lcsh"]
 			  ]
+			  
+			  
+650
+       {
+         "source": {"650": {"ind1": " ", "ind2": "7",
+           "subfields": [{"a": "Fysik"}, {"2": "barn"}]}
+         },
+         "result": {"mainEntity": {
+           "instanceOf": {
+             "@type": "Text",
+             "subject": [
+               {
+                 "@id": "https://id.kb.se/term/barn/Fysik",
+                 "@type": "Topic",
+                 "inScheme": {
+                   "@id": "https://id.kb.se/term/barn",
+                   "@type": "ConceptScheme",
+                   "code": "barn"
+                 },
+                 "prefLabel": "Fysik"
+               }
+             ]
+           }
+         }}
+       },
+       
+       
+       
+    {
+      "source": {"650": {"ind1": " ", "ind2": "2",
+        "subfields": [{"a": "Cardiovascular Physiology"}, {"v": "Congresses."}]}
+      },
+      "result": {"mainEntity": {
+        "instanceOf": {
+          "@type": "Text",
+          "subject": [
+            {
+              "@type": "Topic",
+              "@id": "http://id.loc.gov/authorities/label/Information--Information%20Age",
+              "prefLabel": "Cardiovascular Physiology--Congresses",
+              "termComponentList": [
+                {
+                  "@type": "Topic",
+                  "prefLabel": "Cardiovascular Physiology"
+                },
+                {
+                  "@type": "GenreForm",
+                  "prefLabel": "Congresses"
+                }
+              ],
+              "inScheme": {
+                "@id": "https://id.kb.se/term/mesh",
+                "@type": "ConceptScheme",
+                "code": "mesh"
+              }
+            }
+          ]
+        }
+      }}
+    },
+
+    {
+      "source": {"650": {"ind1": " ", "ind2": " ",
+        "subfields": [{"a": "rye"}, {"2": "agrovoc"}],
+      },
+      "result": {"mainEntity": {
+        "instanceOf": {
+          "@type": "Text",
+          "subject": [
+            {
+              "@type": "Topic",
+              "prefLabel": "rye",
+        },
+                {
+                  "@type": "Topic",
+                  "prefLabel": "rye"
+                },
+
+              "inScheme": {
+                "@id": "http://aims.fao.org/standards/agrovoc/linked-open-data",
+                "@type": "ConceptScheme",
+                "code": "agrovoc",
+              }
+
+          ]
+        }
+      }}
+    },
+
+655
+   {
+     "source": {"655": {"ind1": " ", "ind2": "7",
+       "subfields": [{"a": "Deckare"}, {"2": "saogf"}]}
+     },
+     "result": {"mainEntity": {
+       "instanceOf": {
+         "@type": "Text",
+         "subject": [
+           {
+             "@id": "https://id.kb.se/term/saogf/Deckare",
+             "@type": "GenreTerm",
+             "inScheme": {
+               "@id": "https://id.kb.se/term/saogf",
+               "@type": "ConceptScheme",
+               "code": "saogf"
+             },
+             "prefLabel": "Deckare"
+           }
+         ]
+       }
+     }}
+   },
+
+   {
+     "source": {"655": {"ind1": " ", "ind2": "7",
+       "subfields": [{"a": "Deckare"}, {"2": "barngf"}]}
+     },
+     "result": {"mainEntity": {
+       "instanceOf": {
+         "@type": "Text",
+         "subject": [
+           {
+             "@id": "https://id.kb.se/term/barngf/Deckare",
+             "@type": "GenreTerm",
+             "inScheme": {
+               "@id": "https://id.kb.se/term/barngf",
+               "@type": "ConceptScheme",
+               "code": "barngf"
+             },
+             "prefLabel": "Deckare"
+           }
+         ]
+       }
+     }}
+   },
+
+
+      {
+        "source": {"655": {"ind1": " ", "ind2": "7",
+          "subfields": [{"a": "Postkartor"}, {"2": "gmgpc"}]}
+        },
+        "result": {"mainEntity": {
+          "instanceOf": {
+            "@type": "Text",
+            "subject": [
+              {
+                "@id": "https://id.kb.se/term/gmgpc//swe/Postkartor",
+                "@type": "GenreTerm",
+                "inScheme": {
+                  "@id": "https://id.kb.se/term/gmgpc",
+                  "@type": "ConceptScheme",
+                  "code": "gmgpc"
+                },
+                "prefLabel": "Postkartor"
+              }
+            ]
+          }
+        }}
+      },
+      {
+        "source": {"655": {"ind1": " ", "ind2": " ",
+          "subfields": [{"a": "True crime stories"}, {"2": "lcgft"}]}
+        },
+        "result": {"mainEntity": {
+          "instanceOf": {
+            "@type": "Text",
+            "subject": [
+              {
+                "@id": "hhttp://id.loc.gov/authorities/genreForms/gf2014026203.html",
+                "@type": "GenreTerm",
+                "inScheme": {
+                  "@id": "http://id.loc.gov/authorities/genreForms",
+                  "@type": "ConceptScheme",
+                  "code": "lcgft"
+                },
+                "prefLabel": "True crime stories"
+              }
+            ]
+          }
+        }}
+      },
