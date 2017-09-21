@@ -184,7 +184,7 @@
                     "code": "sao"
 					}}}],
 					
-		 "_spec": [ 
+		
         {
           "source":
             "610": {
@@ -287,18 +287,21 @@
 			 "result": {"mainEntity": {
             "instanceOf": {
               "@type": "Text",
+	      
+	   
 			  "subject" [
 			  {
-			  "@type": "Meeting", "name": "Vatican Council"},
+			   "@id": "http://id.loc.gov/authorities/names/n83067715.html",
+			  "@type": "Meeting", 
+			  "name": "Vatican Council",
 			  "date": "2012",
 			  "place" "Rio de Janeiro, Brazil" ,
-			  "title": "Constitutio pastoralis de ecclesia in mundo huius temporis",
+			  "title": "Constitutio pastoralis de ecclesia in mundo huius temporis"},
 			  "Language": {"@type" : "Language",
 			  "label" : "Italian"
-			
-			  
+					  
 			  "inScheme": {
-                    "@id": "https://id.kb.se/term/sao",
+                    "@id": "http://id.loc.gov/authorities/names",
                     "@type": "ConceptScheme",
                     "code": "lcsh"]
 			  ]
@@ -381,7 +384,7 @@
                 },
 
               "inScheme": {
-                "@id": "http://aims.fao.org/standards/agrovoc/linked-open-data",
+                "@id": "http://aims.fao.org/standards/agrovoc/linked-open-data",# lite oklart hur vi kan länka dit
                 "@type": "ConceptScheme",
                 "code": "agrovoc",
               }
@@ -390,6 +393,75 @@
         }
       }}
     },
+ 651
+    "_spec": [
+     {
+       "source": {"651": {"ind1": " ", "ind2": "7",
+         "subfields": [{"a": "Sydafrika"}, {"z": "Västra Kapprovinsen"}, {"2": "sao"}]}
+       },
+       "result": {"mainEntity": {
+         "instanceOf": {
+           "@type": "Text",
+           "subject": [
+             {
+               "@id": "@id": "https://id.kb.se/term/sao/Sydafrika--V%C3%A4stra%20Kapprovinsen",
+               "@type": "GeographicalTerm",
+
+               "prefLabel": "Sydafrika--Västra Kapprovinsen",
+               "termComponentList": [
+                 {
+                   "@type": "TopicalTerm",  # Blir lite osäker på hur vi ska skriva-- har jämfört med hur det ser ut på id.kb.se 
+                   "prefLabel": "Sydafrika"
+                 },
+                 {
+                   "@type": "GeographicalTerm", # Blir lite osäker på hur vi ska skriva-- har jämfört med hur det ser ut på id.kb.se
+                   "prefLabel": "Västra Kapprovinsen"
+                 }
+               ],
+                "inScheme": {
+                  "@id": "https://id.kb.se/term/sao",
+                  "@type": "ConceptScheme",
+                  "code": "sao"
+                }
+           }
+
+       ]
+       }}
+     },
+
+     {
+       "source": {"651": {"ind1": " ", "ind2": "0",
+         "subfields": [{"a": "Aix-en-Provence (France)"}, {"x": "Social life and customs"}, {"v": "Early works to 1800"}] }
+       },
+       "result": {"mainEntity": {
+         "instanceOf": {
+           "@type": "Text",
+           "subject": [
+             {   #Riktigt äo, men hittar inte aukt på id.loc.gov, så inget id????
+               "@type": "Topic",
+               "prefLabel": "Aix-en-Provence--Social life and customs--Early works to 1800",
+               "termComponentList": [
+                 {
+                   "@type": "TopicalTerm",
+                   "prefLabel": "Aix-en-Provence (France)",
+                 },
+                 {
+                   "@type": "Subdivision",
+                   "prefLabel": "Social life and customs",
+                 },
+                 {
+                   "@type": "GenreForm",
+                   "prefLabel": "Early work to 1800",
+                 }
+               ],
+                "inScheme": {
+                  "@id": "http://id.loc.gov/authorities/names",
+                  "@type": "ConceptScheme",
+                  "code": "lcsh"
+                }
+           }
+
+       ]
 
 655
    {
