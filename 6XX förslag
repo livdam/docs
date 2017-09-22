@@ -306,6 +306,41 @@
                     "code": "lcsh"]
 			  ]
 			  
+630
+"_spec": [
+  {
+    "source": {"630": {"ind1": " ", "ind2": "0",
+      "subfields": [{"a": "Talmud"}, {"p": "Bava meẓia"}]}
+    },
+    "result": {"mainEntity": {
+      "instanceOf": {
+        "@type": "Text",
+        "subject": [
+          {
+            "@id": "http://id.loc.gov/authorities/names/n81048431.html",
+            "@type": "Topic",
+            "inScheme": {
+              "@id": "http://id.loc.gov/authorities/names",
+              "@type": "ConceptScheme",
+              "code": "lcsh"
+            },
+            "prefLabel": "Talmud--Bava meẓia"
+            "termComponentList": [  # fast finns inte upplagt för annat än xyvz
+              {
+                "@type": "Topic",
+                "prefLabel": "Talmud"
+              },
+              {
+                "@type": "partName",
+                "prefLabel": "Bava meẓia"
+              }
+            ],
+          }
+        ]
+      }
+    }}
+  },
+			  
 			  
 650
        {
