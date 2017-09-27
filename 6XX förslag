@@ -15,8 +15,8 @@
                   "@type": "Person",
                   "name": "Ovid",
 				  "date": "43 B.C.-17 A.D. or 18 A.D.",
-				  "subdivision": "Amores.",
-				  "language4": "English"
+				  "title": "Amores.",
+				  "language": "English"
                   ],
 				"@id": "http://id.loc.gov/authorities/names/n85005984",
 				"@type": "Topic",
@@ -141,6 +141,85 @@
                     "@type": "ConceptScheme",
                     "code": "lsch",
 					}}},
+{
+        "source": {
+          "600": {
+            "ind1": "1",
+            "ind2": "4",
+            "subfields": [{"a": "Lindgren, Astrid"}, {"d": "1907-2002"}]
+          },
+     "result": {"mainEntity": {
+          "instanceOf": {
+            "@type": "Text",
+            "subject": [
+              {
+                "@type": [
+                "agent":  {"@resourceType": "Person",
+                 "familyName":  "Lindgren",
+                 "givenName":  "Astrid",
+                 "birthYear":  "1907-2002", ],
+
+                ],
+              "prefLabel":"lindgren, Astrid, 1907-2002"
+
+        }}},
+        {
+                "source": {
+                  "600": {
+                    "ind1": "1",
+                    "ind2": "7",
+                    "subfields": [{"a": "Lindgren, Astrid"}, {"d": "1907-2002"}, {"2": "kao"}]
+                  },
+             "result": {"mainEntity": {
+                  "instanceOf": {
+                    "@type": "Text",
+                    "subject": [
+                      {
+                        "@type":
+                        "agent":  {"@resourceType": "Person",
+                          
+                         "familyName":  "Lindgren",
+                         "givenName":  "Astrid",
+                         "birthYear":  "1907-2002", ],
+
+                        ],
+                        "inScheme": {
+                    "@type": "ConceptScheme",
+                    "code": "kao",
+                  },
+                    "prefLabel":"Lindgren, Astrid, 1907-2002"
+
+                }}},
+                {
+                        "source": {
+                          "600": {
+                            "ind1": "1",
+                            "ind2": "nlm",
+                            "subfields": [{"a": "Lindgren, Astrid"}, {"d": "1907-2002"}, ]
+                          },
+                     "result": {"mainEntity": {
+                          "instanceOf": {
+                            "@type": "Text",
+                            "subject": [
+                              {
+                                "@type":
+                                "agent":  {"@resourceType": "Person",
+                                  
+                                 "familyName":  "Lindgren",
+                                 "givenName":  "Astrid",
+                                 "birthYear":  "1907-2002", ],
+        
+                                ],
+                                "inScheme": {
+
+                            "@type": "ConceptScheme",
+                            "code": "nlm",
+                          },
+                            "prefLabel":"Lindgren, Astrid, 1907-2002"
+        
+                        }}},
+                        
+
 
 
 
