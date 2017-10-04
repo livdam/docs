@@ -23,7 +23,7 @@
              		"inScheme": {
                     "@id": "http://id.loc.gov/authorities/names",
                     "@type": "ConceptScheme",
-                    "code": "lsch",
+                    "code": "lcsh",
 					}}},	
 					
 					
