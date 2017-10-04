@@ -1,0 +1,340 @@
+"HAtermbase_with_uri_from_i2": {#Länkar behöver tittas på
+      "match": [
+        {
+          "when": "i2=7 & $2",
+          "NOTE": "if possible to revert to, prefer this form over i2=0",
+          "include": ["termbase_noid", "termid"]
+        },
+        {
+          "when": "i2=4",
+          "include": ["termbase_noid"]
+        },
+        {
+          "when": "i2=0",+
+          "include": ["termbase_noid"],
+          "uriTemplate": "http://id.loc.gov/authorities/label/{prefLabel}", # Vilken uri ska användas här?
+          "TODO": "Check if the two above are sound; better to match on uriTemplate on revert!"
+        },
+		{
+		"when": "i2=1",
+          "include": ["termbase_noid"],
+          "uriTemplate": "http://id.loc.gov/authorities/childrensSubjects{prefLabel}",
+		  },
+		  {
+		  "when": "i2=2",
+          "include": ["termbase_noid"],
+          "uriTemplate": "http://id.loc.gov/authorities/label/{prefLabel}",
+		  },
+		    {
+		  "when": "i2=3",
+          "include": ["termbase_noid"],
+          #Enligt hemsida finns en beta sparql endpoint https://id.nlm.nih.gov/mesh/
+		  },
+		{ "when": "i2=5",
+		"include": ["termbase_noid"],
+		
+		}
+		{ "when": "i2=6",
+		"include": ["termbase_noid"],
+		}
+        {
+          "when": "null"
+          "include": ["termbase_noid"],
+        }
+      ]
+    },
+    
+ "600": {
+		"include": ["subjectbase",  "HAtermbase_with_uri_from_i2"], # Med vad menas med FIXME vid i1=0 i agentdataPersonFamily? Samt kan vi använda agendataXX för 600, 610, 611 när de inte är en agent? Sent påkommen tanke. Låter vara kvar.
+
+		"aboutEntity": "?work",
+		"addLink": "subject",
+		"about": "_:agent",
+		 "resourceType": "Person",
+		 "match": [
+        {
+        "when": "t",
+		"include": ["agentdataPersonFamily","titledetails1XX/7XX"],
+		"pendingResources": {
+					 "_:work": {"addLink": "subject", "resourceType": "Work", "embedded": false},
+					 "_:contribution": {"about": "_:work", "link": "contribution", "resourceType": "Contribution", "embedded": false},
+					 "_:agent": {"about": "_:contribution", "link": "agent", "resourceType": "Person", "embedded": false}
+				 },
+				 "$t": {"about": "_:work", "property": "title"},
+
+	},
+	{
+				"when": null,
+				"include": "agentdataPersonFamily",
+				"addLink": "subject",
+				"resourceType": "Person",
+				"pendingResources": {
+					"_:agent": {"link": "agent", "resourceType": "Person"}
+				}
+			}
+	],
+		  "computeLinks": {"use": "$4", "mapping": "relatorCode"},
+		 "$0": {"addLink": "identifiedBy", "property": "value"},
+		 "subfieldOrder": "a b c d j e t g m n p r l k o x z y v" # bäst vore om man lät de vara som i posten -tar tid att funderar över, tar inte med detta för 610 o 611
+		 },
+
+
+		 "610": {  # Krånglig, behöver diskuteras!!!
+      "include": ["subjectbase", "agentdataOrganization", "HAtermbase_with_uri_from_i2"],
+      "aboutEntity": "?work",
+      "addLink": "subject",
+      "resourceType": "Organization", # ta bort här?
+
+
+	   "match": [
+        {
+        "when": "i1=1",
+        "pendingResources": {
+          "_:agent": {"link": "agent", "resourceType": "Jurisdiction"},
+          "_:isPartOf": {"about": "_:agent", "link": "isPartOf", "resourceType": "Jurisdiction"},
+          "_:place": {"about": "_:agent", "addLink": "place", "resourceType": "Place"}
+        },
+
+      {
+        "when": "null",
+        "pendingResources": {
+          "_:agent": {"link": "agent", "resourceType": "Organization"},
+          "_:isPartOf": {"about": "_:agent", "link": "isPartOf", "resourceType": "Organization"},
+          "_:place": {"about": "_:agent", "addLink": "place", "resourceType": "Place"}
+        },
+			},
+
+				{
+			  "when": "$t",
+			   "include":  "titledetails1XX/7XX",
+				 "pendingResources": {
+								"_:work": {"addLink": "subject", "resourceType": "Work", "embedded": false},
+								"_:contribution": {"about": "_:work", "link": "contribution", "resourceType": "Contribution", "embedded": false},
+								"_:agent": {"about": "_:contribution", "link": "agent", "resourceType": "Organization", "embedded": false}
+							},
+							"$t": {"about": "_:work", "property": "title"},
+
+			 },
+      ],
+        "computeLinks": {"use": "$4", "mapping": "relatorCode"},
+        "i1": {"marcDefault": "2"},
+        "$0": {"addLink": "identifiedBy", "property": "value"},
+
+
+
+
+		 "611": { # Samma i1-krångel som 610!!!
+"include": ["subjectbase", "agentdataMeeting", "HAtermbase_with_uri_from_i2"],
+"aboutEntity": "?work",
+"addLink": "subject",
+"resourceType": "Meeting",
+"pendingResources": {
+ "_:place": {"about": "_:agent", "addLink": "place", "resourceType": "Place"}
+
+
+"match": [
+ {
+ "when": "i1=1",
+ "pendingResources": {
+	 "_:agent": {"link": "agent", "resourceType": "Jurisdiction"},
+	 "_:isPartOf": {"about": "_:agent", "link": "isPartOf", "resourceType": "Jurisdiction"},
+	 "_:place": {"about": "_:agent", "addLink": "place", "resourceType": "Place"}
+ },
+
+
+ "when": "null",
+ "pendingResources": {
+	 "_:agent": {"link": "agent", "resourceType": "Meeting"},
+	 "_:isPartOf": {"about": "_:agent", "link": "isPartOf", "resourceType": "Meeting"},
+	 "_:place": {"about": "_:agent", "addLink": "place", "resourceType": "Place"}
+ },
+
+"when": "$t",
+"include": "titledetails1XX/7XX",
+},
+{
+
+"$a": {"property": "name", "required": true}, # Finns i AgentdataMeeting , behövs här också?
+ "computeLinks": {"use": "$4", "mapping": "relatorCode"},
+ "i1": {"marcDefault": "2"},
+"j": {"about": "_:agent", "addLink": "role", "property": "label"},
+ "$0": {"addLink": "identifiedBy", "property": "value"},
+
+},
+{
+		"630": {
+			"include": ["subjectbase", "HAtermbase_with_uri_from_i2", "titlesearchelem"],
+
+      "aboutEntity": "?work",
+      "addLink": "subject", "resourceType": "Work",
+			"$a": {"about": "_:work", "property": "uniformTitle"},
+			"$d": {"property": "date"},
+			"$n": {"addProperty": "partNumber", "punctuationChars": ","},
+			"$0": {"addLink": "identifiedBy", "property": "value"},
+			#LC använder madsrdf för a,v,x,y,z - bör vi göra det??
+
+
+		},
+
+
+			"648": {
+	 "include": ["subjectbase", "HAtermbase", "uri_from_i2"],
+	 "aboutEntity": "?work",
+	 "addLink": "subject",
+	 "resourceType": "Temporal",
+	 	"$a": {"about": "_:work", "property": "Temporal"},
+	},
+		"_spec": [
+		        {
+		          "source": {"648": {"ind1": " ", "ind2": "7",
+		            "subfields": [{"a": "1500-talet"}, {"2": "sao"}]}
+		          },
+		          "result": {"mainEntity": {
+		            "instanceOf": {
+		              "@type": "Text",
+		              "subject": [
+		                {
+		                  "@id": "https://id.kb.se/term/sao/1500-talet",
+		                  "@type": "Temporal",
+		                  "inScheme": {
+		                    "@id": "https://id.kb.se/term/sao",
+		                    "@type": "ConceptScheme",
+		                    "code": "sao"
+		                  },
+		                  "prefLabel": "1500-talet"
+		                }
+		              ]
+		            }
+		          }}
+		        },
+
+										{
+											"source": {"648": {"ind1": " ", "ind2": "7",
+												"subfields": [{"a": "Since 1500"}, {"2": "fast"}]}
+											},
+											"result": {"mainEntity": {
+												"instanceOf": {
+													"@type": "Text",
+													"subject": [
+														{
+															"@id": "http://id.worldcat.org/fast/1356013",
+															"@type": "Temporal",
+															"inScheme": {
+																"@id": "http://id.worldcat.org/fast/",
+																"@type": "ConceptScheme",
+																"code": "fast"
+															},
+															"prefLabel": "Since 1500"
+														}
+													]
+												}
+											}}
+										},
+
+ "650": {
+	 "include": ["subjectbase", "HAtermbase_with_uri_from_i2"],
+	 "aboutEntity": "?work",
+	 "addLink": "subject",
+	 "computeLinks": {"use": "$4", "mapping": "relatorCode"},
+	 "resourceType": "Topic",
+	 "i1": { # Behövs troligen inte
+		 "link": "marc:subjectLevel",
+		 "uriTemplate": "{+_}",
+		 "marcDefault": " ",
+		 "tokenMap": {
+			 "0": "marc:Unspecified",
+			 "1": "marc:Primary",
+			 "2": "marc:Secondary"
+		 }
+	 },
+
+	 "651": {
+      "include": ["subjectbase", "HAtermbase", "uri_from_i2"],
+      "aboutEntity": "?work",
+      "addLink": "subject",
+      "resourceType": "Geographic",
+      "i1": null,
+
+		},
+		"_spec": [
+		        {
+		          "source": {"651": {"ind1": " ", "ind2": "7",
+		            "subfields": [{"a": "Sverige"},{"z": "Stockholm"}, {"2": "sao"}]}
+		          },
+		          "result": {"mainEntity": {
+		            "instanceOf": {
+		              "@type": "Text",
+		              "subject": [
+		                {
+		                  "@id": "https://id.kb.se/term/sao/Sverige--Stockholm",
+		                  "@type": "Geographic",
+		                  "inScheme": {
+		                    "@id": "https://id.kb.se/term/sao",
+		                    "@type": "ConceptScheme",
+		                    "code": "sao"
+		                  },
+		                  "prefLabel": "Sverige--Stockholm",
+		                }
+		              ]
+		            }
+		          }}
+		        },
+
+
+						   {
+						          "source": {"651": {"ind1": " ", "ind2": "0",
+						            "subfields": {"a": "Sweden"}}
+						          },
+						          "result": {"mainEntity": {
+						            "instanceOf": {
+						              "@type": "Text",
+						              "subject": [
+						                {
+						                  "@id": "http://id.loc.gov/vocabulary/geographicAreas/e-sw",
+						                  "@type": "Geographic",
+						                  "inScheme": {
+						                    "@id": "https://id.kb.se/term/sao",
+						                    "@type": "ConceptScheme",
+						                    "code": "lcsh"
+						                  },
+						                  "prefLabel": "Sweden",
+						                }
+													],
+						            }
+						          }}
+						        },
+
+"653": {
+"Include": ["subjectdata", "HAtermbase_with_uri_from_i2"],
+"$a": {"aboutEntity": "?thing", "property": "keyword"}
+},
+"_spec": [
+				{
+					"source": {"653": {"ind1": " ", "ind2": "4",
+						"subfields": {"a": "Directors"}}
+					},
+					"result": {"mainEntity": {
+						"instanceOf": {
+							"@type": "Text",
+							"subject": [
+								{
+							"@type": "Keyword",
+							"keyword": "Directors",
+							"prefLabel": "Directors",
+								}
+							]
+						}
+					}}
+				},
+
+"654": { ##174 poster - något att diskutera med SAO redak
+"ignored": true,
+"TODO": "facet term (i1:like 650, i2: null)"
+},
+
+"655" : {
+"include": ["subjectbase", "HAtermbase_with_uri_from_i2"],
+"aboutEntity": "?work",
+"addLink": "genreForm",
+"resourceType": "GenreForm",
+},
