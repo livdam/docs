@@ -1,0 +1,302 @@
+100
+"_spec": [
+        {
+          "source": {
+            "100": {"ind1": "1", "ind2": " ", "subfields": [
+              {"a": "Jansson, Tove"}
+          ]}},
+          "result": {
+            "mainEntity": {
+              "@type": "Person",
+              "familyName":  "Jansson", "givenName":  "Tove"
+            }
+          }
+        },
+        {
+          "source": {
+            "100": {"ind1": "1", "ind2": " ", "subfields": [
+              {"a": "Jansson, Tove"},
+              {"t": "Anteckningar från en ö"}
+          ]}},
+          "result": {
+            "mainEntity": {
+              "@type": "Work",
+              "title": "Anteckningar från en ö",
+              "contribution": [
+                {
+                  "@type": "PrimaryContribution",
+                  "agent": {
+                    "@type": "Person", "familyName":  "Jansson", "givenName":  "Tove"
+                  }
+                }
+              ]
+            }
+          }
+        },
+
+        {
+          "source": {
+            "100": {"ind1": "0", "ind2": " ", "subfields": [
+              {"a": "Lucifer,"},
+              {"t": "Skuggpojken"},
+              {"l": "Norska"}
+          ]}},
+          "result": {
+            "mainEntity": {
+              "@type": "Work",
+              "title": "Skuggpojken",
+              "contribution": [
+                {
+                  "@type": "PrimaryContribution",
+                  "agent": {
+                    "@type": "Person", "name":  "Lucifer",
+                    "language": "Norska"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "source": {
+            "100": {"ind1": "0", "ind2": " ", "subfields": [
+              {"a": "Sokrates"},
+              {"d": "470 eller 469 f.Kr-399 f.Kr."}
+          ]}},
+          "result": {
+            "mainEntity": {
+              "@type": "Person",
+                   "name":  "Sokrates",
+                   "birthyear": "470 eller 469 f.Kr",
+                   "deathyear": "399 f.Kr."
+                  }
+                }
+              }
+              ]
+            }
+          }
+        },
+        {
+          "source": {
+            "100": {"ind1": "1", "ind2": " ", "subfields": [
+              {"a": "p'Bitek, Okot"},
+              {"d": "1931-1982"}
+          ]}},
+          "result": {
+            "mainEntity": {
+              "@type": "Person",
+                   "familyNamename":  "p'Bitek",
+                   "givenName": "Okot",
+                   "birthyear": "1931",
+                   "deathyear": "1982"
+                  }
+                }
+              }
+              ]
+            }
+          }
+        },
+        {
+          "source": {
+            "100": {"ind1": "0", "ind2": " ", "subfields": [
+              {"a": "Gustav"},
+              {"b": "I,"},
+              {"c": "kung av Sverige"},
+              {"d": "1496-1560"}
+          ]}},
+          "result": {
+            "mainEntity": {
+              "@type": "Person",
+                   "name":  "Gustav",
+                   "marc:numeration": "I",
+                   "marc:titleOther": "kung av Sverige",
+                   "birthyear": "1496",
+                   "deathyear": "1560"
+                  }
+                }
+              }
+              ]
+            }
+          }
+        },
+        {
+          "source": {
+            "100": {"ind1": "0", "ind2": " ", "subfields": [
+              {"a": "Diana"},
+              {"c": "prinsessa av Wales,"},
+              {"d": "1961-1997"},
+              {"c": "(ande)"}
+          ]}},
+          "result": {
+            "mainEntity": {
+              "@type": "Person",
+                   "name":  "Diana",
+                   "marc:titleOther": "prinsessa av Wales, ",
+                   "birthyear": "1961",
+                   "deathyear": "1997",
+                    "marc:titleOther": "(ande)"
+                  }
+                }
+              }
+              ]
+            }
+          }
+        },
+        {
+          "source": {
+            "100": {"ind1": "1", "ind2": " ", "subfields": [
+              {"a": "Eliot, T.S."},
+              {"q": "(Thomas Stearns)"},
+              {"d": "1888-1965"}
+
+          ]}},
+          "result": {
+            "mainEntity": {
+              "@type": "Person",
+                   "birthname":  "Eliot",
+                   "givenName": "T.S.",
+                   "marc:fullerFormName": "(Thomas Stearns) ",
+                   "birthyear": "1888",
+                   "deathyear": "1965"
+
+                  }
+                }
+              }
+              ]
+            }
+          }
+        },
+        {
+          "source": {
+            "100": {"ind1": "3", "ind2": " ", "subfields": [
+              {"a": "Nilssom (släkt: "},
+              {"d": "1700-talet"},
+              {"c": "Krylbo, Sverige)"}
+
+          ]}},
+          "result": {
+            "mainEntity": {
+              "@type": "Family",
+                   "name":  "Nilsson (släkt: ",
+                   "marc:fullerFormName": "(Thomas Stearns) ",
+                   "date": "1700-talet",
+                   "place": "Krylbo, Sverige)"
+
+                  }
+                }
+              }
+              ]
+            }
+          }
+        }
+      ]
+    },
+
+
+110
+"_spec": [
+       {
+         "source": {
+           "110": {"ind1": "2", "ind2": " ", "subfields": [
+             {"a": "Europeiska unionen"},
+             {"b": " Regionkommittén"}
+           ]}},
+         "result": {
+           "mainEntity": {
+             "@type": "Organization",
+                     "marc:subordinateUnit" : "Regionkommittén",
+                     "isPartOf": {
+                       "@type": "Organization",
+                       "name": "Europeiska unionen"
+           } }
+         },
+         {
+           "source": {
+             "110": {"ind1": "1", "ind2": " ", "subfields": [
+               {"a": "Sverige"},
+               {"b": "Armén"},
+                {"b": "Dalregementet"}
+             ]}},
+           "result": {
+             "mainEntity": {
+               "@type": "Jurisdiction",
+                       "marc:subordinateUnit" : ["Armén", "-Dalregementet"],
+                       "isPartOf": {
+                         "@type": "Jurisdiction",
+                         "name": "Sverige"
+             }
+           }
+       },
+       {
+         "source": {
+           "110": {"ind1": "1", "ind2": " ", "subfields": [
+             {"a": "Förenta staterna"},
+             {"b": "Congress"},
+             {"n": "(64: )"},
+             {"d": "1915-1916)"},
+            {"c": "Washington DC"}
+           ]}},
+         "result": {
+           "mainEntity": {
+             "@type": "Jurisdiction",
+                     "marc:subordinateUnit" : "Congress",
+                     "isPartOf": {
+                       "@type": "Jurisdiction",
+                       "name": "Förenta staterna",
+                       "marc:numberOfPartSectionMeeting": "64",
+                       "date": "1915-1916",
+                       "place":  "Washington DC"
+           }
+         }       },
+         {
+           "source": {
+             "110": {"ind1": "1", "ind2": " ", "subfields": [
+               {"a": "Great Britain"},
+               {"t": "Treaties, etc."},
+               {"g": "Poland"},
+               {"d": "1948 Mar.2."},
+               {"k": "Protocols, etc"},
+               {"d": "1951 Mar.6"}
+           ]}},
+           "result": {
+             "mainEntity": {
+               "@type": "Work",
+               "title": "Treaties, etc.",
+                  "date": "1948 Mar.2.",
+              "comment": "Poland",
+               "marc:formSubheading": "Protocols, etc",
+               "date": "1951 Mr.6"
+            }
+               "contribution": [
+                 {
+                   "@type": "PrimaryContribution",
+                   "agent": "Jurisdiction",
+                     "name": "Great Britain",
+
+
+                 }
+               ],
+    
+           }
+         }
+111
+{
+  "source": {
+    "111": {"ind1": "2", "ind2": " ", "subfields": [
+      {"a": "Geophysical Symposium"},
+      {"n": "(21st: )"},
+      {"d": "1976 :)"},
+     {"c": "Leipzig, Germany"}
+    ]}},
+  "result": {
+    "mainEntity": {
+      "@type": "Meeting",
+
+                "name": "Förenta staterna",
+                "marc:numberOfPartSectionMeeting": "21st",
+                "date": "1976",
+                "place":  "Leipzig, Germany"
+    }
+  }       },
+     ]
+   }
