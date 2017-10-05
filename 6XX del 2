@@ -208,28 +208,27 @@
 		          }}
 		        },
 
-										{
-											"source": {"648": {"ind1": " ", "ind2": "7",
-												"subfields": [{"a": "Since 1500"}, {"2": "fast"}]}
-											},
-											"result": {"mainEntity": {
-												"instanceOf": {
-													"@type": "Text",
-													"subject": [
-														{
-															"@id": "http://id.worldcat.org/fast/1356013",
-															"@type": "Temporal",
-															"inScheme": {
-																"@id": "http://id.worldcat.org/fast/",
-																"@type": "ConceptScheme",
-																"code": "fast"
-															},
-															"prefLabel": "Since 1500"
-														}
-													]
-												}
-											}}
-										},
+	{
+	"source": {"648": {"ind1": " ", "ind2": "7","subfields": [{"a": "Since 1500"}, {"2": "fast"}]}
+},
+	"result": {"mainEntity": {
+	"instanceOf": {
+	"@type": "Text",
+	"subject": [
+	{
+	"@id": "http://id.worldcat.org/fast/1356013",
+	"@type": "Temporal",
+	"inScheme": {
+	"@id": "http://id.worldcat.org/fast/",
+	"@type": "ConceptScheme",
+	"code": "fast"
+	},
+	"prefLabel": "Since 1500"
+	}
+	]
+	}
+	}}
+	},
 
  "650": {
 	 "include": ["subjectbase", "HAtermbase_with_uri_from_i2"],
