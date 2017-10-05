@@ -3,7 +3,7 @@
         {
           "when": "i2=7 & $2",
           "NOTE": "if possible to revert to, prefer this form over i2=0",
-          "include": ["termbase_noid", "termid"]
+          "include": ["termbase_noid"]
         },
         {
           "when": "i2=4",
