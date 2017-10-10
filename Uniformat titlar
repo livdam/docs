@@ -1,0 +1,241 @@
+#uniformTitle Inte i Bf - RDA använder preferred title, has preferred title for work
+# Vi har   :uniformTitle a owl:DatatypeProperty;
+    rdfs:label "uniform titel"@sv;
+    rdfs:subPropertyOf :prefLabel, :title . Förslag preferredTitle.Kvar tills vidare
+
+"130": {
+      "aboutEntity": "?work",
+      "addLink": #Vad ska man länka till???
+      "link": "expressionOf", # Varför denna relation? ?
+       "TODO:i1": {},# filering bflc:titleSortKey
+      "include": "titledetails1xx7xx",
+      "resourceType": "Work",
+      "TODO": "Similar to 240. Could use link:expressionOf if 130 XOR 240",n #???
+      "$a": {"property": "uniformTitle"},
+      "d": {"property": "legalDate"},
+      "n": {"property": "numberOfPartOfWork"},
+      "$0": {"addLink": "identifiedBy", "property": "value"}
+
+    },
+    "_spec": [
+        {
+          "source": {
+            "130": {"ind1": "0", "ind2": " ", "subfields": [
+              {"a": "Treaty of the Non-proliferation of Nuclear Weapons"},
+              {"d": "(1968)."},
+              {"l": "Spanish."},
+              {"f": "1977."}
+
+          ]}},
+          "result": {"mainEntity": {
+            "hasTitle": [ {"@type": "Title",
+              "uniformTitle":  "Treaty of the Non-proliferation of Nuclear Weapons",
+              "legalDate": "1968",
+              "language": {"@type": "translationOf", "language": "Spanish"} ,
+              "originDate": "1977."
+            } ]
+          }}
+        },
+
+
+    "240": {
+     "aboutEntity": "?work",
+     "TODO:i2": {}, # filering bflc:titleSortKey,
+     "TODO:i1" - ta hand om?? Fråga biblioteken?,
+
+     "include": "titledetails1xx7xx",
+     "embedded": true,
+     "link": "hasTitle",
+     "resourceType": "Title",
+     "$a": {"property": "uniformTitle"},
+     "d": {"property": "legalDate"},
+     "n": {"property": "numberOfPartOfWork"},
+
+     "$0": { # NL gjort - varför behövs så mycket här???
+       "aboutEntity": "?work",
+       "addLink": "describedBy", "resourceType": "Record", "property": "controlNumber",
+       "uriTemplate": "http://libris.kb.se/auth/{_}"
+     }
+   },
+   "_spec": [
+       {
+         "source": {
+           "240": {"ind1": "0", "ind2": " ", "subfields": [
+             {"a": "Moyen âge"},
+             {"l": "Engelska."},
+
+
+         ]}},
+         "result": {"mainEntity": {
+           "hasTitle": [ {"@type": "Title",
+             "uniformTitle":  "Moyen âge",
+             "language": {"@type": "translationOf", "language": "Engelska"} ,
+
+           } ]
+         }}
+       },
+       {
+         "source": {
+           "240": {"ind1": "0", "ind2": " ", "subfields": [
+             {"a": "Moyen âge"},
+             {"l": "Engelska."},
+
+
+         ]}},
+         "result": {"mainEntity": {
+           "hasTitle": [ {"@type": "Title",
+             "uniformTitle":  "Moyen âge",
+             "language": {"@type": "translationOf", "language": "Engelska"} ,
+
+           } ]
+         }}
+       },
+
+   "730": {
+     "aboutEntity": "?work",
+     "TOOO:i1": {},# filering bflc:
+
+     "match": [
+        {
+          "when": "i2=2",
+         "include": "titledetails1xx7xx",
+          "addLink": "hasPart",
+          "resourceType": "Work",
+
+            }
+            {
+            "when": null,
+             "include": "titledetails1xx7xx",
+             "addLink": "relatedTo",
+           },
+          ],
+
+          "$a": {"property": "uniformTitle"},
+          "$d":  {"property": "legalDate"},
+          "$i": {"addLink": "relation", "property": "label"},
+          "$x": {"property": "issn", "punctuationChars": ".,=;"},
+          "$0": {"addLink": "identifiedBy", "property": "value"}
+        },
+        "_spec": [
+            {
+              "source": {
+                "730": {"ind1": "0", "ind2": " ", "subfields": [
+                  {"i": "Novelization of (work)"},
+                  {"a": "Abyss (Motion picture : 1989)"}  ],
+
+            }},
+              "result": {"mainEntity":
+                "instanceOf": {
+                  "@type": "Text",
+                "relatedTo": [
+                  {
+                    "@type": "Relationship",
+                    "relation": [{"label": "Novelization of (work)"}],
+                  "entity": {
+                    "@type": "Work",
+                    "uniformTitle":  "Abyss (Motion picture : 1989)"},
+              
+              ],
+              },
+
+            {
+              "source": {
+                "730": {"ind1": "0", "ind2": " ", "subfields": [
+                  {"a": "Macaroons and biscuits."},
+                  {"l": "Svenska."},
+
+
+              ]}},
+              "result": {"mainEntity": {
+                "instanceOf": {
+                  "@type": "Text",
+                "hasTitle": [
+                  {"@type": "Work",
+                  "uniformTitle":  "Macaroons and biscuits",
+                  "language": {"@type": "translationOf", "language": "Svenska"} ,
+
+                } ],
+              }, }
+            },
+        {
+            "source": {
+         "730": {"ind1": "0", "ind2": "2", "subfields": [
+           {"i": "Container of (work): "}
+           {"a": "Gigue,"},
+           {"m": "harpsichord,"},
+           {"n": "GraunWV D:XVIII:11,"},
+           {"r": "B♭ minor"},
+         ]}},
+
+       "result": {"mainEntity": {
+         "instanceOf": {
+           "@type": "Text",
+           "relatedTo": [
+             {
+               "@type": "Relationship",
+               "relation": [{"label": "Container of (work):"}],
+             }
+           ]
+           "hasPart": [
+             {
+               "@type": "Work",
+               "title": "Gigue",
+               "musicMedium": "harpsichord,",
+               "partNumber": "GraunWV D:XVIII:11,",
+               "musicKey": "B♭ minor,"},
+             ],
+           } } }
+
+
+
+
+   "830": {
+   "addLink": "isPartOf", "resourceType": "Serial",
+   "TODO:i2": {} # filering bflc:titleSortKey,
+   "include": "titledetails1xx7xx",
+   "$a": {"property": "uniformTitle"},
+   "$d": {"addProperty": "legaldate"},
+   "$v": {"property": "seriesEnumeration"},
+   "$x": {"property": "issn", "punctuationChars": ".,=;"},
+   "$0": {"addLink": "identifiedBy", "property": "value"},
+
+   "_spec": [
+       {
+         "source": {
+           "830": {"ind1": " ", "ind2": "0", "subfields": [
+             {"a": "Europarecht (Munich, germany)"},
+             {"p": "Beiheft"}
+             {"V": "2002/1"} ],
+
+       }},
+         "result": {"mainEntity": {
+           "hasTitle": [ {"@type": "Title",
+
+               "uniformTitle":  "Europarecht",
+                "partName": "Beiheft",
+                "seriesEnumeration": "2002/1"
+              }
+            ],
+
+
+         },
+         {
+           "source": {
+             "830": {"ind1": " ", "ind2": "0", "subfields": [
+               {"a": "Studies on the texts of the desert of Judah,"},
+               {"v": "101"}
+               {"x": "0169-9962"} ],
+
+         }},
+           "result": {"mainEntity": {
+             "hasTitle": [ {"@type": "itle",
+
+                 "uniformTitle":  "Studies on the texts of the desert of Judah",
+                  "seriesEnumeration": "101"  ,
+                  "issn": "0169-9962"
+                }
+              ],
+
+
+           },
+ },
