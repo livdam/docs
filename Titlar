@@ -1,0 +1,375 @@
+"structuredtitle": { anv av 242, 245, 246, 247
+  "pendingResources": {
+    "_:titlePart": {
+      "addLink": "hasPart",
+      "resourceType": "TitlePart"
+    }
+  },
+  "match": [
+    {
+      "when": "$a =~ .+:\\s*$",
+      "$a": {"property": "mainTitle", "trailingPunctuation": " :"},
+      "$b": {"property": "subtitle", "required": true, "punctuationChars": "/"}
+    },
+    {
+      "when": "$a =~ .+=\\s*$",
+      "$a": {"property": "mainTitle", "trailingPunctuation": " ="},
+      "$b": {"property": "marc:parallelTitle", "required": true, "punctuationChars": "/"}
+    },
+    {
+      "when": "$a =~ .+\\.\\s*$",
+      "$a": {"property": "mainTitle", "trailingPunctuation": " ."},
+      "$b": {"property": "marc:equalTitle", "required": true, "punctuationChars": "/"},
+      "TODO": "$a and $b represent equal titles"
+    }
+  ],
+  "$a": {"property": "mainTitle", "punctuationChars": "=:/."},
+  "$b": {"property": "titleRemainder", "punctuationChars": "/"},
+  "$n": {"aboutNew": "_:titlePart", "property": "partNumber", "punctuationChars": ","},
+  "$p": {"about": "_:titlePart", "property": "partName", "punctuationChars": "/"}
+},
+
+"740": {}
+   "TOOO:i1": {},# filering bflc:,
+   "match": [
+      {
+        "when": "i2=2",
+        "addLink": "hasPart",
+        "resourceType": "Work",
+
+        "when": null ,
+      "addLink": "relatedTo",
+      "resourceType": "Relationship",
+    }
+        ],
+
+   "$a": {"property": "title"},
+   "$n": {"addProperty": "partNumber", "punctuationChars": ","},
+   "$p":  {"addProperty": "partName"},
+
+   "_spec": [
+       {
+         "source": {
+           "740": {"ind1": "0", "ind2": "2", "subfields": [
+
+             {"a": "Economics library selections"}
+            {"n": "Series 1,"},
+           {"p": "New books in economics"},
+         ],
+
+       }},
+         "result": {"mainEntity":
+           "instanceOf": {
+             "@type": "Text",
+           "hasPart": [
+             {
+               "@type": "Work",
+               "title": "Economics library selections",
+               "partNumber": "Series 1,",
+               "partName": "New books in economics"}],
+
+             },
+           },
+
+               "source": {
+                 "740": {"ind1": "3", "ind2": " ", "subfields":  {"a": "En hjälpande hand"}
+
+             }},
+               "result": {"mainEntity":
+                 "instanceOf": {
+                   "@type": "Text",
+                 "relatedTo": [
+                   {
+                     "@type": "Work",
+                     "title": "En hjälpande hand",
+                }   ],
+
+}
+
+
+         ],
+         },
+
+"210": { #svårt att modellera!!   hör till serier#
+             "include": ["titlesearchelem"], #tar hand om filering? Här ingen att ta hand om
+             "aboutEntity": "?thing",
+             "addLink": "hasTitle",
+             "embedded": true,
+             "resourceType": "AbbreviatedTitle",
+             "TOOO:i2": {},# LC source + issnkey
+             "match": [
+                {
+                  "when": "i2=" "",
+                 "source": # hur modellera?
+
+
+                    }
+
+                  ],
+             "$a": {"property": "mainTitle"},
+             "$b": {"property": "qualifier"},
+             "TODO" #lägggs till i def bf:qualifier  nu :qualifyingNote
+             "$2": {"property": "sourceNote"} #LC använder "bf:source" + label,
+
+             "_spec": [
+                 {
+                   "source": {
+                     "210": {"ind1": "1", "ind2": "0", "subfields":
+                       {"a": "Mensuration photogrammetrie genie rural"},
+
+                 },
+                   "result": {"mainEntity":
+                     "hasTitle": [ {"@type": "AbbreviatedTitle",
+                       "mainTitle": "Mensuration photogrammetrie genie rural"},
+
+                       ],
+
+                       },
+            {
+               "source": {
+                     "210": {"ind1": "0", "ind2": " ", "subfields": [
+                             {"a": "Plant prot. bull."} ,
+                              {"b": "(Faridabad)"}    ] ,
+
+
+                       },
+                         "result": {"mainEntity":
+                           "hasTitle": [ {"@type": "AbbreviatedTitle",
+                             "mainTitle": "Plant prot. bull.",
+                             "qualifier": "(Faridabad)"},
+
+                             ],
+
+                             },
+   "222": {
+               "aboutEntity": "?thing", # Håll ihop issn och 222
+               "NOTE:domainIncludes": "Serial/Periodical",
+                "addLink": "hasTitle",
+               "embedded": true,
+                "resourceType": "KeyTitle",
+               "$a": {"property": "mainTitle"},
+                "$b": {"property": "qualifier"}
+              },
+   "_spec": [
+        "source": {
+                    "222": {"ind1": " ", "ind2": "0", "subfields": [
+                            {"a": "Plant protection bulletin"} ,
+                             {"b": "(Faridabad)"}    ] ,
+
+
+                      },
+                        "result": {"mainEntity":
+                          "hasTitle": [ {"@type": "KeyTitle",
+                            "mainTitle": "Plant protection bulletin",
+                            "qualifier": "(Faridabad)"},
+
+                            ],
+          },
+
+"242": {
+                "include": ["structuredtitle", "titlesearchelem"],# tar hand om i1, här i2 som har filering ,
+                "aboutEntity": "?thing",
+                "addLink": "marc:hasTranslatedTitle",
+                "embedded": true,
+                "resourceType": "Title",
+                "$c": {"property": "responsibilityStatement"}, #LC ignore, 2 poster
+                "$h": {"property": "marc:mediaTerm"},
+                "$y": {"link": "language", "property": "code"},
+                "TODO": "Translation of? merge into 245?" # har relation till 245, hur blir relationen?, räcker så här? ,
+"_spec": [
+           "source": {
+             "222": {"ind1": "1", "ind2": "0", "subfields": [
+                    {"a": "New regulation on public order"} ,
+                    {"b": "an addendum to the instruction of the ward chairmen."}
+                    {"y": "eng"}    ] ,
+
+
+                      },
+                          "result": {"mainEntity":
+                                       "hasTitle": [ {"@type": "marc:hasTranslatedTitle",
+                                         "mainTitle": "New regulation on public order",
+                                         "subtitle": "an addendum to the instruction of the ward chairmen" ,
+                                         "language" "XXXX", # Hur skriva?
+                                         "code": "eng"},
+
+                                         ],
+                       },
+              },
+              "source": {
+                "222": {"ind1": "1", "ind2": "0", "subfields": [
+                       {"a": "Annals of chemistry"} ,
+                       {"n": "Series C,."}
+                       {"p": "Organic chemistry and biochemistry."},
+                       {"y": "eng"}] ,
+
+
+                         },
+                             "result": {"mainEntity":
+                                          "hasTitle": [ {"@type": "marc:hasTranslatedTitle",
+                                            "mainTitle": "Annals of chemistry",
+                                            "partNumber": "Series C",
+                                            "partname": "Organic chemistry and biochemistry" ,
+                                            "language" "XXXX",
+                                            "code": "eng"},
+
+                                            ],
+                          },
+  "243": {
+          "include": ["titledetails1xx7xx", "titlesearchelem"], # tar hand om i1, här i2 som har filering,
+              "addLink": "hasTitle",
+              "embedded": true,
+              "resourceType": "CollectiveTitle",
+              "$a": {"property": "mainTitle"},
+              "$d": {"property": "legalDate"},
+              "$n": {"addProperty": "partNumber", "punctuationChars": ","},
+             }
+
+                          },
+"_spec": [
+      "source": {
+       "243": {"ind1": "1", "ind2": "0", "subfields": [
+            {"a": "Philosophical works"} ,
+            {"k": "Selsections"}    ] ,
+
+
+                },
+                  "result": {"mainEntity":
+                    "hasTitle": [ {"@type": "CollectiveTitle",
+                       "mainTitle": "Philosophical works.",
+                      "form": "Selections"},
+
+                ],
+                },
+              },
+
+       "source": {
+      "243": {"ind1": "1", "ind2": "0", "subfields": [
+        {"a": "Correspondence"} ,
+        {"s": "Selections"},
+        {"l": "English"}    ] ,
+
+
+       },
+       "result": {"mainEntity":
+            "hasTitle": [ {"@type": "CollectiveTitle",
+                "mainTitle": "Correspondence",
+                "marc:version": "Selections" ,
+                "language": "English"
+                } ],
+
+
+                },
+          },
+  "245": {
+               "include": ["structuredtitle", "titlesearchelem"],  # tar hand om i1, här i2 som har filering,
+               "aboutEntity": "?thing",
+               "addLink": "hasTitle",
+               "embedded": true,
+               "resourceType": "Title",
+               "i2": {"TODO:titleSortKey": "bf2 implements this as: ($label,@ind2+1,(string-length($label)-@ind2)-1)", "marcDefault": "0"}, #vad gör?
+               "subfieldOrder": "a b c p n ... h",
+               "$c": {
+                 "aboutEntity": "?thing", "property": "responsibilityStatement",
+                 "leadingPunctuation": "/", "trailingPunctuation": ".",
+                 "NOTE": "punctuation may include data about included parts (e.g. short stories)"
+               },
+               "$f": {"aboutEntity": "?thing", "property": "temporalCoverage"},
+               "$g": {"aboutEntity": "?thing", "property": "marc:generalTemporalCoverageNote"}, #ej i Definitions, borde döpas om till "marc:bulkTemporalCoverage",
+               "$h": {"aboutEntity": "?thing", "property": "marc:mediaTerm", "surroundingChars": "[]"},
+               "$k": {"addProperty": "marc:formSubheading"}, #Mitt tilägg, vet inte hur många poster som har
+               "$s": {"property": "version"},
+               "_spec": [
+                    {
+                      "source": {
+                        "245": {"ind1": "1", "ind2": "0", "subfields": [
+                          {"a": "Anteckningar från en ö"}
+                      ]}},
+                      "result": {"mainEntity": {
+                        "hasTitle": [ {"@type": "Title",
+                          "mainTitle":  "Anteckningar från en ö"
+                        } ]
+                      }}
+                    },
+                    {
+                      "source": {
+                        "245": {"ind1": "0", "ind2": "0", "subfields": [
+                          {"a": "Anteckningar från en ö /"},
+                          {"c": "Tove Jansson, Tuulikki Pietilä."}
+                      ]}},
+                      "result": {"mainEntity": {
+                        "hasTitle": [ {"@type": "Title",
+                          "mainTitle":  "Anteckningar från en ö",
+                          "marc:searchElement": false
+                        } ],
+                        "responsibilityStatement":  "Tove Jansson, Tuulikki Pietilä"
+                      }}
+                    }
+                  ]
+                },
+                "246": {
+                      "include": ["structuredtitle"],
+                      "aboutEntity": "?thing",
+                      "addLink": "hasTitle",
+                      "embedded": true,
+                      "i1": {
+                        "link": "marc:searchControl",
+                        "uriTemplate": "{+_}",
+                        "tokenMap": {
+                          "0": "marc:NoteNoAddedEntry",
+                          "1": "marc:NoteAddedEntry",
+                          "2": "marc:NoNoteNoAddedEntry",
+                          "3": "marc:NoNoteAddedEntry"
+                        },
+                        "marcDefault": "1"
+                      },
+                      "i2": {
+                        "property": "@type",
+                        "overwrite": true,
+                        "TODO:if _": "use $i",
+                        "tokenMap": {
+                          " ": "VariantTitle",
+                          "0": "marc:TitlePart",
+                          "1": "ParallelTitle",
+                          "2": "marc:DistinctiveTitle",
+                          "3": "marc:OtherTitle",
+                          "4": "CoverTitle",
+                          "5": "TitlePage",
+                          "6": "HeadingTitle", # CaptionTitle
+                          "7": "ColumnTitle", #RunningTitle
+                          "8": "SpineTitle"
+                        }
+                      },
+                      "$f": {"property": "qualifyingNote"},# ska vara "date", Men $f volues 5-6, blir inte bra då. Både om volymer och om datum i samma fält
+
+                      "$g": {"property": "comment"}, #jmfr   "$g": {"about": "_:agent", "addProperty": "comment"}, "about": "_:title", "addproperty": "comment",
+                      "$h": {"property": "marc:mediaTerm", "surroundingChars": "[]"},
+                      "$i": {"property": "typeNote"} #Typanmärkning på svenska - begripligt? anv 022, 024, 246, 300 f, här Displaytext, LC ignore ,
+                    },
+
+                    "247": {
+                      "TODO": "Previously misused as 246?", #Går inte att bedöma
+                      "include": ["structuredtitle"],
+                      "NOTE:domainIncludes": "Integrating", #Diskutera
+                      "aboutEntity": "?thing",
+                      "addLink": "marc:previousTitle",
+                      "embedded": true,
+                      "resourceType": "Title",
+                      "i1": {
+                        "property": "marc:isAddedEntry",
+                        "tokenMap": {"1": true},
+                        "marcDefault": "0"
+                      },
+                      "i2": {
+                        "property": "marc:showRemark",
+                        "tokenMap": {"1": true},
+                        "marcDefault": "0"
+                      },
+                      "$f": {"property": "date"},
+                      "$g": {"property": "comment"},  #jmfr   "$g": {"about": "_:agent", "addProperty": "comment"}, "about": "_:title", "addproperty": "comment",
+                      "$h": {"property": "marc:mediaTerm"},
+                      "$x": {"addProperty": "issn"}
+                    },
+
+"249": {}, # Plan B
+
+                 },
