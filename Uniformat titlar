@@ -188,13 +188,15 @@
 
 
 
-   "830": {
-   "addLink": "isPartOf", "resourceType": "Serial",
+ "830": {
+   "addLink": "hasSeries", "resourceType": "Serial",
    "TODO:i2": {} # filering bflc:titleSortKey,
    "include": "titledetails1xx7xx",
    "$a": {"property": "uniformTitle"},
    "$d": {"addProperty": "legaldate"},
+   "$n": {"addProperty": "partNumber", "punctuationChars": ","},
    "$v": {"property": "seriesEnumeration"},
+   "$w": {"addProperty": "bibliographicRecordControlNumber"},
    "$x": {"property": "issn", "punctuationChars": ".,=;"},
    "$0": {"addLink": "identifiedBy", "property": "value"},
 
