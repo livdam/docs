@@ -275,6 +275,10 @@
                },
                "$f": {"aboutEntity": "?thing", "property": "temporalCoverage"},
                "$g": {"aboutEntity": "?thing", "property": "marc:generalTemporalCoverageNote"}, #ej i Definitions, borde döpas om till "marc:bulkTemporalCoverage",
+               #Varför inte enkelt skriva 
+"$f": "marc:inclusiveDates"
+"$g": "marc:bulkDates"Och se till att värde är en literal?
+
                "$h": {"aboutEntity": "?thing", "property": "marc:mediaTerm", "surroundingChars": "[]"},
                "$k": {"addProperty": "marc:formSubheading"}, #Mitt tilägg, vet inte hur många poster som har
                "$s": {"property": "version"},
