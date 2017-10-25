@@ -1,0 +1,224 @@
+  Har bara tittat på 082, 083 och 084 än så länge. Det mesta övriga bör bli Plan B
+  För holdings har jag tittat på 082 och 084, men  hyllkod (shelfMark i Bf2) läggs i 852.
+  
+  "classification-ddc": {
+     "resourceType": "ClassificationDdc",
+
+     "i1": {
+       "addlink: ":edition"  ,
+       "match": [
+         {
+           "when": "i1=0": {"property": ":edition", "label": "full"},
+         },
+         {
+         "when": "i1=1": {"property": ":edition", "label": "abridged"},
+       },
+       {
+         "when": "i1=7": {"ignored": true}, #LC gör så
+       },
+     ],
+
+    },
+
+     },
+     "$a": {"property": ":code", "required": true}, # Här eller i 082 och 083?
+
+     "$2": {
+       "link": "inScheme", "resourceType": "ConceptScheme",
+       "required": true,
+       "property": "version",# LC har edtion men krånglar väl med full edition?
+       "splitValuePattern": "(\\d+)(?:/(swe))?",
+       "splitValueProperties": ["version", "language"],
+       "rejoin": "/"
+     },
+
+},
+
+
+"082": {
+     "aboutEntity": "?work",
+     "addLink": "classification",
+     "include": ["classification-ddc"],
+     "match": [
+       {"when": "i2=0",  "source":  "LC"},
+       {"when": null, XXXX, # Hur skriva bäst? LC säger ignore för både _ och 4. Skulle kunna återkonvertera till 4
+       },
+     ]
+
+       "$b": {"property": ":itemPortion"}, #finns som property till klass ibf2, men vill vi ha med? Hör inte till klassifikationen, utan till hyllkod
+       "$q": ":source", #kLC använder source här men assigner i 084
+
+
+     },
+     "_spec": [
+       {
+         "source": {
+          "082": {"in1": "0", "ind2": "0", "subfields": [
+            {"a": "158.1"},
+            {"2": "23"}
+            ]}
+          },
+         "result": {"mainEntity": {
+           "work"  XXXX, #känner mig osäker på hur modellera
+           "classification",
+           "edition": "full"
+           "code": "158.1",
+           "version": "23"
+         }}
+       },
+       {
+         "source": {
+          "082": {"in1": "0", "ind2": "4", "subfields": [
+            {"a": "158.1"},
+            {"2": "23/swe"},
+            {"q": "KB"}
+            ]}
+          },
+         "result": {"mainEntity": {
+           "work"  XXXX, #känner mig osäker på hur modellera
+           "classification",
+           "edtion": "full",
+           "code": "158.1",
+           "version": "23/swe",
+           "source": "KB"
+         }}
+       }
+     ]
+   },
+   "083": {
+     "aboutEntity": "?work",
+     "addLink": "classification", # behöver särskiljas från 082?
+     "include": ["classification-ddc"]
+   },
+  "$b": {"property": ":itemPortion"}, #LC gör. finns som property till #känner mig osäker på hur modellera#känner mig osäker på hur modellera
+  "q": {"property" "source"},
+ }
+ },
+ "_spec": [
+   {
+     "source": {
+      "083": {"in1": "0", "ind2": " ", "subfields": [
+        {"a": "158.1"},
+        {"2": "23"}
+        ]}
+      },
+     "result": {"mainEntity": {
+       "work"  XXXX, #känner mig osäker på hur modellera
+       "classification",
+       "edition": "full"
+       "code": "158.1",
+       "version": "23"
+     }}
+     {
+       "source": {
+        "083": {"ind1": "7", "ind2": " ", "subfields": [
+          {"a": "598.0994"},
+          {"2": "23/nor"},
+          {"q": "KB"}
+          ]}
+        },
+       "result": {"mainEntity": {
+         "work"  XXXX, #känner mig osäker på hur modellera
+         "classification",
+         "edtion": "full",
+         "code": "598.0994",
+         "version": "23/swe",
+         "source": "KB"
+       }}
+     }
+   },
+
+   "084": {
+     "include": [], #vad? Ta bort.
+     "aboutEntity": "?work",
+     "addLink": "classification",
+     "resourceType": "Classification",
+
+     "$a": {"property": "code", "required": true},
+
+    "match": [
+      {
+      "when":  "$2=kssb" | "$2=kssb/5" | "$2=kssb/6" | "$2=kssb/7" | "$2=kssb/8" },
+
+       "link": "inScheme",
+       "resourceType": "ConceptScheme",
+       "uriTemplate": "https://id.kb.se/term/{+_}",
+       "property": "code",
+       "uriTemplate": "https://id.kb.se/term/{+inScheme.code}/{code}",
+       "uriTemplateDefaults": {"inScheme.code": "kssb"},
+     },
+   {"when": null,
+        "link": "inScheme", "resourceType": "ConceptScheme",
+        "required": true,
+        "property": "code",
+
+      },
+   ],
+
+     "$b": {"property": "classificationItem"}, #HA:"$b": {"property": ":itemPortion"}, #LC gör. finns som property till #känner mig osäker på
+     "$q": {"property": "assigner"}, #Ha lagt till efter LC Admin data. Men, LC använder source i 082
+     "_spec": [
+
+       {
+         "source": "084", {"ind1": " ", "ind2": " ", "subfields": [
+           {"a": "Fut.021(x)"},
+           {"2": "kssb/5"}  ]
+         "result": {"mainEntity": {
+           {
+             "work": [ {"@type": "Classification",
+               "code":  "Fut.021(x)",
+               "source": "kssb/5", # kan man få upplagan separerad?
+
+             }
+      {
+      "source": "084", {"ind1": " ", "ind2": " ", "subfields": [
+              {"a": "330"},
+              {"2": "sdnb"}  ]
+               "result": {"mainEntity": {
+                 {
+                   "work": [ {"@type": "Classification",
+                     "code":  "330",
+                     "source": "sdnb",
+],
+
+              },
+         }}
+       }
+     ]
+
+Holdings
+"050": {
+      "inherit": "bib",
+      "aboutEntity": "?thing",
+      "NOTE:local": "LIBRIS-definierat beståndsfält.",
+      "TODO": "shelfMark for items?"
+    },
+    "060": {
+      "inherit": "bib",
+      "aboutEntity": "?thing",
+      "NOTE:local": "LIBRIS-definierat beståndsfält.",
+      "TODO": "shelfMark for items?"
+    },
+    "066": {"ignored": true, "NOTE:record-count": 0, "NOTE:local": "ANVÄNDS F.N. EJ"},
+
+    "072": {"inherit": "bib", "aboutEntity": "?thing", "NOTE:local": "LIBRIS-definierat beståndsfält."},
+
+
+    "080": {"inherit": "bib", "aboutEntity": "?thing", "NOTE:local": "LIBRIS-definierat beståndsfält."},
+
+    "082": {
+      "inherit": "bib",
+      "aboutEntity": "?thing",
+      "NOTE:local": "LIBRIS-definierat beståndsfält.",
+      "$m": null, "ej definerat i bib",
+      "$b": "{"property": "itemPortion"}, #Om inte vi har kvar i bib,
+      "$q": null
+    },
+
+    "084": {
+      "inherit": "bib",
+      "aboutEntity": "?thing",
+      "NOTE:local": "LIBRIS-definierat beståndsfält.",
+      "$b": "{"property": "itemPortion"}, #Om inte vi har kvar i bib,
+        "$q": null
+    },
