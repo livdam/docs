@@ -1,5 +1,7 @@
   Har bara tittat på 082, 083 och 084 än så länge. Det mesta övriga bör bli Plan B
   För holdings har jag tittat på 082 och 084, men  hyllkod (shelfMark i Bf2) läggs i 852.
+  Där bör  shelfLocation ändras till shelfMark          "$c": {"addProperty": "shelfLocation"},
+          "$d": {"addProperty": "formerShelfLocation"}
   
   "classification-ddc": {
      "resourceType": "ClassificationDdc",
@@ -210,15 +212,12 @@ Holdings
       "inherit": "bib",
       "aboutEntity": "?thing",
       "NOTE:local": "LIBRIS-definierat beståndsfält.",
-      "$m": null, "ej definerat i bib",
-      "$b": "{"property": "itemPortion"}, #Om inte vi har kvar i bib,
       "$q": null
     },
 
     "084": {
       "inherit": "bib",
       "aboutEntity": "?thing",
-      "NOTE:local": "LIBRIS-definierat beståndsfält.",
-      "$b": "{"property": "itemPortion"}, #Om inte vi har kvar i bib,
+      "NOTE:local": "LIBRIS-definierat beståndsfält."
         "$q": null
     },
