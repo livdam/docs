@@ -7,7 +7,7 @@
      "resourceType": "ClassificationDdc",
 
      "i1": {
-       "addlink: ":edition"  ,
+       "addlink": "edition"  ,
        "match": [
          {
            "when": "i1=0": {"property": ":edition", "label": "full"},
@@ -23,7 +23,7 @@
     },
 
      },
-     "$a": {"property": ":code", "required": true}, # Här eller i 082 och 083?
+     "$a": {"property": ":code", "required": true},
 
      "$2": {
        "link": "inScheme", "resourceType": "ConceptScheme",
@@ -43,11 +43,9 @@
      "include": ["classification-ddc"],
      "match": [
        {"when": "i2=0",  "source":  "LC"},
-       {"when": null, XXXX, # Hur skriva bäst? LC säger ignore för både _ och 4. Skulle kunna återkonvertera till 4
+       {"when": null, revertTo i2=4. #Hur skriva?
        },
      ]
-
-       "$b": {"property": ":itemPortion"}, #finns som property till klass ibf2, men vill vi ha med? Hör inte till klassifikationen, utan till hyllkod
        "$q": ":source", #kLC använder source här men assigner i 084
 
 
@@ -55,62 +53,67 @@
      "_spec": [
        {
          "source": {
-          "082": {"in1": "0", "ind2": "0", "subfields": [
+          "082": {"ind1": "0", "ind2": "0", "subfields": [
             {"a": "158.1"},
             {"2": "23"}
             ]}
           },
          "result": {"mainEntity": {
-           "work"  XXXX, #känner mig osäker på hur modellera
-           "classification",
-           "edition": "full"
+           "instanceOf": {
+             "@type": "Text",
+           "classification": [
+             {
+           "edition": "full",
            "code": "158.1",
            "version": "23"
-         }}
+         }]}
        },
        {
          "source": {
-          "082": {"in1": "0", "ind2": "4", "subfields": [
+          "082": {"in1d": "0", "ind2": "4", "subfields": [
             {"a": "158.1"},
             {"2": "23/swe"},
             {"q": "KB"}
             ]}
           },
          "result": {"mainEntity": {
-           "work"  XXXX, #känner mig osäker på hur modellera
-           "classification",
+           "instanceOf": {
+             "@type": "Text",
+           "classification": [
+             {
            "edtion": "full",
            "code": "158.1",
            "version": "23/swe",
            "source": "KB"
-         }}
+         }]}
        }
-     ]
+     }}
    },
    "083": {
      "aboutEntity": "?work",
      "addLink": "classification", # behöver särskiljas från 082?
-     "include": ["classification-ddc"]
-   },
-  "$b": {"property": ":itemPortion"}, #LC gör. finns som property till #känner mig osäker på hur modellera#känner mig osäker på hur modellera
-  "q": {"property" "source"},
- }
+     "include": ["classification-ddc"],
+    "q": {"property" "source"},
+
  },
  "_spec": [
    {
      "source": {
-      "083": {"in1": "0", "ind2": " ", "subfields": [
+      "083": {"ind1": "0", "ind2": " ", "subfields": [
         {"a": "158.1"},
         {"2": "23"}
         ]}
       },
      "result": {"mainEntity": {
-       "work"  XXXX, #känner mig osäker på hur modellera
-       "classification",
-       "edition": "full"
+       "instanceOf": {
+         "@type": "Text",
+       "classification": [
+         {
+       "edition": "full",
        "code": "158.1",
        "version": "23"
-     }}
+     },
+     ]}
      {
        "source": {
         "083": {"ind1": "7", "ind2": " ", "subfields": [
@@ -120,18 +123,20 @@
           ]}
         },
        "result": {"mainEntity": {
-         "work"  XXXX, #känner mig osäker på hur modellera
-         "classification",
+         "instanceOf": {
+          "@type": "Text",
+         "classification": [
+           {
          "edtion": "full",
          "code": "598.0994",
-         "version": "23/swe",
+         "version": "23",
+         "language": "nor",
          "source": "KB"
-       }}
+       }]}
      }
    },
 
    "084": {
-     "include": [], #vad? Ta bort.
      "aboutEntity": "?work",
      "addLink": "classification",
      "resourceType": "Classification",
@@ -140,14 +145,16 @@
 
     "match": [
       {
-      "when":  "$2=kssb" | "$2=kssb/5" | "$2=kssb/6" | "$2=kssb/7" | "$2=kssb/8" },
-
+      "when":  "$2=kssb" | "$2=kssb/5" | "$2=kssb/6" | "$2=kssb/7" | "$2=kssb/8" ,
        "link": "inScheme",
        "resourceType": "ConceptScheme",
        "uriTemplate": "https://id.kb.se/term/{+_}",
        "property": "code",
        "uriTemplate": "https://id.kb.se/term/{+inScheme.code}/{code}",
        "uriTemplateDefaults": {"inScheme.code": "kssb"},
+       "splitValuePattern": "(\\d+)(?:/(5))?",  #6, 7, 8 - hur göra?
+       "splitValueProperties": ["code", "version"],
+       "rejoin": "/"
      },
    {"when": null,
         "link": "inScheme", "resourceType": "ConceptScheme",
@@ -156,8 +163,6 @@
 
       },
    ],
-
-     "$b": {"property": "classificationItem"}, #HA:"$b": {"property": ":itemPortion"}, #LC gör. finns som property till #känner mig osäker på
      "$q": {"property": "assigner"}, #Ha lagt till efter LC Admin data. Men, LC använder source i 082
      "_spec": [
 
@@ -166,10 +171,19 @@
            {"a": "Fut.021(x)"},
            {"2": "kssb/5"}  ]
          "result": {"mainEntity": {
-           {
-             "work": [ {"@type": "Classification",
-               "code":  "Fut.021(x)",
-               "source": "kssb/5", # kan man få upplagan separerad?
+           "instanceOf": {
+             "@type": "Text",
+            "Classification": [
+              "code": "Fut.021(x)",
+              "inScheme": {
+                "@id": "https://id.kb.se/term/kssb/5",
+                "@type": "Conceptscheme",
+                "source": "kssb",
+               "version": "5"
+
+              }
+              ]{
+              }
 
              }
       {
@@ -177,8 +191,10 @@
               {"a": "330"},
               {"2": "sdnb"}  ]
                "result": {"mainEntity": {
-                 {
-                   "work": [ {"@type": "Classification",
+                 "instanceOf": {
+                   "@type": "Text",
+                   "Classification": [
+
                      "code":  "330",
                      "source": "sdnb",
 ],
@@ -186,7 +202,6 @@
               },
          }}
        }
-     ]
 
 Holdings
 "050": {
