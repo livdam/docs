@@ -65,12 +65,13 @@
              {
            "edition": "full",
            "code": "158.1",
-           "version": "23"
+           "version": "23",
+           "source": "LC"
          }]}
        },
        {
          "source": {
-          "082": {"in1d": "0", "ind2": "4", "subfields": [
+          "082": {"ind1": "0", "ind2": "4", "subfields": [
             {"a": "158.1"},
             {"2": "23/swe"},
             {"q": "KB"}
@@ -83,7 +84,8 @@
              {
            "edtion": "full",
            "code": "158.1",
-           "version": "23/swe",
+           "version": "23",
+            "language": "swe",
            "source": "KB"
          }]}
        }
