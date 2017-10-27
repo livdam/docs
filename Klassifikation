@@ -42,11 +42,12 @@
      "addLink": "classification",
      "include": ["classification-ddc"],
      "match": [
-       {"when": "i2=0",  "source":  "LC"},
+       {"when": "i2=0",  "source": "LC",
+       "@id:http://id.loc.gov/vocabulary/organizations/dlc"}, #LC hänvisar till detta. Be
        {"when": null, revertTo i2=4. #Hur skriva?
        },
      ]
-       "$q": ":source", #kLC använder source här men assigner i 084
+       "$q": ":source", # LC använder source här men assigner i 084bf:assigner hör till AdminMetadata, bf:source till klassen Source
 
 
      },
@@ -66,7 +67,7 @@
            "edition": "full",
            "code": "158.1",
            "version": "23",
-           "source": "LC"
+           "source": ["LC", "@id:http://id.loc.gov/vocabulary/organizations/dlc"], # Skriva lite annorlunda?
          }]}
        },
        {
@@ -85,7 +86,7 @@
            "edtion": "full",
            "code": "158.1",
            "version": "23",
-            "language": "swe",
+           "language": "swe",
            "source": "KB"
          }]}
        }
@@ -93,7 +94,7 @@
    },
    "083": {
      "aboutEntity": "?work",
-     "addLink": "classification", # behöver särskiljas från 082?
+     "addLink": "classification", # behöver särskiljas från 082? Typ "additional",
      "include": ["classification-ddc"],
     "q": {"property" "source"},
 
@@ -161,11 +162,11 @@
    {"when": null,
         "link": "inScheme", "resourceType": "ConceptScheme",
         "required": true,
-        "property": "code",
+        "property": "classificationCode", #om det inte fungerar med "code"
 
       },
    ],
-     "$q": {"property": "assigner"}, #Ha lagt till efter LC Admin data. Men, LC använder source i 082
+     "$q": {"property": "assigner"}, #Ha lagt till efter LC. Admin data. Men, LC använder source i 082 Bra som test?
      "_spec": [
 
        {
@@ -180,7 +181,7 @@
               "inScheme": {
                 "@id": "https://id.kb.se/term/kssb/5",
                 "@type": "Conceptscheme",
-                "source": "kssb",
+                "code": "kssb",
                "version": "5"
 
               }
@@ -188,22 +189,6 @@
               }
 
              }
-      {
-      "source": "084", {"ind1": " ", "ind2": " ", "subfields": [
-              {"a": "330"},
-              {"2": "sdnb"}  ]
-               "result": {"mainEntity": {
-                 "instanceOf": {
-                   "@type": "Text",
-                   "Classification": [
-
-                     "code":  "330",
-                     "source": "sdnb",
-],
-
-              },
-         }}
-       }
 
 Holdings
 "050": {
