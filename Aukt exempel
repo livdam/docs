@@ -381,6 +381,57 @@
       }
     }
   },
+   "_spec": [
+              {
+                "source": {
+                  "410": {"ind1": "2", "ind2": " ", "subfields": [
+                    {"a": "Europeiska unionen."},
+                    {"b": "Europaparlamentet"}
+                  ]}},
+                "result": {
+                  "mainEntity": {
+                    "@type": "Organisation",
+                     "hasVersion": {
+
+                      "@type": "Organization",
+                      "marc:subordinateUnit": "Europaparlamentet",
+                      "isparOf": {
+                        "@type": "Organization",
+                        "name": "Europeiska unionen"
+                      },
+
+
+
+                    }
+                  }
+                }
+              },
+
+              "_spec": [
+                  {
+                    "source": {
+                      "410": {"ind1": "1", "ind2": " ", "subfields": [
+                        {"a": "Sverige."},
+                        {"b": "Statens väg- och transportforskninginstitut"}
+                      ]}},
+                    "result": {
+                      "mainEntity": {
+                        "@type": "Organization",
+                         "hasVersion": {
+
+                          "@type": "Jurisdiction",
+                          "marc:subordinateUnit": "Statens väg- och transportforskninginstitut",
+                          "isparOf": {
+                            "@type": "Jurisdiction",
+                            "name": "Sverige"
+                          },
+
+
+
+                        }
+                      }
+                    }
+                  },
   500
   "_spec": [
       {
