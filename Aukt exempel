@@ -300,3 +300,134 @@
   }       },
      ]
    }
+   400
+   "_spec": [
+       {
+         "source": {
+           "400": {"ind1": "1", "ind2": " ", "subfields": [
+             {"a": "Nicander, A.,"},
+             {"d": "1707-1781"}
+           ]}},
+         "result": {
+           "mainEntity": {
+             "@type": "Person",
+              "exactMatch",
+
+               "@type": "Person",
+               "familyName": "Nicander",
+               "givenName": "A.",
+               "lifeSpan": "1707-1781",
+               #Få in "altLabel"?
+
+
+             }
+           }
+         }
+       },
+       "source": {
+         "400": {"ind1": "0", "ind2": " ", "subfields": [
+           {"a": "Alexander"},
+           {"b": "III,"}
+           {"c": "kung i Makedonien,"},
+           {"d": "356 f.Kr.-323 f.Kr"},
+         ]}},
+       "result": {
+         "mainEntity": {
+           "@type": "Person",
+            "exactMatch": {
+
+             "@type": "Person",
+             "name": "Alexander",
+             "marc:numeration": "III",
+             "titleOther": "kung i Makedonien ",
+             "lifeSpan": "356 f.Kr.-323 f.Kr",
+
+
+           },
+         }
+       }
+     },
+
+    "source": {
+      "400": {"ind1": "1", "ind2": " ", "subfields": [
+        {"a": "Defoe, Daniel"},
+        {"d": "1551?-1731"},
+        {"t": "The life and most suprizing adventures of Robinson Crusoe, of York, "},
+
+      ],},},
+    "result": {
+      "mainEntity": {
+        "@type": "Work",
+        "hasVersion": [
+          {
+        "title": "The life and most suprizing adventures of Robinson Crusoe, of York,",
+         "contribution": [
+           {
+           "@type": "PrimaryContribution",
+           "agent": {
+             "@type": "Person",
+             "familyName": "Defoe",
+             "givenName" : "Daniel",
+             "lifeSpan": "1551?-1731"
+           }
+         ],
+       }
+       ],
+     },
+          ,
+
+
+        }
+      }
+    }
+  },
+  500
+  "_spec": [
+      {
+        "source": {
+          "500": {"ind1": "1", "ind2": " ", "subfields": [
+            {"a": "Oats, Joyce Carol"},
+            {"d": "1938-"}
+          ]}},
+        "result": {
+          "mainEntity": {
+            "@type": "Person",
+             "hasRelation": {
+
+              "@type": "Person",
+              "familyName": "Oats",
+              "givenName": "Joyce Carol",
+              "lifeSpan": "1938-",
+              #Få in "altLabel"?
+
+
+            }
+          }
+        }
+      },
+      {
+        "source": {
+          "500": {"ind1": "", "ind2": " ", "subfields": [
+            {"a": "Lindgren, Astrid"},
+            {"d": "1907-2002"},
+            {"t": "Lillebror och Karlsson på taket"}  # Relation till samlingsverket Allt om Karlsson på taket,
+          ]}},
+        "result": {
+          "mainEntity": {
+            "@type": "Work",
+             "hasRelation": [
+             {
+              "@type": "Work",
+              "title": "Lillebror och Karlsson på taket",
+              "contribution": {
+              "@type": "Person",
+              "familyName": "Lindgren",
+              "givenName": "Astrid",
+              "lifeSpan": "1907-2002",
+              #Få in "altLabel"?
+
+
+            }
+          }
+        }
+      }
