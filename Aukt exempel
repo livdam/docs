@@ -450,7 +450,7 @@
 
                         "@type": "Organization",
                         "marc:subordinateUnit": ["General Assembly", "Special Session", "Preparatory Committee of the Whole"],
-                        "partNumber": "(13 :",
+                        "marc:numberOfPartSectionMeeting": "(13 :",
                         "legalDate": "1986)",
 
                         "ispartOf": {
