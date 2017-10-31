@@ -432,6 +432,35 @@
                       }
                     }
                   },
+  "source": {
+                    "410": {"ind1": "2", "ind2": " ", "subfields": [
+                      {"a": "United Nations"},
+                      {"b": "General Assembly"},
+                      {"b": "Special Session"},
+                      {"n": "(13 : "},
+                      {"d": "1986)."},
+                      {"b": "Preparatory Committee of the Whole"},
+
+
+                  ]  },
+                  "result": {
+                    "mainEntity": {
+                      "@type": "Organization",
+                       "hasVersion": {
+
+                        "@type": "Organization",
+                        "marc:subordinateUnit": ["General Assembly", "Special Session", "Preparatory Committee of the Whole"],
+                        "partNumber": "(13 :",
+                        "legalDate": "1986)",
+
+                        "ispartOf": {
+                          "@type": "Organization",
+                          "name": "United Nations"
+                        },
+                       ],
+                     }
+                     ],
+                   },
   500
   "_spec": [
       {
