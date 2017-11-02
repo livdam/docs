@@ -1,0 +1,258 @@
+"800": {
+      "addLink": "hasSeries",
+      "resourceType": "Serial",
+      "TODO:aboutEntity?": "?series", # Prata med Fredrik
+      "include": ["agentdataPersonFamily", "titledetails1xx7xx"],
+      "$t": {"property": "title"},
+      "$n": {"addProperty": "partNumber", "punctuationChars": ","},
+      "$w": {"addProperty": "bibliographicRecordControlNumber"},
+      "$v": {"property": "seriesEnumeration"},
+      "$x": {"property": "issn", "punctuationChars": ".,=;"}
+      "$0": {"addLink": "identifiedBy", "property": "value"},
+      "pendingResources": {
+        "_:contribution": {
+          "addLink": "contribution",
+          "resourceType": "PrimaryContribution",
+          "embedded": true
+        },
+        "_:agent": {
+          "about": "_:contribution",
+          "link": "agent",
+          "resourceType": "Person",
+          "embedded": false
+        }
+      }
+
+      "_spec": [
+        {
+          "source": {"800": {"ind1": "1", "ind2": " ", "subfields": [ {"a": "Sandemo, Margit"},
+            {"d": "1924-"}
+            {"t": "Sandemo-serien ;"},
+            {"v": "v 4"}
+            ],
+
+          },
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "hasSeries": [
+                {
+              "@type": "Work",
+              "title": "Sandemo-serien",
+              "seriesEnumeration": "v 4",
+
+              "contribution": [
+                {
+                  "@type": "PrimaryContribution",
+                  "agent": {"@type": "Person",
+                    "familyName":  "Sandemo"
+                    "givenName":  "Margit",
+                    "birthYear":  "1924"
+                }
+              ]
+            }
+            ]
+            }
+          }}
+        },
+        {
+          "source": {"800": {"ind1": "1", "ind2": " ", "subfields": [ {"a": "  Feist, Raymond,"},
+            {"t": "Demonwar saga."},
+            {"l": "Svenska"},
+            {"v": "v 2"}
+            ],
+
+          },
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "hasSeries": [
+                {
+              "@type": "Work",
+              "title": "Demonvar saga",
+              "seriesEnumeration": "v 2",
+              "language": "Svenska",
+
+              "contribution": [
+                {
+                  "@type": "PrimaryContribution",
+                  "agent": {"@type": "Person",
+                    "familyName":  "Feist",
+                    "givenName" : "Raymond",
+                }
+              ]
+            }
+            ]
+            }
+          }}
+        },
+    {
+      "source": {"800": {"ind1": "1", "ind2": " ", "subfields": [ {"a": "  Sousa, John Philip,"},
+        {"d": "1854-1932"},
+        {"t": "Marches"},
+        {"m": "band."},
+        {"k": "Selections (Sousa American bicentennial collection);"} ,
+        {"v": "v.1."}
+        ],
+
+      },
+      "result": {"mainEntity": {
+        "instanceOf": {
+          "@type": "Text",
+          "hasSeries": [
+          "@type": "Work",
+          "title": "Marches",
+          "musicMedium": "band.",
+          "formSubheading": "Selections (Sousa American bicentennial collection);",
+          "seriesEnumeration": "v.1.",
+
+          "contribution": [
+            {
+              "@type": "PrimaryContribution",
+              "agent": {"@type": "Person",
+                "familyName":  "Sousa",
+                "givenName":  "John Philip",
+                "birthYear":  "1854",
+                "deathyear": "1932"},
+            }
+          ],
+        ],
+        }
+      }}
+    },
+
+
+    },
+    "810": {  "addLink": "hasSeries",
+      "resourceType": "Serial",
+      "TODO:aboutEntity?": "?series", # Prata med Fredrik
+      "include": ["agentdataOrganisation", "titledetails1xx7xx"],
+      "$t": {"property": "title"},
+      "$w": {"addProperty": "bibliographicRecordControlNumber"},
+      "$v": {"property": "seriesEnumeration"},
+      "$x": {"property": "issn", "punctuationChars": ".,=;"}
+      "$0": {"addLink": "identifiedBy", "property": "value"},
+      "pendingResources": {
+        "_:contribution": {
+          "addLink": "contribution",
+          "resourceType": "PrimaryContribution",
+          "embedded": true
+        },
+        "_:agent": {
+          "about": "_:contribution",
+          "link": "agent",
+          "resourceType": "Organization",
+          "embedded": false
+        }
+      }
+    },
+    {
+      "source": {"810": {"ind1": "2", "ind2": " ", "subfields": [ {"a": "German Institute of Global and Area Studies <Hamburg>,"},
+        {"t": "GIGA working papers"},
+        {"v": "v 40"}
+        ],
+
+      },
+
+      "result": {"mainEntity": {
+        "instanceOf": {
+          "@type": "Text",
+          "hasSeries": [
+          "@type": "Work",
+          "title": "GIGA working papers",
+          "seriesEnumeration": "v 40",
+
+          "contribution": [
+            {
+              "@type": "PrimaryContribution",
+              "agent": {"@type": "Organization",
+                "name": "German Institute of Global and Area Studies <Hamburg>"
+            }
+          ],
+        ],
+        }
+
+
+    "811": {  "addLink": "hasSeries",
+      "resourceType": "Serial",
+      "TODO:aboutEntity?": "?series", # Prata med Fredrik
+      "include": ["agentdataMeeting", "titledetails1xx7xx"],
+      "$t": {"property": "title"},
+      "$w": {"addProperty": "bibliographicRecordControlNumber"},
+      "$v": {"property": "seriesEnumeration"},
+      "$x": {"property": "issn", "punctuationChars": ".,=;"}
+      "$0": {"addLink": "identifiedBy", "property": "value"},
+      "pendingResources": {
+        "_:contribution": {
+          "addLink": "contribution",
+          "resourceType": "PrimaryContribution",
+          "embedded": true
+        },
+        "_:agent": {
+          "about": "_:contribution",
+          "link": "agent",
+          "resourceType": "Meeting",
+          "embedded": false
+        }
+      },
+      {
+        "source": {"811": {"ind1": "2", "ind2": " ", "subfields": [ {"a": "Vatican Council"},
+          {"n": "(2nd: "},
+          {"d": "1962-1964)"},
+          {"t": "Decretum de presbyterorum ministerio et vita."},
+          ],
+
+        },
+
+        "result": {"mainEntity": {
+          "instanceOf": {
+            "@type": "Text",
+            "hasSeries": [
+            "@type": "Work",
+            "title": "Decretum de presbyterorum ministerio et vita",
+
+            "contribution": [
+              {
+                "@type": "PrimaryContribution",
+                "agent":  {"@type": "Meeting",
+                  "name": "Vatican Council>",
+                  "partNumber": "(2nd:"
+                  ,
+                  "date": "1962-1965)"
+                }
+              }
+                ]
+              ]
+              }
+            }
+          }
+            ],
+          ],
+          }
+    },
+    {
+      "Source": {"811": {ind1": "2", "ind2": " ", "subfields": [
+        {"a": "Babylonian Expedition of the University of Pennsylvania",
+        "t": "Series A, Cuneiform texts ;",
+        "v": "v.3, pt. 1."}
+      ],
+        "result": {"mainEntity": {
+          "instanceOf": {
+            "@type": "Text",
+            "hasSeries: [
+              {
+              "@type": "Work",
+              "title": "Series A, Cuneiform texts",
+              "seriesEnumeration": "v.3, pt. 1."}
+              "contribution": [
+                "type" "PrimaryConribution",
+                "agent": { "@type": "Meetingg",
+                "name": "Babylonian Expedition of the University of Pennsylvania"}
+              ]
+
+              ]"
+
+          },
+          },},
+          }}
+    }
