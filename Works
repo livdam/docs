@@ -2,7 +2,14 @@
       "aboutEntity": "?work",
       "aboutAlias": "_:work",
       "i2": {"about": "_:title", "property": "marc:nonfilingChars"},
-      "include": ["titledetails", "titlesearchelem"],
+       "match": [
+        {
+          "when": "l",
+          "link": "translation" },
+     "include": ["titledetails", "titlesearchelem"],
+     "when": null,
+     "include": ["titledetails", "titlesearchelem"],
+     ],
       "pendingResources": {
         "_:title": {
           "about": "_:work", "addLink": "hasTitle", "resourceType": "Title",
@@ -10,6 +17,8 @@
         }
       },
       "TODO": "See also 100$t and 130.", #100 t endast 1 post som är felaktig
+ 
+        },
       "$a": {"about": "_:title", "property": "mainTitle"},
       "$d": {"property": "legalDate"},
       "$0": {
