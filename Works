@@ -9,7 +9,7 @@
           "embedded": true
         }
       },
-      "TODO": "See also 100$t and 130.",
+      "TODO": "See also 100$t and 130.", #100 t endast 1 post som är felaktig
       "$a": {"about": "_:title", "property": "mainTitle"},
       "$d": {"property": "legalDate"},
       "$0": {
@@ -35,6 +35,52 @@
                 "marc:nonfilingChars" : " "
               } ],
               "language": {"@type": "Language", "label": "Engelska."}
+            }
+          }}
+        }
+      ]
+    },
+ "130": {
+      "aboutEntity": "?work",
+      "link": "expressionOf",
+      "include": ["titledetails"],
+      "resourceType": "Work",
+      "aboutAlias": "_:work",
+      "pendingResources": {
+        "_:title": {
+          "about": "_:work", "addLink": "hasTitle", "resourceType": "Title",
+          "embedded": true
+        }
+      },
+      "i1": {"about": "_:title", "property": "marc:nonfilingChars"},
+      "$a": {"about": "_:title", "property": "mainTitle"},
+      "$d": {"property": "legalDate"},
+      "$0": {"addLink": "identifiedBy", "property": "value"},
+      "subfieldOrder": "a d m n r p k l s f o",
+      "$6": {"property": "marc:fieldref"},
+      "_spec": [
+        {
+          "source": {
+            "130": {"ind1": "0", "ind2": " ", "subfields": [
+              {"a": "Treaty of the Non-proliferation of Nuclear Weapons"},
+              {"d": "(1968)."},
+              {"l": "Spanish."},
+              {"f": "1977."}
+            ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "expressionOf": {
+                "@type": "Work",
+                "hasTitle" : [ {
+                  "@type" : "Title",
+                  "mainTitle" : "Treaty of the Non-proliferation of Nuclear Weapons",
+                  "marc:nonfilingChars" : "0"
+                } ],
+                "language": {"@type": "Language", "label": "Spanish."},
+                "legalDate": "(1968).",
+                "originDate": "1977."
+              }
             }
           }}
         }
