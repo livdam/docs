@@ -1,0 +1,42 @@
+"240": {
+      "aboutEntity": "?work",
+      "aboutAlias": "_:work",
+      "i2": {"about": "_:title", "property": "marc:nonfilingChars"},
+      "include": ["titledetails", "titlesearchelem"],
+      "pendingResources": {
+        "_:title": {
+          "about": "_:work", "addLink": "hasTitle", "resourceType": "Title",
+          "embedded": true
+        }
+      },
+      "TODO": "See also 100$t and 130.",
+      "$a": {"about": "_:title", "property": "mainTitle"},
+      "$d": {"property": "legalDate"},
+      "$0": {
+        "aboutEntity": "?work",
+        "addLink": "describedBy", "resourceType": "Record", "property": "controlNumber",
+        "uriTemplate": "http://libris.kb.se/auth/{_}"
+      },
+      "$6": {"property": "marc:fieldref"},
+      "_spec": [
+        {
+          "source": {
+            "240": {"ind1": "0", "ind2": " ", "subfields": [
+              {"a": "Moyen âge"},
+              {"l": "Engelska."}
+            ]}},
+          "result": {"mainEntity": {
+            "instanceOf": {
+              "@type": "Text",
+              "hasTitle": [ {
+                "@type": "Title",
+                "mainTitle": "Moyen âge",
+                "marc:searchElement" : false,
+                "marc:nonfilingChars" : " "
+              } ],
+              "language": {"@type": "Language", "label": "Engelska."}
+            }
+          }}
+        }
+      ]
+    },
