@@ -5,7 +5,7 @@
        "match": [
         {
           "when": "l",
-          "link": "translation" },
+          "link": "translationOf" },
      "include": ["titledetails", "titlesearchelem"],
      "when": null,
      "include": ["titledetails", "titlesearchelem"],
