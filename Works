@@ -17,7 +17,7 @@
         }
       },
       "TODO": "See also 100$t and 130.", #100 t endast 1 post som är felaktig
- 
+
         },
       "$a": {"about": "_:title", "property": "mainTitle"},
       "$d": {"property": "legalDate"},
@@ -95,3 +95,4 @@
         }
       ]
     },
+Ex 240
