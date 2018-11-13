@@ -43,6 +43,7 @@ Välj Medverkan när en agent har en relation till det verk som beskrivs i insta
 #### Relation till verk uttryckt genom text (700 ‡i)
 Det finns fasta termer i RDA för att uttrycka en relation till ett verk och som motsvarar delfält i i Exportformatet. Det är ännu inte möjligt att länka till dessa i nya Libris. Svensk översättning för relationerna behöver gås igenom.
 
+Relation till ett verk av en författare (700 1/_ ‡i a  ‡td ǂt)
 * Välj Relation (Relationship) vid plustecknet vid Verksdelen
 * Välj typ Relation (Relationship) i sidopanelen
 * Välj Relation (Relation) vid plustecknet vid Relation (Relationship)
@@ -54,23 +55,18 @@ Lägg till Entitet / Skapa lokalt / Verk / Benämning
  *  Har titel/ Titel / Huvudtitel
   <br/>```Exempel: Pride and prejudice```
  
-*  Medverkande och funktion / Primär medverkan
-
-
 Välj Primär medverkan när en agent har en relation till verk som beskrivs som relaterat.
-
-   * Medverkan och funktion / Primär medverkan / Agent/ Person (700 1/_ ‡a  ǂd )
-   
-   Länka i första hand till en agent.
+* Medverkan och funktion / Primär medverkan / Agent/ Person (700 1/_ ‡a  ǂd )
+  Länka i första hand till en agent.
     <br/>```Exempel: Austin,  Jane, 1775-1817```
  
 
 #### Obestämt relation till ett verk (700)
 Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 ‡a)
 
-* Anmärkning (hasNote) Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930
+* Anmärkning (hasNote) br/>```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
 
-Välj Relation vid plustecknet  vid Verk
+* VälRelation vid plustecknet  vid Verk
 
 Välj typ Relation i menyn
 
