@@ -74,7 +74,7 @@ Välj Primär medverkan när en agent har en relation till verk som beskrivs som
     <br/>```Exempel: Austin,  Jane, 1775-1817```
  
 
-#### Obestamd relation till ett verk 
+#### Obestamd relation till verk 
 (700)
 Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 ‡a)
 
