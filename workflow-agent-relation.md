@@ -15,6 +15,7 @@ tags:
 Länka i första hand till befintliga auktioriteter för personer, organisationer och möten. Om det inte finns en auktoritet så kan du skapa en auktoritet. Se hjälptexterna för att [Skapa ny agent Person](https://libris.kb.se/katalogisering/help/workflow-agent-person-new) samt för [Organisation](https://libris.kb.se/katalogisering/help/workflow-agent-organisation-new). Det finns även hjälp för att redigera befintliga auktoriteter. Se även hjälp för att [Lägga till Agent - Organisation](https://libris.kb.se/katalogisering/help/workflow-agent-org-instance)
 
 *I de första versionerna av nya Libris bör man inte länka till eller skapa nya verk, det är under utveckling.*
+[Relation uttryckt som Funktion](#Relation-uttryckt-som-Funktion)
 
 ## Relationer
 
@@ -66,29 +67,22 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 
 * Anmärkning (hasNote) br/>```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
 
-* VälRelation vid plustecknet  vid Verk
+* Välj Relation vid plustecknet  vid Verk
+* Välj typ Relation i menyn
+* Välj Entitet vid plustecknet vid Relation
 
-Välj typ Relation i menyn
-
-Välj Entitet vid plustecknet vid Relation
-
-Lägg till Verk som entitet. 
-
+Lägg till Entitet / Skapa lokalt / Verk 
 *  Har titel/ Titel / Huvudtitel
   <br/>```Exempel: En sund själ i en sund kropp```
  
-*  Medverkande och funktion / Primär medverkan
-
-
 Välj Primär medverkan när en agent har en relation till verk som beskrivs som relaterat.
-
-   * Medverkan och funktion / Primär medverkan / Agent/ Person (700 1/_ ‡a  ǂd )
+* Medverkan och funktion / Primär medverkan / Agent/ Person (700 1/_ ‡a  ǂd )
    
  Länka i första hand till auktoritet.
    <br/>```Exempel: Hammarberg, Lena, 1943-```
  
 
-#### Flera verk kopplade till instansen
+#### Samlingsverk - flera verk kopplade till instansen
  Medverkan och funktion / Har del / Primär medverkan
 
 Välj Primär medverkan när agenten har relation till ett annat verk än det som beskrivs i instansen
