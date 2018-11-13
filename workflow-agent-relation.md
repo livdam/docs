@@ -30,7 +30,6 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 ## Relationer
 
 #### Relation uttryckt som Funktion 
-(‡4)
 Utgå ifrån Instans av Verk / Medverkande och funktion / Medverkan
 
 Välj Medverkan när en agent har en relation till det verk som beskrivs i instansen.
@@ -53,7 +52,6 @@ Välj Medverkan när en agent har en relation till det verk som beskrivs i insta
     
 
 #### Relation till verk uttryckt genom text 
-(700 ‡i)
 Det finns fasta termer i RDA för att uttrycka en relation till ett verk och som motsvarar delfält i i Exportformatet. Det är ännu inte möjligt att länka till dessa i nya Libris. Svensk översättning för relationerna behöver gås igenom.
 
 Relation till ett verk av en författare (700 1/_ ‡i a  ‡td ǂt)
@@ -74,8 +72,7 @@ Välj Primär medverkan när en agent har en relation till verk som beskrivs som
     <br/>```Exempel: Austin,  Jane, 1775-1817```
  
 
-#### Obestamd relation till verk 
-(700)
+#### Obestämd relation till verk 
 Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 ‡a)
 
 * Anmärkning (hasNote) br/>```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
