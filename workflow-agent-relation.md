@@ -15,7 +15,11 @@ tags:
 Länka i första hand till befintliga auktioriteter för personer, organisationer och möten. Om det inte finns en auktoritet så kan du skapa en auktoritet. Se hjälptexterna för att [Skapa ny agent Person](https://libris.kb.se/katalogisering/help/workflow-agent-person-new) samt för [Organisation](https://libris.kb.se/katalogisering/help/workflow-agent-organisation-new). Det finns även hjälp för att redigera befintliga auktoriteter. Se även hjälp för att [Lägga till Agent - Organisation](https://libris.kb.se/katalogisering/help/workflow-agent-org-instance)
 
 *I de första versionerna av nya Libris bör man inte länka till eller skapa nya verk, det är under utveckling.*
+
+
 [Relation uttryckt som Funktion](#Relation-uttryckt-som-Funktion)
+
+[Relation uttryckt genom text](#Relation-uttryckt-genom-text)
 
 ## Relationer
 
