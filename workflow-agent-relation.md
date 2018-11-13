@@ -22,7 +22,7 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 [Relation till verk uttryckt genom text](#relation-till-verk-uttryckt-genom-text)
 
-[Obestämd relation till verk](#obestamd-relation-till-verk)
+[Obestämd relation till verk](#obestämd-relation-till-verk)
 
 [Samlingsverk](#Samlingsverk)
 
