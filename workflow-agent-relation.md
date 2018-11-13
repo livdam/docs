@@ -17,7 +17,7 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 *I de första versionerna av nya Libris bör man inte länka till eller skapa nya verk, det är under utveckling.*
 
 
-[Relation uttryckt som Funktion](#Relation-uttryckt-som-Funktion)
+[Relation uttryckt som Funktion](#Relation-uttryckt-som-funktion)
 
 [Relation uttryckt genom text](#Relation-uttryckt-genom-text)
 
