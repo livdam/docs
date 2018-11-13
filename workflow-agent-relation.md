@@ -21,7 +21,7 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 [Relation uttryckt genom text](#Relation-uttryckt-genom-text)
 
-[Obestämd relation till verk][#Obestämd-relation-till-verk)
+[Obestämd relation till verk][#Obestamd-relation-till-verk)
 
 [Samlingsverk](#Samlingsverk)
 
@@ -71,7 +71,7 @@ Välj Primär medverkan när en agent har en relation till verk som beskrivs som
     <br/>```Exempel: Austin,  Jane, 1775-1817```
  
 
-#### Obestämd relation till ett verk (700)
+#### Obestamd relation till ett verk (700)
 Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 ‡a)
 
 * Anmärkning (hasNote) br/>```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
