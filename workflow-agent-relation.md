@@ -20,7 +20,7 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 [Relation uttryckt som Funktion](#relation-uttryckt-som-funktion)
 
-[Relation uttryckt genom text](#relation-uttryckt-genom-text)
+[Relation till verk uttryckt genom text](#relation-till-verk-uttryckt-genom-text)
 
 [Obestämd relation till verk](#obestamd-relation-till-verk)
 
