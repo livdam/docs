@@ -12,7 +12,7 @@ tags:
 
 700, 710 och 711 är komplicerade fält i MARC21 som kan uttrycka olika saker om en agent, medverkande, relationer, och att en instans innehåller flera verk. 
 
-Den här hjälpen visar hur man skapar relationer av olika typer. Länka i första hand till befintliga auktioriteter för personer, organisationer och möten. Om det inte finns en auktoritet så kan du skapa en auktoritet. Se hjälpen för att Skapa ny agent Person samt Organisation. Det finns även hjälp för att redigera befintliga auktoriteter. Se även hjälp för att lägga till Agent - Organisation
+Den här hjälpen visar hur man skapar relationer av olika typer. Länka i första hand till befintliga auktioriteter för personer, organisationer och möten. Om det inte finns en auktoritet så kan du skapa en auktoritet. Se hjälptexterna för att [Skapa ny agent Person](https://libris.kb.se/katalogisering/help/workflow-agent-person-new) samt [Organisation] (https://libris.kb.se/katalogisering/help/workflow-agent-organisation-new). Det finns även hjälp för att redigera befintliga auktoriteter. Se även hjälp för att [Lägga till Agent - Organisation] (https://libris.kb.se/katalogisering/help/workflow-agent-org-instance)
 
 *I de första versionerna av nya Libris bör man inte länka till eller skapa nya verk, det är under utveckling.*
 
@@ -43,14 +43,10 @@ Välj Medverkan när en agent har en relation till det verk som beskrivs i insta
 #### Relation till verk uttryckt genom text (700 ‡i)
 Det finns fasta termer i RDA för att uttrycka en relation till ett verk och som motsvarar delfält i i Exportformatet. Det är ännu inte möjligt att länka till dessa i nya Libris. Svensk översättning för relationerna behöver gås igenom.
 
-Välj Relation vid plustecknet  vid Verk
-
-Välj typ Relation i menyn
-
-Välj Entitet vid plustecknet  vid Relation
-
-Lägg till Verk som entitet. 
-Vid plustecknet för Verk lägger man till delfält:
+Välj Relation (Relationship) vid plustecknet vid Verksdelen
+Välj typ Relation (Relationship) i sidopanelen
+Välj Relation (Relation) vid plustecknet vid Relation (Relationship)
+Lägg till Entitet / Skapa lokalt / Verk / Benämning
 
 *  Benämning
   <br/>```Exempel: Parafraserar```
