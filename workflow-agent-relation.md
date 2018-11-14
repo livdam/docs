@@ -54,7 +54,7 @@ Välj Medverkan när en agent har en relation till det verk som beskrivs i insta
 #### Relation till verk uttryckt genom text 
 Det finns fasta termer i RDA för att uttrycka en relation till ett verk och som motsvarar delfält i i Exportformatet. Det är ännu inte möjligt att länka till dessa i nya Libris. Svensk översättning för relationerna behöver gås igenom.
 
-Relation till ett verk av en författare (700 1/_ ‡i a  ‡td ǂt)
+Relation till ett verk av en författare (700 1/_ ‡i a  ‡d ǂt)
 * Välj Relation (Relationship) vid plustecknet vid Verksdelen
 * Välj typ Relation (Relationship) i sidopanelen
 * Välj Relation (Relation) vid plustecknet vid Relation (Relationship)
@@ -109,12 +109,12 @@ Välj Primär medverkan när agenten har relation till ett annat verk än det so
   * Deltitel (700 ‡p)
   
   Fler delfält att lägga till vid plustecknet för Verk som rör titeln:
-    * Tid för verket (700 ‡f)
-    * Språk  / Benämning (700 ‡l)
-    * Besättning för framförande (700 ‡m) *Under utveckling*
-    * Version (700 ‡o)
-    * Tonart (700 ‡r)
-    * (700 ‡s) *Under utveckling*
+  * Tid för verket (700 ‡f)
+  * Språk  / Benämning (700 ‡l)
+  * Besättning för framförande (700 ‡m) *Under utveckling*
+  * Version (700 ‡o)
+  * Tonart (700 ‡r)
+  * (700 ‡s) *Under utveckling*
  
 
   Lägg därefter till Agenten:
