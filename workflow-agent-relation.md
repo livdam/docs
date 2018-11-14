@@ -86,13 +86,14 @@ Lägg till Entitet / Skapa lokalt / Verk
   <br/>```Exempel: En sund själ i en sund kropp```
  
 Välj Primär medverkan när en agent har en relation till verk som beskrivs som relaterat.
-* Medverkan och funktion / Primär medverkan / Agent/ Person (700 1/_ ‡a  ǂd )
+* Medverkan och funktion / Primär medverkan / Agent/ Person (700 1/_ ‡a ǂd )
    
  Länka i första hand till auktoritet.
    <br/>```Exempel: Hammarberg, Lena, 1943-```
  
 
 #### Samlingsverk
+(700 1/2 ‡a ǂd ǂt )
  Medverkan och funktion / Har del / Primär medverkan
 
 Välj Primär medverkan när agenten har relation till ett annat verk än det som beskrivs i instansen
