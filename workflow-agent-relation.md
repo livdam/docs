@@ -102,8 +102,21 @@ Välj Primär medverkan när agenten har relation till ett annat verk än det so
   * Har titel / Huvudtitel  - skriv in titeln
     <br/>```Exempel:  Mind over matter```
   
+ #ejklar
+
+  Lägg därefter till Agenten:
+  * Medverkan och medverkan / Primär medverkan / Agent/ Person
   
-####  Fler delfält
+  Länka i första hand till agent. För att lägga till som lokal entitet:
+  
+  * Medverkan och funktion / Primär medverkan / Agent / Person / Efternamn
+    <br/>```Exempel: Roberts```
+
+  * Medverkan och funktion / Primär medverkan / Agent/ Förnamn
+    <br/>```Exempel: Nora```
+    
+    
+    ####  Fler delfält
   Fler delfält att lägga till vid plustecknet för Titeln som rör titeln:
   * Specificering i form av grupptitel (700 ‡k)
   * Delbeteckning (700 ‡n)
@@ -116,16 +129,4 @@ Välj Primär medverkan när agenten har relation till ett annat verk än det so
   * Version (700 ‡o)
   * Tonart (700 ‡r)
   * (700 ‡s) *Under utveckling*
- 
-
-  Lägg därefter till Agenten:
-  * Medverkan och medverkan / Primär medverkan / Agent/ Person
-  
-  Länka i första hand till agent. För att lägga till som lokal entitet:
-  
-  * Medverkan och funktion / Primär medverkan / Agent / Person / Efternamn
-    <br/>```Exempel: Roberts```
-
-  * Medverkan och funktion / Primär medverkan / Agent/ Förnamn
-    <br/>```Exempel: Nora```
   
