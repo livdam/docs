@@ -93,20 +93,16 @@ Välj Primär medverkan när en agent har en relation till verk som beskrivs som
  
 
 #### Samlingsverk
-(700 1/2 ‡a ǂd ǂt )
- Medverkan och funktion / Har del / Primär medverkan
+Medverkan och funktion / Har del / Primär medverkan (700 1/2 ‡a ǂd ǂt )
 
 Välj Primär medverkan när agenten har relation till ett annat verk än det som beskrivs i instansen
 
-* Har del / skapa lokal entitet - välj Verk (långt ner i listan, ge inte upp! - i senare versioner kommer vi att förenkla detta.)
-  * Har titel / Huvudtitel  - skriv in titeln
-    <br/>```Exempel:  Mind over matter```
-  
- #ejklar
-
-  Lägg därefter till Agenten:
+* Har del / skapa lokal entitet - sök upp och välj Verk
+  * Har titel / Titel / Huvudtitel 
+  Skriv in titeln ```Exempel:  Mind over matter```
+ <br/>
+* Lägg därefter till Agenten:
   * Medverkan och medverkan / Primär medverkan / Agent/ Person
-  
   Länka i första hand till agent. För att lägga till som lokal entitet:
   
   * Medverkan och funktion / Primär medverkan / Agent / Person / Efternamn
