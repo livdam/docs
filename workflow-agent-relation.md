@@ -103,7 +103,8 @@ Välj Primär medverkan när agenten har relation till ett annat verk än det so
 
   Lägg därefter till Agenten:
 * Medverkan och medverkan / Primär medverkan / Agent/ Person
-  Länka i första hand till agent. För att lägga till som lokal entitet:
+ 
+Länka i första hand till agent. För att lägga till som lokal entitet:
   
   * Medverkan och funktion / Primär medverkan / Agent / Person / Efternamn
     <br/>```Exempel: Roberts```
