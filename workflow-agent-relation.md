@@ -75,7 +75,7 @@ Välj Primär medverkan när en agent har en relation till verk som beskrivs som
 #### Obestämd relation till verk 
 Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 ‡a)
 
-* Anmärkning (hasNote) br/>```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
+* Anmärkning (hasNote) ```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
 
 * Välj Relation vid plustecknet  vid Verk
 * Välj typ Relation i menyn
