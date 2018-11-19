@@ -24,7 +24,7 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 [Obestämd relation till verk](#obestämd-relation-till-verk)
 
-[Samlingsverk](#Samlingsverk)
+[Fler ingående verk](#Fler-ingaende-verk)
 
 
 ## Relationer
@@ -92,7 +92,8 @@ Välj Primär medverkan när en agent har en relation till verk som beskrivs som
    <br/>```Exempel: Hammarberg, Lena, 1943-```
  
 
-#### Samlingsverk
+#### Fler ingaende verk
+Om du vill ange ingående verk:
 Medverkan och funktion / Har del / Primär medverkan (700 1/2 ‡a ǂd ǂt )
 
 Välj Primär medverkan när agenten har relation till ett annat verk än det som beskrivs i instansen
