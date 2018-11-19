@@ -93,7 +93,8 @@ Välj Primär medverkan när en agent har en relation till verk som beskrivs som
  
 
 #### Fler ingaende verk
-Om du vill ange ingående verk:
+Om du vill ange fler ingående verk:
+
 Medverkan och funktion / Har del / Primär medverkan (700 1/2 ‡a ǂd ǂt )
 
 Välj Primär medverkan när agenten har relation till ett annat verk än det som beskrivs i instansen
@@ -120,11 +121,4 @@ Länka i första hand till agent. För att lägga till som lokal entitet:
   * Delbeteckning (700 ‡n)
   * Deltitel (700 ‡p)
   
-  Fler delfält att lägga till vid plustecknet för Verk som rör titeln:
-  * Tid för verket (700 ‡f)
-  * Språk  / Benämning (700 ‡l)
-  * Besättning för framförande (700 ‡m) *Under utveckling*
-  * Version (700 ‡o)
-  * Tonart (700 ‡r)
-  * (700 ‡s) *Under utveckling*
-  
+ 
