@@ -82,7 +82,7 @@ Om du vill ange fler ingående verk:
 * Medverkan och medverkan / Primär medverkan / Agent/ Person
  
     
-  ####  Fler delfält
+####  Fler delfält
   Fler delfält att lägga till vid plustecknet för Titeln som rör titeln:
   * Specificering i form av grupptitel (700 ‡k)
   * Delbeteckning (700 ‡n)
