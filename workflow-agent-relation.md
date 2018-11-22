@@ -8,17 +8,17 @@ tags:
 - under arbete
 ---
 
-## Relationer till agenter, delar och verk 
+## Relationer till delar och verk 
 (7XX)
 
 700, 710 och 711 är komplicerade fält i MARC21 som kan uttrycka olika saker om en agent, medverkande, relationer, och att en instans innehåller flera verk. Den här hjälpen visar hur man skapar olika typer av relationer. 
 
-Länka i första hand till befintliga auktioriteter för personer, organisationer och möten. Om det inte finns en auktoritet så kan du skapa en auktoritet. Se hjälptexterna för att [Skapa ny agent Person](https://libris.kb.se/katalogisering/help/workflow-agent-person-new) samt för [Organisation](https://libris.kb.se/katalogisering/help/workflow-agent-organisation-new). Det finns även hjälp för att redigera befintliga auktoriteter. Se även hjälp för att [Lägga till Agent - Organisation](https://libris.kb.se/katalogisering/help/workflow-agent-org-instance)
+Länka i första hand till befintliga auktioriteter för personer, organisationer och möten. Om det inte finns en auktoritet så kan du skapa en auktoritet. Se hjälptexterna för Agenter. Se även Hjälptexten Relationer till Agent i verksbeskrivningen.
 
 *I de första versionerna av nya Libris bör man inte länka till eller skapa nya verk, det är under utveckling.*
 
 
-[Relation uttryckt som Funktion](#relation-uttryckt-som-funktion)
+
 
 [Relation till verk uttryckt genom text](#relation-till-verk-uttryckt-genom-text)
 
@@ -26,29 +26,6 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 [Fler ingående verk](#Fler-ingaende-verk)
 
-
-## Relationer
-
-#### Relation uttryckt som Funktion 
-Utgå ifrån Instans av Verk / Medverkande och funktion / Medverkan
-
-Välj Medverkan när en agent har en relation till det verk som beskrivs i instansen.
-* Medverkan och funktion / Medverkan / Agent / Person (700 1/- ‡a)
-  Länka till entitet.
-
-  I undantagsfall, skapa lokal entitet och välj Person
-   * Lägg till Efternamn
-   <br/>```Exempel: Andersson```
-  
-   * Förnamn
-   <br/>```Exempel: Frans```
-   
-   * Levnadsår (700 ‡d)
-    <br/>```Exempel: 1974-```
-
-  * Funktion - klicka på plustecknet intill Funktion (700 ‡4)
-    Länka till entitet.
-    <br/>```Exempel: relator/trl (= översättare)```
     
 
 #### Relation till verk uttryckt genom text 
@@ -95,12 +72,8 @@ Välj Primär medverkan när en agent har en relation till verk som beskrivs som
 
 #### Fler ingaende verk
 Om du vill ange fler ingående verk:
-
-Medverkan och funktion / Har del / Primär medverkan (700 1/2 ‡a ǂd ǂt )
-
-Välj Primär medverkan när agenten har relation till ett annat verk än det som beskrivs i instansen
-
-  * Har del / skapa lokal entitet - sök upp och välj Verk
+(700 1/2 ‡a ǂd ǂt )
+  * Har del / skapa lokal entitet / Verk
     * Har titel / Titel / Huvudtitel 
   Skriv in titeln 
   <br/>```Exempel:  Mind over matter```
@@ -108,16 +81,8 @@ Välj Primär medverkan när agenten har relation till ett annat verk än det so
   Lägg därefter till Agenten:
 * Medverkan och medverkan / Primär medverkan / Agent/ Person
  
-Länka i första hand till agent. För att lägga till som lokal entitet:
-  
-  * Medverkan och funktion / Primär medverkan / Agent / Person / Efternamn
-    <br/>```Exempel: Roberts```
-
-  * Medverkan och funktion / Primär medverkan / Agent/ Förnamn
-    <br/>```Exempel: Nora```
     
-    
-    ####  Fler delfält
+  ####  Fler delfält
   Fler delfält att lägga till vid plustecknet för Titeln som rör titeln:
   * Specificering i form av grupptitel (700 ‡k)
   * Delbeteckning (700 ‡n)
