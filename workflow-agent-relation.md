@@ -36,12 +36,12 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
 
 Skärdump.......
 
-Öppna sidorutan Lägg till egenskaper under: Text
-Välj egenskapen Relation (Relationship)
-Välj typ Relation (Relationship) från rullgardinsmenyn
-Öppna sidorutan Lägg till egenskaper under: Relation och välj Entitet
-Lägg till Entitet/Skapa lokal entitet/Verk
-Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel
+* Öppna sidorutan Lägg till egenskaper under: Text
+* Välj egenskapen Relation (Relationship)
+* Välj typ Relation (Relationship) från rullgardinsmenyn
+* Öppna sidorutan Lägg till egenskaper under: Relation och välj Entitet
+  * Lägg till Entitet/Skapa lokal entitet/Verk
+    * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel
 Skriv in titeln
 Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
 Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns Skapa lokal entitet, välj Person och fyll i uppgifterna
