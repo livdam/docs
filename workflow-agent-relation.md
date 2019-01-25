@@ -29,9 +29,29 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
     
 
 #### Relation till verk uttryckt genom text 
-Det finns fasta termer i RDA för att uttrycka en relation till ett verk och som motsvarar delfält i i Exportformatet. Det är ännu inte möjligt att länka till dessa i nya Libris. Svensk översättning för relationerna behöver gås igenom.
+# Relation till ett verk av en författare (700 1/_ ‡i a  ‡d ǂt)#
+Det finns fasta termer i RDA för att uttrycka en relation till ett verk och som motsvarar delfält i i Exportformatet, men det är ännu inte möjligt att länka till dessa i nya Libris. De kontrollerade relationsbeteckningarna tillämpas tills vidare restriktivt, eftersom det för närvarande saknas officiella svenska översättningar av RDA-termerna.
 
-Relation till ett verk av en författare (700 1/_ ‡i a  ‡d ǂt)
+För att uttrycka relationen till ett verk som har ett samband med (men inte ingår i) den katalogiserade instansen:
+
+Skärdump.......
+
+Öppna sidorutan Lägg till egenskaper under: Text
+Välj egenskapen Relation (Relationship)
+Välj typ Relation (Relationship) från rullgardinsmenyn
+Öppna sidorutan Lägg till egenskaper under: Relation och välj Entitet
+Lägg till Entitet/Skapa lokal entitet/Verk
+Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel
+Skriv in titeln
+Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
+Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns Skapa lokal entitet, välj Person och fyll i uppgifterna
+Öppna sidorutan Lägg till egenskaper under: Relation och välj Relation
+Lägg till Relation (Relation) /Skapa lokal entitet
+Lägg till egenskaper under: Relation och välj Benämning
+Skriv in uppgiften
+
+_______
+
 * Välj Relation (Relationship) vid plustecknet vid Verksdelen
 * Välj typ Relation (Relationship) i sidopanelen
 * Välj Relation (Relation) vid plustecknet vid Relation (Relationship)
