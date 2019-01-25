@@ -42,13 +42,13 @@ Skärdump.......
 * Öppna sidorutan Lägg till egenskaper under: Relation och välj Entitet
   * Lägg till Entitet/Skapa lokal entitet/Verk
     * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel
-Skriv in titeln
-Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
-Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns Skapa lokal entitet, välj Person och fyll i uppgifterna
-Öppna sidorutan Lägg till egenskaper under: Relation och välj Relation
-Lägg till Relation (Relation) /Skapa lokal entitet
-Lägg till egenskaper under: Relation och välj Benämning
-Skriv in uppgiften
+      * Skriv in titeln
+    * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
+      * Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns Skapa lokal entitet, välj Person och fyll i uppgifterna
+* Öppna sidorutan Lägg till egenskaper under: Relation och välj Relation
+  * Lägg till Relation (Relation) /Skapa lokal entitet
+    * Lägg till egenskaper under: Relation och välj Benämning
+    * Skriv in uppgiften
 
 _______
 
