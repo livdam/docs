@@ -24,9 +24,9 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 [Obestämd relation till verk](#obestämd-relation-till-verk)
 
-[Fler ingående verk](#Fler_ingaende-verk)
+[Fler ingående verk](#Fler_ingående-verk)
 
-[Fler delfält](#Fler_delfalt)
+[Fler delfält](#Fler_delfält)
 
     
 
@@ -76,7 +76,7 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
  
 <br/>
 ### Fler ingaende verk
-För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 ‡a ǂd ǂt):
+* För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 ‡a ǂd ǂt):
 
 
 ![Ingaende verk](Ingaendeverk.png) 
