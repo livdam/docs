@@ -34,7 +34,7 @@ Det finns fasta termer i RDA för att uttrycka en relation till ett verk och som
 
 För att uttrycka relationen till ett verk som har ett samband med (men inte ingår i) den katalogiserade instansen:
 
-Skärdump.......
+![Relation till ett verk av en författare](Relationverkaut.png) 
 
 * Öppna sidorutan Lägg till egenskaper under: Text
 * Välj egenskapen Relation (Relationship)
