@@ -90,12 +90,12 @@ För att skapa analytiska biuppslag på verk som ingår i den katalogiserade ins
 <br/> 
     
 ###  Fler delfält
-  För att lägga till fler delfält under Verk/Har titel/Titel/Lägg till egenskaper under: Titel/:
+* För att lägga till fler delfält under Verk/Har titel/Titel/Lägg till egenskaper under: Titel/:
   * Specificering i form av grupptitel (700 ‡k)
   * Delbeteckning (700 ‡n)
   * Deltitel (700 ‡p)
   
-  För att lägga till språk för det relaterade verket (700 ‡l):
+* För att lägga till språk för det relaterade verket (700 ‡l):
 * Lägg till egenskaper under Verk/Språk
   * Lägg till Språk/Skapa lokal entitet
   * Lägg till egenskaper under: Språk/Benämning
