@@ -89,7 +89,7 @@ Om relationen 채r viktig att beskriva och inte kan beskrivas p책 annat s채tt, g�
    * Skriv in titeln
   * L채gg till egenskaper under Verk/Medverkan och funktion/Prim채r medverkan/Agent
    * L채gg till entitet och l채nka till autkoriserad namnform. Om en s책dan inte finns, Skapa lokal entitet, v채lj Person och fyll i uppgifterna
-  
+ 
 
 <br/> 
     
