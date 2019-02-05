@@ -40,7 +40,7 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
 
 * Öppna sidorutan Lägg till egenskaper under: Text
 * Välj egenskapen Relation (Relationship)
-* Välj typ Relation (Relationship) från rullgardinsmenyn
+* Välj typ Relation från rullgardinsmenyn
 * Öppna sidorutan Lägg till egenskaper under: Relation och välj Entitet
   * Lägg till Entitet/Skapa lokal entitet/Verk
   * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel
