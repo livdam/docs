@@ -57,7 +57,8 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
  <br/>
 
 ### Obestämd relation till verk 
-Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 ‡a)
+* Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 ‡a)
+
 
 ![Obestämd relation till ett verk](Obestrelationverk.png) 
 
