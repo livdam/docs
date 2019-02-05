@@ -24,9 +24,9 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 [Obestämd relation till verk](#obestämd-relation-till-verk)
 
-[Fler ingående verk](#Fler_ingående-verk)
+[Fler ingående verk](#Fler-ingående-verk)
 
-[Fler delfält](#Fler_delfält)
+[Fler delfält](#Fler-delfält)
 
     
 
