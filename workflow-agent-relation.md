@@ -75,7 +75,8 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 <br/>```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
 
  <br/>
-###  Fler ingående verk
+ 
+### xxxxx
 * För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 ‡a ǂd ǂt)
 
 
