@@ -73,9 +73,8 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 * Lägg till en anmärkning (Lägg till egenskaper under: Instans/Anmärkning (hasNote)/Anmärkning/Benämning) och skriv in uppgiften
 <br/>```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
 
- 
-<br/>
-### Fler ingaende verk
+ <br/>
+###  Fler ingående verk
 * För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 ‡a ǂd ǂt):
 
 
