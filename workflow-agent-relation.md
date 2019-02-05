@@ -76,6 +76,18 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 
 ![Obestämd relation till ett verk](Obestrelationverk.png) 
 
+* Öppna sidorutan Lägg till egenskaper under: Text
+* Välj egenskapen Relation (relationship)
+* Välj typ Relation från rullgardinsmenyn
+* Öppna sidorutan Lägg till egenskaper under: Relation och välj Entitet
+* Lägg till Entitet/Skapa lokal entitet/Verk
+  * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel
+  * Skriv in titeln
+* Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
+  * Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns Skapa lokal entitet, välj Person och fyll i uppgifterna
+* Lägg till en anmärkning (Lägg till egenskaper under: Instans/Anmärkning (hasNote)/Anmärkning/Benämning) och skriv in uppgiften
+
+
 * Anmärkning (hasNote) 
 <br/>```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
 
@@ -95,23 +107,30 @@ Välj Primär medverkan när en agent har en relation till verk som beskrivs som
  
 
 #### Fler ingaende verk
-Om du vill ange fler ingående verk:
-(700 1/2 ‡a ǂd ǂt )
+För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 ‡a ǂd ǂt):
+
 
 ![Ingaende verk](Ingaendeverk.png) 
-  * Har del / skapa lokal entitet / Verk
-    * Har titel / Titel / Huvudtitel 
-  Skriv in titeln 
-  <br/>```Exempel:  Mind over matter```
+  * Öppna sidorutan Lägg till egenskaper under Text:
+  * Välj egenskapen Har del (hasPart)
+  * Lägg till entitet / Skapa Lokal entitet / -- Verk
+    * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
+    * Lägg till entitet och länka till autkoriserad namnform. Om en sådan inte finns, Skapa lokal entitet, välj Person och fyll i uppgifterna
+  
 
-  Lägg därefter till Agenten:
-* Medverkan och medverkan / Primär medverkan / Agent/ Person
  
     
 ####  Fler delfält
-  Fler delfält att lägga till vid plustecknet för Titeln som rör titeln:
+  För att lägga till fler delfält under Verk/Har titel/Titel/Lägg till egenskaper under: Titel/:
   * Specificering i form av grupptitel (700 ‡k)
   * Delbeteckning (700 ‡n)
   * Deltitel (700 ‡p)
+  
+  För att lägga till språk för det relaterade verket (700 ‡l):
+* Lägg till egenskaper under Verk/Språk
+  * Lägg till Språk/Skapa lokal entitet
+  * Lägg till egenskaper under: Språk/Benämning
+  * Skriv in språket i klartext 
+
   
  
