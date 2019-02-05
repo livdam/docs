@@ -26,6 +26,8 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 [Fler ingående verk](#Fler_ingaende-verk)
 
+[Fler delfält](#Fler_delfalt)
+
     
 
 ### Relation till verk uttryckt genom text 
