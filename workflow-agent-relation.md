@@ -97,6 +97,8 @@ Välj Primär medverkan när en agent har en relation till verk som beskrivs som
 #### Fler ingaende verk
 Om du vill ange fler ingående verk:
 (700 1/2 ‡a ǂd ǂt )
+
+![Ingaende verk](Ingaende verk.png) 
   * Har del / skapa lokal entitet / Verk
     * Har titel / Titel / Huvudtitel 
   Skriv in titeln 
