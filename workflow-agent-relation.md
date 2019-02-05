@@ -52,7 +52,7 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
     * Lägg till egenskaper under: Relation och välj Benämning
     * Skriv in uppgiften. ```Exempel: Parafraserar```
 
- 
+ <br/>>
 
 ### Obestämd relation till verk 
 Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 ‡a)
@@ -72,7 +72,7 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 <br/>```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
 
  
-
+<br/>
 ### Fler ingaende verk
 För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 ‡a ǂd ǂt):
 
@@ -85,7 +85,7 @@ För att skapa analytiska biuppslag på verk som ingår i den katalogiserade ins
     * Lägg till entitet och länka till autkoriserad namnform. Om en sådan inte finns, Skapa lokal entitet, välj Person och fyll i uppgifterna
   
 
- 
+<br/> 
     
 ###  Fler delfält
   För att lägga till fler delfält under Verk/Har titel/Titel/Lägg till egenskaper under: Titel/:
