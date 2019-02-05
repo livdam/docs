@@ -50,25 +50,8 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
 * Öppna sidorutan Lägg till egenskaper under: Relation och välj Relation
   * Lägg till Relation (Relation) /Skapa lokal entitet
     * Lägg till egenskaper under: Relation och välj Benämning
-    * Skriv in uppgiften
+    * Skriv in uppgiften. ```Exempel: Parafraserar```
 
-_______
-
-* Välj Relation (Relationship) vid plustecknet vid Verksdelen
-* Välj typ Relation (Relationship) i sidopanelen
-* Välj Relation (Relation) vid plustecknet vid Relation (Relationship)
-
-Lägg till Entitet / Skapa lokalt / Verk / Benämning
-*  Benämning
-  <br/>```Exempel: Parafraserar```
-  
- *  Har titel/ Titel / Huvudtitel
-  <br/>```Exempel: Pride and prejudice```
- 
-Välj Primär medverkan när en agent har en relation till verk som beskrivs som relaterat.
-* Medverkan och funktion / Primär medverkan / Agent/ Person (700 1/_ ‡a  ǂd )
-  Länka i första hand till en agent.
-    <br/>```Exempel: Austin,  Jane, 1775-1817```
  
 
 #### Obestämd relation till verk 
@@ -86,24 +69,8 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
   * Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns Skapa lokal entitet, välj Person och fyll i uppgifterna
 * Lägg till en anmärkning (Lägg till egenskaper under: Instans/Anmärkning (hasNote)/Anmärkning/Benämning) och skriv in uppgiften
-
-
-* Anmärkning (hasNote) 
 <br/>```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
 
-* Välj Relation vid plustecknet  vid Verk
-* Välj typ Relation i menyn
-* Välj Entitet vid plustecknet vid Relation
-
-Lägg till Entitet / Skapa lokalt / Verk 
-*  Har titel/ Titel / Huvudtitel
-  <br/>```Exempel: En sund själ i en sund kropp```
- 
-Välj Primär medverkan när en agent har en relation till verk som beskrivs som relaterat.
-* Medverkan och funktion / Primär medverkan / Agent/ Person (700 1/_ ‡a ǂd )
-   
- Länka i första hand till auktoritet.
-   <br/>```Exempel: Hammarberg, Lena, 1943-```
  
 
 #### Fler ingaende verk
