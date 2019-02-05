@@ -86,7 +86,9 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
   * Lägg till entitet/Skapa Lokal entitet/Verk
    * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel
     <BR>
-
+   * Skriv in titeln
+   * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
+   * Lägg till entitet och länka till autkoriserad namnform. Om en sådan inte finns, Skapa lokal entitet, välj Person och fyll i uppgifterna
  
 
 <br/> 
