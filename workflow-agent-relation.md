@@ -24,7 +24,7 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 [Obestämd relation till verk](#obestämd-relation-till-verk)
 
-[Fler ingående verk](#Fler-ingaende-verk)
+[Fler ingående verk](#Fler_ingaende-verk)
 
     
 
@@ -34,7 +34,7 @@ Det finns fasta termer i RDA för att uttrycka en relation till ett verk och som
 
 För att uttrycka relationen till ett verk som har ett samband med (men inte ingår i) den katalogiserade instansen:
 
-![Relation till ett verk av en författare](Relationverkaut.png) 
+![Relation till ett verk av en författare](Relationverkauth.png) 
 
 * Öppna sidorutan Lägg till egenskaper under: Text
 * Välj egenskapen Relation (Relationship)
@@ -98,7 +98,7 @@ Välj Primär medverkan när en agent har en relation till verk som beskrivs som
 Om du vill ange fler ingående verk:
 (700 1/2 ‡a ǂd ǂt )
 
-![Ingaende verk](Ingaende verk.png) 
+![Ingaende verk](Ingaendeverk.png) 
   * Har del / skapa lokal entitet / Verk
     * Har titel / Titel / Huvudtitel 
   Skriv in titeln 
