@@ -54,7 +54,7 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
 
  
 
-#### Obestämd relation till verk 
+### Obestämd relation till verk 
 Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 ‡a)
 
 ![Obestämd relation till ett verk](Obestrelationverk.png) 
@@ -73,7 +73,7 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 
  
 
-#### Fler ingaende verk
+### Fler ingaende verk
 För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 ‡a ǂd ǂt):
 
 
@@ -87,7 +87,7 @@ För att skapa analytiska biuppslag på verk som ingår i den katalogiserade ins
 
  
     
-####  Fler delfält
+###  Fler delfält
   För att lägga till fler delfält under Verk/Har titel/Titel/Lägg till egenskaper under: Titel/:
   * Specificering i form av grupptitel (700 ‡k)
   * Delbeteckning (700 ‡n)
