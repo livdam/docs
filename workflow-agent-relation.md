@@ -92,6 +92,18 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
  
 
 <br/> 
+
+### Relation till ett verk av en författare som ämnesord
+* För att lägga till en författares verk som ämne (600 1/_ ǂa ǂd ǂt
+
+![Relation till verk av en författare som ämnesord](Relationverkauthsubj.png)
+
+* Öppna sidorutan Lägg till entitet inom egenskapen Ämne
+* Välj Skapa lokalt entitet/Verk
+  * Lägg till egenskaper under Verk/Har titel/Huvudtitel
+  * Skriv in den föredragna titeln
+  * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
+  * Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns, Skapa lokal entitet, Välj Person och fyll i uppgifterna
     
 ###  Fler delfält
 * För att lägga till fler delfält under Verk/Har titel/Titel/Lägg till egenskaper under: Titel/:
