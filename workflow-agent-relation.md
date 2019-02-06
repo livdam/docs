@@ -2,7 +2,7 @@
 section: Hjälptexter katalogisering
 title: Relationer till agenter, delar och verk
 order: 34
-date: 2019-02-04
+date: 2019-02-06
 tags:
 - editor
 - under arbete
@@ -26,7 +26,7 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 [Ingående verk](#Ingående-verk)
 
-[Relation till ett verk av en författare](#Relation-till-ett-verk-av-en-författare-som-ämnesord)
+[Relation till ett verk av en författare som ämnesord](#Relation-till-ett-verk-av-en-författare-som-ämnesord)
 
 [Fler delfält](#Fler-delfält)
 
