@@ -33,7 +33,8 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
     
 
 ### Relation till verk uttryckt genom text 
-##### Relation till ett verk av en författare (700 1/_ ‡i a  ‡d ǂt)
+Relation till ett verk av en författare (700 1/_ ‡i a  ‡d ǂt)
+<br/>
 Det finns fasta termer i RDA för att uttrycka en relation till ett verk och som motsvarar delfält i i Exportformatet, men det är ännu inte möjligt att länka till dessa i nya Libris. De kontrollerade relationsbeteckningarna tillämpas tills vidare restriktivt, eftersom det för närvarande saknas officiella svenska översättningar av RDA-termerna.
 
 För att uttrycka relationen till ett verk som har ett samband med (men inte ingår i) den katalogiserade instansen:
@@ -75,7 +76,7 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
  <br/>
  
 ### Ingående verk
-* För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 ‡a ǂd ǂt)
+För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 ‡a ǂd ǂt)
 
 
 ![Ingaende verk](Ingaendeverk.png) 
@@ -90,7 +91,7 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 <br/> 
 
 ### Relation till ett verk av en författare som ämnesord
-För att lägga till en författares verk som ämne (600 1/_ ǂa ǂd ǂt
+För att lägga till en författares verk som ämne (600 1/_ ǂa ǂd ǂt)
 
 ![Relation till verk av en författare som ämnesord](Relationverkauthsubj.png)
 
