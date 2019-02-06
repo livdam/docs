@@ -45,16 +45,13 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
 * Välj typ Relation från rullgardinsmenyn
 * Öppna sidorutan Lägg till egenskaper under: Relation och välj Entitet
   * Lägg till Entitet/Skapa lokal entitet/Verk
-  * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel
-    <BR>
-    * Skriv in titeln
-   * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
-     <BR>
-    * Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns Skapa lokal entitet, välj Person och fyll i uppgifterna
+  * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel och skriv in titeln
+  * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
+  * Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns Skapa lokal entitet, välj Person och fyll i uppgifterna
 * Öppna sidorutan Lägg till egenskaper under: Relation och välj Relation
   * Lägg till Relation/Skapa lokal entitet
-    * Lägg till egenskaper under: Relation och välj Benämning
-    * Skriv in uppgiften. ```Exempel: Parafraserar```
+  * Lägg till egenskaper under: Relation och välj Benämning
+  * Skriv in uppgiften. ```Exempel: Parafraserar```
 
  <br/>
 
@@ -69,9 +66,8 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 * Välj typ Relation från rullgardinsmenyn
 * Öppna sidorutan Lägg till egenskaper under: Relation och välj Entitet
 * Lägg till Entitet/Skapa lokal entitet/Verk
-  * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel
-  * Skriv in titeln
-* Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
+  * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel och skriv in titeln
+  * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
   * Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns Skapa lokal entitet, välj Person och fyll i uppgifterna
 * Lägg till en anmärkning (Lägg till egenskaper under: Instans/Anmärkning (hasNote)/Anmärkning/Benämning) och skriv in uppgiften
 <br/>```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
@@ -84,19 +80,17 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 
 ![Ingaende verk](Ingaendeverk.png) 
 * Öppna sidorutan Lägg till egenskaper under Text:
-  * Välj egenskapen Har del (hasPart)
-  * Lägg till entitet/Skapa Lokal entitet/Verk
-   * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel
-
-   * Skriv in titeln
-   * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
-   * Lägg till entitet och länka till autkoriserad namnform. Om en sådan inte finns, Skapa lokal entitet, välj Person och fyll i uppgifterna
+* Välj egenskapen Har del (hasPart)
+* Lägg till entitet/Skapa Lokal entitet/Verk
+  * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel och skriv in titlen
+  * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
+  * Lägg till entitet och länka till autkoriserad namnform. Om en sådan inte finns, Skapa lokal entitet, välj Person och fyll i uppgifterna
  
 
 <br/> 
 
 ### Relation till ett verk av en författare som ämnesord
-* För att lägga till en författares verk som ämne (600 1/_ ǂa ǂd ǂt
+För att lägga till en författares verk som ämne (600 1/_ ǂa ǂd ǂt
 
 ![Relation till verk av en författare som ämnesord](Relationverkauthsubj.png)
 
@@ -108,12 +102,12 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
   * Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns, Skapa lokal entitet, Välj Person och fyll i uppgifterna
     
 ###  Fler delfält
-* För att lägga till fler delfält under Verk/Har titel/Titel/Lägg till egenskaper under: Titel/:
+För att lägga till fler delfält under Verk/Har titel/Titel/Lägg till egenskaper under: Titel/:
   * Specificering i form av grupptitel (700 ‡k)
   * Delbeteckning (700 ‡n)
   * Deltitel (700 ‡p)
   
-* För att lägga till språk för det relaterade verket (700 ‡l):
+För att lägga till språk för det relaterade verket (700 ‡l):
 * Lägg till egenskaper under Verk/Språk
   * Lägg till Språk/Skapa lokal entitet
   * Lägg till egenskaper under: Språk/Benämning
