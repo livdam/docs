@@ -33,7 +33,7 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
     
 
 ### Relation till verk uttryckt genom text 
-Relation till ett verk av en författare (700 1/_ ‡i a  ‡d ǂt)
+Relation till ett verk av en författare (700 1/_ #i a  #d #t)
 <br/>
 Det finns fasta termer i RDA för att uttrycka en relation till ett verk och som motsvarar delfält i i Exportformatet, men det är ännu inte möjligt att länka till dessa i nya Libris. De kontrollerade relationsbeteckningarna tillämpas tills vidare restriktivt, eftersom det för närvarande saknas officiella svenska översättningar av RDA-termerna.
 
@@ -57,7 +57,7 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
  <br/>
 
 ### Obestämd relation till verk 
-Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 ‡a)
+Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 #a)
 
 
 ![Obestämd relation till ett verk](Obestrelationverk.png) 
@@ -76,7 +76,7 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
  <br/>
  
 ### Ingående verk
-För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 ‡a ǂd ǂt)
+För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 #a #d #t)
 
 
 ![Ingaende verk](Ingaendeverk.png) 
@@ -91,7 +91,7 @@ För att skapa analytiska biuppslag på verk som ingår i den katalogiserade ins
 <br/> 
 
 ### Relation till ett verk av en författare som ämnesord
-För att lägga till en författares verk som ämne (600 1/_ ǂa ǂd ǂt)
+För att lägga till en författares verk som ämne (600 1/_ #a #d #t)
 
 ![Relation till verk av en författare som ämnesord](Relationverkauthsubj.png)
 
@@ -104,11 +104,11 @@ För att lägga till en författares verk som ämne (600 1/_ ǂa ǂd ǂt)
     
 ###  Fler delfält
 För att lägga till fler delfält under Verk/Har titel/Titel/Lägg till egenskaper under: Titel/:
-  * Specificering i form av grupptitel (700 ‡k)
-  * Delbeteckning (700 ‡n)
-  * Deltitel (700 ‡p)
+  * Specificering i form av grupptitel (700 #k)
+  * Delbeteckning (700 #n)
+  * Deltitel (700 #p)
   
-För att lägga till språk för det relaterade verket (700 ‡l):
+För att lägga till språk för det relaterade verket (700 #l):
 * Lägg till egenskaper under Verk/Språk
   * Lägg till Språk/Skapa lokal entitet
   * Lägg till egenskaper under: Språk/Benämning
