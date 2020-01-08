@@ -33,7 +33,7 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
     
 
 ### Relation till verk uttryckt genom text 
-Relation till ett verk av en författare (700 1/_ #i a  #d #t)
+Relation till ett verk av en författare (700 1/_ #i #a #d #t)
 <br/>
 Det finns fasta termer i RDA för att uttrycka en relation till ett verk och som motsvarar delfält i i Exportformatet, men det är ännu inte möjligt att länka till dessa i nya Libris. De kontrollerade relationsbeteckningarna tillämpas tills vidare restriktivt, eftersom det för närvarande saknas officiella svenska översättningar av RDA-termerna.
 
@@ -41,17 +41,17 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
 
 ![Relation till ett verk av en författare](Relationverkauth.png) 
 
-* Öppna sidorutan Lägg till egenskaper under: Text
+* Klicka på plustecknet Lägg till egenskaper under: Text
 * Välj egenskapen Relation (Relationship)
 * Välj typ Relation från rullgardinsmenyn
-* Öppna sidorutan Lägg till egenskaper under: Relation och välj Entitet
-  * Lägg till Entitet/Skapa lokal entitet/Verk
-  * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel och skriv in titeln
-  * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
-  * Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns Skapa lokal entitet, välj Person och fyll i uppgifterna
-* Öppna sidorutan Lägg till egenskaper under: Relation och välj Relation
-  * Lägg till Relation/Skapa lokal entitet
-  * Lägg till egenskaper under: Relation och välj Benämning
+* Klicka på plustecknet vid Relation och välj Entitet
+  * Klicka på plustecknet vid Entitet, välj Skapa lokal entitet och välj Verk
+  * Klicka på plustecknet vid Verk, lägg till Har titel/Titel/Huvudtitel och skriv in titeln
+  * Klicka på plustecknet vid Verk, lägg till Medverkan och funktion/Primär medverkan/Agent
+  * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
+* Klicka på plustecknet vid Relation och välj Relation
+  * Klicka på plustecknet vid Relation {Verk saknas} och lägg till Relation. Lägg till Relation och välj Skapa lokal entitet
+  * Klicka på plustecknet vid Relation {Namnlös} och välj Benämning
   * Skriv in uppgiften. ```Exempel: Parafraserar```
 
  <br/>
