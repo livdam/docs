@@ -83,8 +83,8 @@ För att skapa analytiska biuppslag på verk som ingår i den katalogiserade ins
   * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
 
 Om det ingående verket är en översättning:
-	* Klicka på plustecknet vid Verk, lägg till Språk och länka till det språk verket är översatt till. Språket kommer då att exporteras i klartext i delfält 700 #l till MARC21.
-OBS! I exporten till MARC21 kommer det skapas ett fält 041 för varje språklänk. I de fall flera översatta verk ingår kan detta resultera i många dubbleringar. Ignorera de dubblerade fälten.
+* Klicka på plustecknet vid Verk, lägg till Språk och länka till det språk verket är översatt till. Språket kommer då att exporteras i klartext i delfält 700 #l till MARC21.
+OBS! I exporten till MARC21 kommer det skapas ett fält 041 för varje språklänk. I de fall flera översatta verk ingår kan detta resultera i många dubbleringar. Ignorera de dubblerade 041-fälten.
 
 <br/> 
 
