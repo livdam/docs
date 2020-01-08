@@ -47,8 +47,7 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
 * Klicka på plustecknet vid Relation och välj Relation
   * Klicka på plustecknet vid Relation {Verk saknas} och lägg till Relation. Lägg till Relation och välj Skapa lokal entitet
   * Klicka på plustecknet vid Relation {Namnlös} och välj Benämning
-  * Skriv in uppgiften. 
-  ```Exempel: Parafraserar``` 
+  * Skriv in uppgiften. ```Exempel: Parafraserar``` 
 
 ### Obestämd relation till verk 
 Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 #a)
@@ -82,6 +81,7 @@ För att skapa analytiska biuppslag på verk som ingår i den katalogiserade ins
 
 Om det ingående verket är en översättning:
 * Klicka på plustecknet vid Verk, lägg till Språk och länka till det språk verket är översatt till. Språket kommer då att exporteras i klartext i delfält 700 #l till MARC21. 
+
 OBS! I exporten till MARC21 kommer det skapas ett fält 041 för varje språklänk. I de fall flera översatta verk ingår kan detta resultera i många dubbleringar. Ignorera de dubblerade 041-fälten. 
 
 ### Relation till ett verk av en författare som ämnesord
