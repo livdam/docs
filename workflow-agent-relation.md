@@ -41,7 +41,7 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
 
 ![Relation till ett verk av en författare](Relationverkauth.png) 
 
-* Klicka på plustecknet Lägg till egenskaper under: Text
+* Klicka på plustecknet vid Text
 * Välj egenskapen Relation (Relationship)
 * Välj typ Relation från rullgardinsmenyn
 * Klicka på plustecknet vid Relation och välj Entitet
@@ -62,15 +62,15 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 
 ![Obestämd relation till ett verk](Obestrelationverk.png) 
 
-* Öppna sidorutan Lägg till egenskaper under: Text
+* Klicka på plustecknet vid Text
 * Välj egenskapen Relation (relationship)
 * Välj typ Relation från rullgardinsmenyn
-* Öppna sidorutan Lägg till egenskaper under: Relation och välj Entitet
-* Lägg till Entitet/Skapa lokal entitet/Verk
-  * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel och skriv in titeln
-  * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
-  * Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns Skapa lokal entitet, välj Person och fyll i uppgifterna
-* Lägg till en anmärkning (Lägg till egenskaper under: Instans/Anmärkning (hasNote)/Anmärkning/Benämning) och skriv in uppgiften
+* Klicka på plustecknet vid Relation och välj Entitet
+* Klicka på plustecknet vid Entitet, välj Skapa lokal entitet och välj Verk
+  * Klicka på plustecknet vid Verk, lägg till Har titel/Titel/Huvudtitel och skriv in titeln
+  * Klicka på plustecknet vid Verk, lägg till Medverkan och funktion/Primär medverkan/Agent
+  * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
+* Lägg till en anmärkning genom att klicka på plustecknet under Vertygsikonen, välj Anmärkning (hasNote) och lägg till Anmärkning. Skriv in uppgiften under Benämning
 <br/>```Exempel:Bygger på förf:s diss. med titeln: En sund själ i en sund kropp : hälsopolitik i Stockholms folkskolor 1880-1930```
 
  <br/>
@@ -80,13 +80,16 @@ För att skapa analytiska biuppslag på verk som ingår i den katalogiserade ins
 
 
 ![Ingaende verk](Ingaendeverk.png) 
-* Öppna sidorutan Lägg till egenskaper under Text:
+* Klicka på plustecknet vid Text:
 * Välj egenskapen Har del (hasPart)
-* Lägg till entitet/Skapa Lokal entitet/Verk
-  * Lägg till egenskaper under Verk/Har titel/Titel/Huvudtitel och skriv in titlen
-  * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
-  * Lägg till entitet och länka till autkoriserad namnform. Om en sådan inte finns, Skapa lokal entitet, välj Person och fyll i uppgifterna
- 
+* Klicka på plustecknet vid Har del, välj Skapa Lokal entitet och välj ----Verk
+  * Klicka på plustecknet vid Verk, lägg till Har titel/Titel/Huvudtitel och skriv in titeln
+  * Klicka på plustecknet vid Verk, lägg till Medverkan och funktion/Primär medverkan/Agent
+  * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
+
+Om det ingående verket är en översättning:
+	* Klicka på plustecknet vid Verk, lägg till Språk och länka till det språk verket är översatt till. Språket kommer då att exporteras i klartext i delfält 700 #l till MARC21.
+OBS! I exporten till MARC21 kommer det skapas ett fält 041 för varje språklänk. I de fall flera översatta verk ingår kan detta resultera i många dubbleringar. Ignorera de dubblerade fälten.
 
 <br/> 
 
@@ -95,24 +98,16 @@ För att lägga till en författares verk som ämne (600 1/_ #a #d #t)
 
 ![Relation till verk av en författare som ämnesord](Relationverkauthsubj.png)
 
-* Öppna sidorutan Lägg till entitet inom egenskapen Ämne
-* Välj Skapa lokalt entitet/Verk
-  * Lägg till egenskaper under Verk/Har titel/Huvudtitel
-  * Skriv in den föredragna titeln
-  * Lägg till egenskaper under Verk/Medverkan och funktion/Primär medverkan/Agent
-  * Lägg till entitet och länka till auktoriserad namnform. Om en sådan inte finns, Skapa lokal entitet, Välj Person och fyll i uppgifterna
+* Klicka på plustecknet vid Ämne
+* Välj Skapa lokalt entitet och välj Verk
+  * Klicka på plustecknet vid Verk, välj Har titel och välj typ Titel
+  * Skriv in den föredragna titeln i Huvudtitel
+  * Klicka på plustecknet vid Verk, lägg till Medverkan och funktion/Primär medverkan/Agent
+  * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
     
 ###  Fler delfält
-För att lägga till fler delfält under Verk/Har titel/Titel/Lägg till egenskaper under: Titel/:
+För att lägga till fler engenskaper under Verk/Har titel/Titel/Huvudtitel:
+* Klicka på plustecknet vid Titel och välj
   * Specificering i form av grupptitel (700 #k)
   * Delbeteckning (700 #n)
   * Deltitel (700 #p)
-  
-För att lägga till språk för det relaterade verket (700 #l):
-* Lägg till egenskaper under Verk/Språk
-  * Lägg till Språk/Skapa lokal entitet
-  * Lägg till egenskaper under: Språk/Benämning
-  * Skriv in språket i klartext 
-
-  
- 
