@@ -17,9 +17,6 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 *I de första versionerna av nya Libris bör man inte länka till eller skapa nya verk, det är under utveckling.*
 
-
-
-
 [Relation till verk uttryckt genom text](#relation-till-verk-uttryckt-genom-text)
 
 [Obestämd relation till verk](#obestämd-relation-till-verk)
@@ -29,8 +26,6 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 [Relation till ett verk av en författare som ämnesord](#Relation-till-ett-verk-av-en-författare-som-ämnesord)
 
 [Fler delfält](#Fler-delfält)
-
-    
 
 ### Relation till verk uttryckt genom text 
 Relation till ett verk av en författare (700 1/_ #i #a #d #t)
@@ -46,7 +41,7 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
 * Välj typ Relation från rullgardinsmenyn
 * Klicka på plustecknet vid Relation och välj Entitet
   * Klicka på plustecknet vid Entitet, välj Skapa lokal entitet och välj Verk
-  * Klicka på plustecknet vid Verk, lägg till Har titel/Titel/Huvudtitel och skriv in titeln
+  * Klicka på plustecknet vid Verk, lägg till Har titel, välj Titel och skriv in den föredragna titeln under Huvudtitel
   * Klicka på plustecknet vid Verk, lägg till Medverkan och funktion/Primär medverkan/Agent
   * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
 * Klicka på plustecknet vid Relation och välj Relation
@@ -67,7 +62,7 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 * Välj typ Relation från rullgardinsmenyn
 * Klicka på plustecknet vid Relation och välj Entitet
 * Klicka på plustecknet vid Entitet, välj Skapa lokal entitet och välj Verk
-  * Klicka på plustecknet vid Verk, lägg till Har titel/Titel/Huvudtitel och skriv in titeln
+  * Klicka på plustecknet vid Verk, lägg till Har titel, välj Titel och skriv in den föredragna titeln under Huvudtitel
   * Klicka på plustecknet vid Verk, lägg till Medverkan och funktion/Primär medverkan/Agent
   * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
 * Lägg till en anmärkning genom att klicka på plustecknet under Vertygsikonen, välj Anmärkning (hasNote) och lägg till Anmärkning. Skriv in uppgiften under Benämning
@@ -83,7 +78,7 @@ För att skapa analytiska biuppslag på verk som ingår i den katalogiserade ins
 * Klicka på plustecknet vid Text:
 * Välj egenskapen Har del (hasPart)
 * Klicka på plustecknet vid Har del, välj Skapa Lokal entitet och välj ----Verk
-  * Klicka på plustecknet vid Verk, lägg till Har titel/Titel/Huvudtitel och skriv in titeln
+  * Klicka på plustecknet vid Verk, lägg till Har titel, välj Titel och skriv in den föredragna titeln under Huvudtitel
   * Klicka på plustecknet vid Verk, lägg till Medverkan och funktion/Primär medverkan/Agent
   * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
 
@@ -100,8 +95,7 @@ För att lägga till en författares verk som ämne (600 1/_ #a #d #t)
 
 * Klicka på plustecknet vid Ämne
 * Välj Skapa lokalt entitet och välj Verk
-  * Klicka på plustecknet vid Verk, välj Har titel och välj typ Titel
-  * Skriv in den föredragna titeln i Huvudtitel
+  * Klicka på plustecknet vid Verk, lägg till Har titel, välj Titel och skriv in den föredragna titeln under Huvudtitel
   * Klicka på plustecknet vid Verk, lägg till Medverkan och funktion/Primär medverkan/Agent
   * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
     
