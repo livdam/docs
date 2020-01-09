@@ -36,7 +36,7 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
 
 ![Relation till ett verk av en författare](Relationverkauth.png) 
 
-* Klicka på plustecknet vid Text
+* Öppna sidorutan Lägg till egenskaper under Text 
 * Välj egenskapen Relation (Relationship)
 * Välj typ Relation från rullgardinsmenyn
 * Klicka på plustecknet vid Relation och välj Entitet
@@ -57,7 +57,7 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 
 ![Obestämd relation till ett verk](Obestrelationverk.png) 
 
-* Klicka på plustecknet vid Text
+* Öppna sidorutan Lägg till egenskaper under Text 
 * Välj egenskapen Relation (relationship)
 * Välj typ Relation från rullgardinsmenyn
 * Klicka på plustecknet vid Relation och välj Entitet
