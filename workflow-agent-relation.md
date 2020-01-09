@@ -19,15 +19,13 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 [Relation till verk uttryckt genom text](#relation-till-verk-uttryckt-genom-text)
 
-[Obestämd relation till verk](#Obestämd-relation-till-verk)
+[Obestämd relation till verk](#Obestamd-relation-till-verk)
 
-[Ingående verk](#Ingående-verk)
+[Ingående verk](#Ingaende-verk)
 
-[Verk som ämne](#Verk-som-ämne)
+[Verk som ämne](#Verk-som-amne)
 
-
-
-[Fler delfält](#Fler-delfält)
+[Fler delfält](#Fler-delfalt)
 
 ### Relation till verk uttryckt genom text 
 Relation till ett verk av en författare (700 1/_ #i #a #d #t)
@@ -53,7 +51,7 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
   * Skriv in uppgiften. 
   <br/>```Exempel: Parafraserar``` 
 
-### Obestämd relation till verk 
+### Obestamd relation till verk 
 Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 #a)
 
 
@@ -73,7 +71,7 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 
  <br/>
  
-### Ingående verk
+### Ingaende verk
 För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 #a #d #t) 
 
 ![Ingaende verk](Ingaendeverk_sprak.png) 
@@ -91,7 +89,7 @@ Om det ingående verket är en översättning:
 
 OBS! I exporten till MARC21 kommer det skapas ett fält 041 för varje språklänk. I de fall flera översatta verk ingår kan detta resultera i många dubbleringar. Ignorera de dubblerade 041-fälten. 
 
-## Verk som ämne 
+## Verk som amne 
 
 I nuvarande version av Libris katalogiseringsklient är det svårt att länka till Verk som ämne även i de fall det finns en auktoritetspost för verket. Den länkbara entiteten för verket är i dagsläget svår att urskilja från entiteter som representerar uttryck av verket och vi rekommenderar därför att man alltid beskriver verk som lokala entiteter tills vidare. 
 
@@ -99,7 +97,7 @@ I nuvarande version av Libris katalogiseringsklient är det svårt att länka ti
 
 För att lägga till en författares verk som ämne (600 1/_ #a #d #t)
 
-![Relation till verk av en författare som ämnesord](Relationverkauthsubj.png)
+![Relation till verk av en författare som ämnesord](Relationverkauthsubj_NY.png)
 
 * Öppna sidorutan Lägg till entitet inom egenskapen Ämne.
 * Välj typen Verk i rullgardinsmenyn för Skapa lokal entitet.
@@ -108,7 +106,7 @@ För att lägga till en författares verk som ämne (600 1/_ #a #d #t)
   * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
   * Klicka på plustecknet vid Funktion och länka till aktuell funktion
     
-###  Fler delfält
+###  Fler delfalt
 För att lägga till fler engenskaper under Verk/Har titel/Titel/Huvudtitel:
 * Klicka på plustecknet vid Titel och välj
   * Specificering i form av grupptitel (700 #k)
