@@ -48,7 +48,8 @@ För att uttrycka relationen till ett verk som har ett samband med (men inte ing
 * Klicka på plustecknet vid Relation och välj Relation
   * Klicka på plustecknet vid Relation {Verk saknas} och lägg till Relation. Lägg till Relation och välj Skapa lokal entitet
   * Klicka på plustecknet vid Relation {Namnlös} och välj Benämning
-  * Skriv in uppgiften. ```Exempel: Parafraserar``` 
+  * Skriv in uppgiften. 
+  <br/>```Exempel: Parafraserar``` 
 
 ### Obestämd relation till verk 
 Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, gör en allmän anmärkning (500 #a)
