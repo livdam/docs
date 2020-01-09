@@ -74,7 +74,7 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 ### Ingående verk
 För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 #a #d #t) 
 
-![Ingaende verk](Ingaendeverk.png) 
+![Ingaende verk](Ingaendeverk2.PNG) 
 * Klicka på plustecknet vid Text:
 * Välj egenskapen Har del (hasPart)
 * Klicka på plustecknet vid Har del, välj Skapa Lokal entitet och välj Verk  (----Verk)
