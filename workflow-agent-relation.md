@@ -77,7 +77,7 @@ För att skapa analytiska biuppslag på verk som ingår i den katalogiserade ins
 ![Ingaende verk](Ingaendeverk.png) 
 * Klicka på plustecknet vid Text:
 * Välj egenskapen Har del (hasPart)
-* Klicka på plustecknet vid Har del, välj Skapa Lokal entitet och välj ----Verk
+* Klicka på plustecknet vid Har del, välj Skapa Lokal entitet och välj Verk  (----Verk)
   * Klicka på plustecknet vid Verk, lägg till Har titel, välj Titel och skriv in den föredragna titeln under Huvudtitel
   * Klicka på plustecknet vid Verk, lägg till Medverkan och funktion och välj Primär medverkan
   * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
