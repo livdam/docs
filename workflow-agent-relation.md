@@ -19,11 +19,13 @@ Länka i första hand till befintliga auktioriteter för personer, organisatione
 
 [Relation till verk uttryckt genom text](#relation-till-verk-uttryckt-genom-text)
 
-[Obestämd relation till verk](#obestämd-relation-till-verk)
+[Obestämd relation till verk](#Obestämd-relation-till-verk)
 
 [Ingående verk](#Ingående-verk)
 
-[Relation till ett verk av en författare som ämnesord](#Relation-till-ett-verk-av-en-författare-som-ämnesord)
+[Verk som ämne](#Verk-som-ämne)
+
+
 
 [Fler delfält](#Fler-delfält)
 
@@ -75,13 +77,13 @@ Om relationen är viktig att beskriva och inte kan beskrivas på annat sätt, g�
 För att skapa analytiska biuppslag på verk som ingår i den katalogiserade instansen (700 1/2 #a #d #t) 
 
 ![Ingaende verk](Ingaendeverk_sprak.png) 
-* Klicka på plustecknet vid Text:
+* Öppna sidorutan Lägg till egenskaper under Text:
 * Välj egenskapen Har del (hasPart)
 * Klicka på plustecknet vid Har del, välj Skapa Lokal entitet och välj Verk  (----Verk)
   * Klicka på plustecknet vid Verk, lägg till Har titel, välj Titel och skriv in den föredragna titeln under Huvudtitel
   * Klicka på plustecknet vid Verk, lägg till Medverkan och funktion och välj Primär medverkan
   * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
-  * Klicka på plustecknet vid Funktion och välj Författare (aut)
+  * Klicka på plustecknet vid Funktion och länka till aktuell funktion
   * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna 
 
 Om det ingående verket är en översättning:
@@ -89,17 +91,22 @@ Om det ingående verket är en översättning:
 
 OBS! I exporten till MARC21 kommer det skapas ett fält 041 för varje språklänk. I de fall flera översatta verk ingår kan detta resultera i många dubbleringar. Ignorera de dubblerade 041-fälten. 
 
-### Relation till ett verk av en författare som ämnesord
+## Verk som ämne 
+
+I nuvarande version av Libris katalogiseringsklient är det svårt att länka till Verk som ämne även i de fall det finns en auktoritetspost för verket. Den länkbara entiteten för verket är i dagsläget svår att urskilja från entiteter som representerar uttryck av verket och vi rekommenderar därför att man alltid beskriver verk som lokala entiteter tills vidare. 
+
+### Verk som lokal entitet 
+
 För att lägga till en författares verk som ämne (600 1/_ #a #d #t)
 
 ![Relation till verk av en författare som ämnesord](Relationverkauthsubj.png)
 
-* Klicka på plustecknet vid Ämne
-* Välj Skapa lokalt entitet och välj Verk
-  * Klicka på plustecknet vid Verk, lägg till Har titel, välj Titel och skriv in den föredragna titeln under Huvudtitel
+* Öppna sidorutan Lägg till entitet inom egenskapen Ämne.
+* Välj typen Verk i rullgardinsmenyn för Skapa lokal entitet.
+  * Klicka på plustecknet vid Verk, lägg till Har titel, välj Titel och skriv in den föredragna titeln under Huvudtitel (Övrig titelinformation raderas)
   * Klicka på plustecknet vid Verk, lägg till Medverkan och funktion och välj Primär medverkan
   * Klicka på plustecknet vid Agent och länka till auktoriserad namnform. Om en sådan inte finns välj Skapa lokal entitet, välj Person och fyll i uppgifterna
-  * Klicka på plustecknet vid Funktion och välj Författare (aut)
+  * Klicka på plustecknet vid Funktion och länka till aktuell funktion
     
 ###  Fler delfält
 För att lägga till fler engenskaper under Verk/Har titel/Titel/Huvudtitel:
